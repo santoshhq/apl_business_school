@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | ALP Business School</title>
     <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="ALP Business School – Professional Business & Management Qualifications online." />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png" />
+    <link rel="icon" href="assets/images/favicon/favicon.ico" />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+    <meta name="description" content="ALP Business School � Professional Business & Management Qualifications online." />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,6 +36,32 @@
     <link rel="stylesheet" href="assets/css/eduact.css" />
     <!-- ALP Business School Custom Styles -->
     <style>
+        html { scroll-behavior: smooth; }
+        /* -------- Global Button Overrides (blue instead of template orange) -------- */
+        .eduact-btn,
+        .eduact-btn-second,
+        a.eduact-btn,
+        a.eduact-btn-second,
+        button.eduact-btn {
+            background-color: #1a4fd8 !important;
+            border-color: #1a4fd8 !important;
+            color: #ffffff !important;
+        }
+        .eduact-btn:hover,
+        .eduact-btn-second:hover,
+        a.eduact-btn:hover,
+        a.eduact-btn-second:hover {
+            background-color: #0b1d3e !important;
+            border-color: #0b1d3e !important;
+            color: #ffffff !important;
+        }
+        .eduact-btn__curve { background-color: #0b1d3e !important; }
+        .main-slider__title span { color: #1a4fd8 !important; }
+        .section-title__tagline { color: #1a4fd8 !important; }
+        .section-title__tagline svg path { fill: #1a4fd8 !important; }
+        a:hover, .main-menu__list > li > a:hover { color: #1a4fd8 !important; }
+        .main-menu__list > li.current > a,
+        .main-menu__list > li.current > a:hover { color: #1a4fd8 !important; }
         /* -------- ALP Course Cards -------- */
         .alp-course-card {
             border-radius: 12px;
@@ -73,7 +99,7 @@
             position: absolute;
             top: 14px;
             left: 14px;
-            background: #C9A227;
+            background: #1a4fd8;
             color: #fff;
             font-size: 12px;
             font-weight: 700;
@@ -95,12 +121,12 @@
             transition: color 0.3s ease;
         }
         .alp-course-card:hover .alp-course-card__title {
-            color: #C9A227;
+            color: #1a4fd8;
         }
         .alp-course-card__link {
             font-size: 14px;
             font-weight: 600;
-            color: #C9A227;
+            color: #1a4fd8;
             display: inline-flex;
             align-items: center;
             gap: 5px;
@@ -112,7 +138,7 @@
     </style>
     <style>
         /* ALP Brand: Navy + Gold */
-        .alp-course-card{border-top:3px solid #C9A227}
+        .alp-course-card{border-top:3px solid #1a4fd8}
     </style>
 </head>
 
@@ -134,7 +160,7 @@
                             <img src="assets/images/apl_logo.png" height="58" style="width:auto;max-width:62px;object-fit:contain;flex-shrink:0;" alt="ALP Business School">
                             <div style="line-height:1.25;">
                                 <span style="display:block;font-size:17px;font-weight:800;color:#0b1d3e;letter-spacing:0.2px;">ALP Business School</span>
-                                <span style="display:block;font-size:11.5px;font-weight:600;color:#C9A227;letter-spacing:1px;text-transform:uppercase;">Up Lift Your Career</span>
+                                <span style="display:block;font-size:11.5px;font-weight:600;color:#1a4fd8;letter-spacing:1px;text-transform:uppercase;">Up Lift Your Career</span>
                             </div>
                         </a>
                     </div>
@@ -154,7 +180,7 @@
                                     <li><a href="course-teacher-training-l5.html">Teacher Training (Level 5)</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <!-- /.main-menu__nav -->
@@ -163,7 +189,7 @@
                             <i class="fa fa-bars"></i>
                         </a>
                         <!-- /.mobile menu btn -->
-                        <a href="tel:+441234567890" style="display:inline-flex;align-items:center;gap:7px;background:#C9A227;color:#ffffff;font-size:13px;font-weight:700;padding:9px 16px;border-radius:30px;text-decoration:none;margin-right:8px;letter-spacing:0.3px;"><i class="fa fa-phone-alt" style="font-size:12px;"></i>Call Us</a>
+                        <a href="apply-now.html" style="display:inline-flex;align-items:center;gap:9px;background:#1a4fd8;color:#ffffff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:50px;text-decoration:none;margin-right:8px;letter-spacing:0.3px;transition:background 0.2s ease;">Apply Now <i class="fas fa-sign-in-alt" style="font-size:13px;"></i></a>
                     </div>
                     <!-- /.main-menu__right -->
                 </div>
@@ -198,8 +224,6 @@
                     <div class="main-slider__item">
                         <div class="main-slider__bg" style="background-image: url(assets/images/shapes/slider-bg-1.jpg);"></div>
                         <!-- slider-image-->
-                        <div class="main-slider__shape-one"><img src="assets/images/shapes/slider-shape-1.png" alt="eduact" /></div>
-                        <!-- slider-shape-1 -->
                         <div class="main-slider__shape-two"><img src="assets/images/shapes/slider-shape-2.png" alt="eduact" /></div>
                         <!-- slider-shape-2 -->
                         <div class="container">
@@ -211,7 +235,7 @@
                                         <p class="main-slider__text">Ofqual-regulated qualifications from Level 3 to Level 7,<br>designed to fast-track your career or university journey.</p>
                                         <!-- slider-text -->
                                         <div class="main-slider__btn">
-                                            <a href="index.html#courses" class="eduact-btn eduact-btn-second"><span class="eduact-btn__curve"></span>Explore Courses<i class="icon-arrow"></i></a>
+                                            <a href="#courses" class="eduact-btn eduact-btn-second"><span class="eduact-btn__curve"></span>Explore Courses<i class="icon-arrow"></i></a>
                                             <!-- /.btn -->
                                         </div>
                                     </div>
@@ -228,7 +252,7 @@
                                     </div>
                                     <div class="main-slider__shape-three">
                                         <svg viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="76" cy="76" r="63.7419" stroke="#F57005" stroke-width="24" />
+                                            <circle cx="76" cy="76" r="63.7419" stroke="#1a4fd8" stroke-width="24" />
                                         </svg>
                                     </div>
                                     <!-- slider-shape-3 -->
@@ -238,11 +262,7 @@
                                         </svg>
                                     </div>
                                     <!-- slider-shape-4 -->
-                                    <div class="main-slider__shape-five">
-                                        <svg viewBox="0 0 124 101" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M118.712 10.0661C118.712 10.0661 48.8261 -23.0444 10.0927 36.3064C3.19101 46.8818 -5.89196 76.3137 5.86651 93.2798C17.625 110.246 31.9191 95.0447 39.4615 82.9168C47.0161 70.7815 63.3887 39.7207 103.51 21.3862C112.963 17.063 132.273 16.0369 118.712 10.0661Z" />
-                                        </svg>
-                                    </div>
+                                    
                                     <!-- slider-shape-5 -->
                                     <div class="main-slider__shape-six">
                                         <img src="assets/images/shapes/slider-shape-6.png" alt="eduact" />
@@ -271,8 +291,6 @@
                     <div class="main-slider__item">
                         <div class="main-slider__bg" style="background-image: url(assets/images/shapes/slider-bg-1.jpg);"></div>
                         <!-- slider-image-->
-                        <div class="main-slider__shape-one"><img src="assets/images/shapes/slider-shape-1.png" alt="eduact" /></div>
-                        <!-- slider-shape-1 -->
                         <div class="main-slider__shape-two"><img src="assets/images/shapes/slider-shape-2.png" alt="eduact" /></div>
                         <!-- slider-shape-2 -->
                         <div class="container">
@@ -281,7 +299,7 @@
                                     <div class="main-slider__content">
                                         <h2 class="main-slider__title"><span>Professional</span><br>Qualifications<br>from Level 3 to 7</h2>
                                         <!-- slider-title -->
-                                        <p class="main-slider__text">Business Management, HR, Teacher Training &amp; more —<br>all 100% online and fully regulated by Ofqual.</p>
+                                        <p class="main-slider__text">Business Management, HR, Teacher Training &amp; more �<br>all 100% online and fully regulated by Ofqual.</p>
                                         <!-- slider-text -->
                                         <div class="main-slider__btn">
                                             <a href="course-business-management-l3.html" class="eduact-btn eduact-btn-second"><span class="eduact-btn__curve"></span>View Courses<i class="icon-arrow"></i></a>
@@ -301,7 +319,7 @@
                                     </div>
                                     <div class="main-slider__shape-three">
                                         <svg viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="76" cy="76" r="63.7419" stroke="#F57005" stroke-width="24" />
+                                            <circle cx="76" cy="76" r="63.7419" stroke="#1a4fd8" stroke-width="24" />
                                         </svg>
                                     </div>
                                     <!-- slider-shape-3 -->
@@ -343,7 +361,6 @@
                     <!-- slider-item-start -->
                     <div class="main-slider__item">
                         <div class="main-slider__bg" style="background-image: url(assets/images/shapes/slider-bg-1.jpg);"></div>
-                        <div class="main-slider__shape-one"><img src="assets/images/shapes/slider-shape-1.png" alt="" /></div>
                         <div class="main-slider__shape-two"><img src="assets/images/shapes/slider-shape-2.png" alt="" /></div>
                         <div class="container">
                             <div class="row">
@@ -351,10 +368,10 @@
                                     <div class="main-slider__content">
                                         <h2 class="main-slider__title"><span>Study Online,</span><br>Progress to<br>University</h2>
                                         <!-- slider-title -->
-                                        <p class="main-slider__text">Our Level 4/5 diplomas are equivalent to the first<br>two years of a university degree — study from anywhere.</p>
+                                        <p class="main-slider__text">Our Level 4/5 diplomas are equivalent to the first<br>two years of a university degree � study from anywhere.</p>
                                         <!-- slider-text -->
                                         <div class="main-slider__btn">
-                                            <a href="contact.html" class="eduact-btn eduact-btn-second"><span class="eduact-btn__curve"></span>Get In Touch<i class="icon-arrow"></i></a>
+                                            <a href="#contact" class="eduact-btn eduact-btn-second"><span class="eduact-btn__curve"></span>Get In Touch<i class="icon-arrow"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -370,7 +387,7 @@
                                     </div>
                                     <div class="main-slider__shape-three">
                                         <svg viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="76" cy="76" r="63.7419" stroke="#C9A227" stroke-width="24" />
+                                            <circle cx="76" cy="76" r="63.7419" stroke="#1a4fd8" stroke-width="24" />
                                         </svg>
                                     </div>
                                     <div class="main-slider__shape-four">
@@ -481,13 +498,77 @@
         </section>
         <!-- About End -->
         <!-- Service Start -->
-        <section class="service-three" style="background-image: url(assets/images/shapes/service-bg-3.png);">
+        <style>
+            .alp-category-section {
+                padding: 80px 0 70px;
+                background: #ffffff;
+            }
+            /* Cards row */
+            .alp-cat-card {
+                background: #fff;
+                border: 1px solid #e8ecf2;
+                border-radius: 10px;
+                padding: 32px 24px 28px;
+                margin-bottom: 30px;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative;
+            }
+            .alp-cat-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 12px 40px rgba(11,29,62,0.12);
+            }
+            /* Line + icon assembly */
+            .alp-cat-card__line-zone {
+                position: relative;
+                height: 68px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 22px;
+            }
+            .alp-cat-card__line {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 2px;
+            }
+            .alp-cat-card__icon {
+                width: 58px;
+                height: 58px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                color: #fff;
+                position: relative;
+                z-index: 2;
+                flex-shrink: 0;
+            }
+            .alp-cat-card__title {
+                font-size: 16px;
+                font-weight: 700;
+                color: #0b1d3e;
+                margin: 0 0 8px;
+                line-height: 1.4;
+            }
+            .alp-cat-card__sub {
+                font-size: 13px;
+                color: #8a94a6;
+                margin: 0;
+                font-weight: 500;
+            }
+        </style>
+        <section class="alp-category-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="section-title wow fadeInLeft" data-wow-delay="100ms">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 text-center">
+                        <div class="section-title wow fadeInUp" data-wow-delay="100ms">
                             <h5 class="section-title__tagline">
-                                Our Service
+                                Course Categories
                                 <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
                                     <g clip-path="url(#clip0_324_36194)">
                                         <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
@@ -497,100 +578,62 @@
                                     </g>
                                 </svg>
                             </h5>
-                            <h2 class="section-title__title">Creating a Lifelong Learning<br> Best Community</h2>
+                            <h2 class="section-title__title">Explore Our Top Categories</h2>
                         </div>
-                        <!-- section-title -->
-                    </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="100ms">
-                        <p class="service-three__section-text">
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-                        </p>
                     </div>
                 </div>
                 <div class="row">
+                    <!-- Card 1 -->
                     <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="service-three__item text-center">
-                            <div class="service-three__wrapper">
-                                <div class="service-three__hover" style="background-image: url(assets/images/service/1.jpg);"></div>
-                                <!-- /.service-icon -->
-                                <div class="service-three__icon">
-                                    <span class="icon-education"></span>
-                                </div>
-                                <!-- /.service-icon -->
-                                <h3 class="service-three__title">
-                                    <a href="team.html">Exclusive Coach</a>
-                                </h3>
-                                <!-- /.service-title -->
-                                <p class="service-three__text">Lorem ipsum dolor sit amet consectetur. Convallis ornare semper id hendrerit</p>
-                                <!-- /.service-content -->
-                                <div class="service-three__br"></div>
-                                <a class="service-three__rm" href="team.html"></a>
-                            </div>
-                        </div>
-                        <!-- /.service-card-three -->
-                    </div>
-                    <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="service-three__item text-center">
-                            <div class="service-three__wrapper">
-                                <div class="service-three__hover" style="background-image: url(assets/images/service/2.jpg);"></div>
-                                <!-- /.service-icon -->
-                                <div class="service-three__icon">
+                        <div class="alp-cat-card">
+                            <div class="alp-cat-card__line-zone">
+                                <div class="alp-cat-card__line" style="background:#1a4fd8;"></div>
+                                <div class="alp-cat-card__icon" style="background:#1a4fd8;">
                                     <span class="icon-business"></span>
                                 </div>
-                                <!-- /.service-icon -->
-                                <h3 class="service-three__title">
-                                    <a href="team-become.html">Creative Minds</a>
-                                </h3>
-                                <!-- /.service-title -->
-                                <p class="service-three__text">Lorem ipsum dolor sit amet consectetur. Convallis ornare semper id hendrerit</p>
-                                <!-- /.service-content -->
-                                <div class="service-three__br"></div>
-                                <a class="service-three__rm" href="team-become.html"></a>
                             </div>
+                            <h3 class="alp-cat-card__title">Business<br>Management</h3>
+                            <p class="alp-cat-card__sub">4 Programmes</p>
                         </div>
-                        <!-- /.service-card-three -->
                     </div>
+                    <!-- Card 2 -->
+                    <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="alp-cat-card">
+                            <div class="alp-cat-card__line-zone">
+                                <div class="alp-cat-card__line" style="background:#0b59c8;"></div>
+                                <div class="alp-cat-card__icon" style="background:#0b59c8;">
+                                    <span class="icon-education"></span>
+                                </div>
+                            </div>
+                            <h3 class="alp-cat-card__title">Human Resource<br>Management</h3>
+                            <p class="alp-cat-card__sub">1 Programme</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
                     <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="service-three__item text-center">
-                            <div class="service-three__wrapper">
-                                <div class="service-three__hover" style="background-image: url(assets/images/service/3.jpg);"></div>
-                                <!-- /.service-icon -->
-                                <div class="service-three__icon">
+                        <div class="alp-cat-card">
+                            <div class="alp-cat-card__line-zone">
+                                <div class="alp-cat-card__line" style="background:#0ea47a;"></div>
+                                <div class="alp-cat-card__icon" style="background:#0ea47a;">
                                     <span class="icon-webinar"></span>
                                 </div>
-                                <!-- /.service-icon -->
-                                <h3 class="service-three__title">
-                                    <a href="course.html">Video Tutorials</a>
-                                </h3>
-                                <!-- /.service-title -->
-                                <p class="service-three__text">Lorem ipsum dolor sit amet consectetur. Convallis ornare semper id hendrerit</p>
-                                <!-- /.service-content -->
-                                <div class="service-three__br"></div>
-                                <a class="service-three__rm" href="course.html"></a>
                             </div>
+                            <h3 class="alp-cat-card__title">Teacher<br>Training</h3>
+                            <p class="alp-cat-card__sub">1 Programme</p>
                         </div>
-                        <!-- /.service-card-three -->
                     </div>
+                    <!-- Card 4 -->
                     <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="500ms">
-                        <div class="service-three__item text-center">
-                            <div class="service-three__wrapper">
-                                <div class="service-three__hover" style="background-image: url(assets/images/service/4.jpg);"></div>
-                                <!-- /.service-icon -->
-                                <div class="service-three__icon">
+                        <div class="alp-cat-card">
+                            <div class="alp-cat-card__line-zone">
+                                <div class="alp-cat-card__line" style="background:#7b3fc4;"></div>
+                                <div class="alp-cat-card__icon" style="background:#7b3fc4;">
                                     <span class="icon-neural"></span>
                                 </div>
-                                <!-- /.service-icon -->
-                                <h3 class="service-three__title">
-                                    <a href="about.html">Worlds Record</a>
-                                </h3>
-                                <!-- /.service-title -->
-                                <p class="service-three__text">Lorem ipsum dolor sit amet consectetur. Convallis ornare semper id hendrerit</p>
-                                <!-- /.service-content -->
-                                <div class="service-three__br"></div>
-                                <a class="service-three__rm" href="about.html"></a>
                             </div>
+                            <h3 class="alp-cat-card__title">Administration<br>&amp; Management</h3>
+                            <p class="alp-cat-card__sub">1 Programme</p>
                         </div>
-                        <!-- /.service-card-three -->
                     </div>
                 </div>
             </div>
@@ -601,90 +644,168 @@
             <div class="video-two__bg jarallax-img" style="background-image: url(assets/images/backgrounds/video-bg-2.jpg);"></div>
             <div class="video-two__shape" style="background-image: url(assets/images/shapes/video-shape-3.png);"></div>
             <div class="container">
-                <div class="row d-flex align-items-center">
-                    <div class="col-xl-6 col-md-7 wow fadeInLeft" data-wow-delay="200ms">
-                        <h3 class="video-two__title">Discover the Campus Through<br> a Video Tour</h3>
-                        <a href="contact.html" class="eduact-btn eduact-btn-second"><span class="eduact-btn__curve"></span>Discover More<i class="icon-arrow"></i></a>
-                    </div>
-                    <div class="col-xl-6 col-md-5 wow fadeInRight" data-wow-delay="200ms">
-                        <div class="video-two__btn">
-                            <a href="https://www.youtube.com/watch?v=ZfzBcYdoVEs" class="video-popup">
-                                <span class="icon-play"></span>
-                            </a>
-                        </div>
+                <div class="row d-flex align-items-center justify-content-center text-center">
+                    <div class="col-xl-8 col-md-10 wow fadeInUp" data-wow-delay="200ms">
+                        <h3 class="video-two__title">Ready to Advance Your Career<br>with an Ofqual-Regulated Qualification?</h3>
+                        <p style="color:#d4dbe8;font-size:16px;margin:0 0 30px;line-height:1.7;">Join hundreds of learners across the UK studying 100% online at their own pace � from Level 3 right through to Level 7, equivalent to a Master's degree.</p>
+                        <a href="#contact" class="eduact-btn eduact-btn-second"><span class="eduact-btn__curve"></span>Speak to an Adviser<i class="icon-arrow"></i></a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Video End -->
         <!-- Counter Start -->
-        <section class="fact-two" style="background-image: url(assets/images/shapes/fact-bg-2.png);">
+        <style>
+            .alp-stats-section {
+                background: linear-gradient(135deg, #050d1f 0%, #0b1d3e 55%, #112660 100%);
+                padding: 80px 0;
+                position: relative;
+                overflow: hidden;
+            }
+            .alp-stats-section::before {
+                content: '';
+                position: absolute;
+                top: -120px; right: -120px;
+                width: 480px; height: 480px;
+                border-radius: 50%;
+                background: rgba(26,79,216,0.10);
+                pointer-events: none;
+            }
+            .alp-stats-section::after {
+                content: '';
+                position: absolute;
+                bottom: -100px; left: -100px;
+                width: 360px; height: 360px;
+                border-radius: 50%;
+                background: rgba(26,79,216,0.07);
+                pointer-events: none;
+            }
+            .alp-stat-card {
+                background: rgba(255,255,255,0.05);
+                border: 1px solid rgba(255,255,255,0.10);
+                border-radius: 16px;
+                padding: 40px 24px 36px;
+                text-align: center;
+                position: relative;
+                transition: background 0.3s ease, transform 0.3s ease;
+                margin-bottom: 24px;
+                backdrop-filter: blur(4px);
+            }
+            .alp-stat-card:hover {
+                background: rgba(26,79,216,0.18);
+                transform: translateY(-6px);
+                border-color: rgba(26,79,216,0.5);
+            }
+            .alp-stat-card__icon {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                background: rgba(26,79,216,0.25);
+                border: 2px solid rgba(26,79,216,0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 20px;
+                font-size: 26px;
+                color: #6ea8ff;
+                transition: background 0.3s ease;
+            }
+            .alp-stat-card:hover .alp-stat-card__icon {
+                background: rgba(26,79,216,0.45);
+            }
+            .alp-stat-card__number {
+                font-size: 52px;
+                font-weight: 900;
+                color: #ffffff;
+                line-height: 1;
+                margin-bottom: 6px;
+                letter-spacing: -1px;
+            }
+            .alp-stat-card__number sup {
+                font-size: 24px;
+                font-weight: 700;
+                vertical-align: super;
+                color: #6ea8ff;
+            }
+            .alp-stat-card__label {
+                font-size: 14px;
+                font-weight: 600;
+                color: rgba(255,255,255,0.65);
+                text-transform: uppercase;
+                letter-spacing: 1.2px;
+                margin: 0;
+            }
+            .alp-stat-card__divider {
+                width: 36px;
+                height: 3px;
+                background: #1a4fd8;
+                border-radius: 2px;
+                margin: 12px auto 14px;
+            }
+            @media (max-width: 767px) {
+                .alp-stat-card__number { font-size: 40px; }
+            }
+        </style>
+        <section class="alp-stats-section">
             <div class="container">
-                <div class="fact-two__inner" style="background-image: url(assets/images/shapes/fact-bg-inner.png);">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                            <div class="fact-two__item text-center">
-                                <div class="fact-two__icon"><span class="icon-Headphone-Women"></span></div>
-                                <div class="fact-two__count">
-                                    <span class="count-box">
-                                        <span class="count-text" data-stop="30.3" data-speed="1500"></span>
-                                    </span>k
-                                </div>
-                                <!-- /.fact-two__count -->
-                                <h3 class="fact-two__title">Student Enrolled</h3>
-                                <!-- /.fact-two__title -->
+                <div class="row justify-content-center">
+                    <!-- Stat 1 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="alp-stat-card">
+                            <div class="alp-stat-card__icon">
+                                <span class="icon-Headphone-Women"></span>
                             </div>
-                            <!-- /.fact-item -->
+                            <div class="alp-stat-card__number">
+                                <span class="count-box"><span class="count-text" data-stop="30.3" data-speed="1500"></span></span><sup>k</sup>
+                            </div>
+                            <div class="alp-stat-card__divider"></div>
+                            <p class="alp-stat-card__label">Students Enrolled</p>
                         </div>
-                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                            <div class="fact-two__item fact-two__item--smnone text-center">
-                                <div class="fact-two__icon"><span class="icon-Online-learning"></span></div>
-                                <div class="fact-two__count">
-                                    <span class="count-box">
-                                        <span class="count-text" data-stop="40.5" data-speed="1500"></span>
-                                    </span>k
-                                </div>
-                                <!-- /.fact-two__count -->
-                                <h3 class="fact-two__title">Class completed</h3>
-                                <!-- /.fact-two__title -->
+                    </div>
+                    <!-- Stat 2 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="alp-stat-card">
+                            <div class="alp-stat-card__icon">
+                                <span class="icon-Online-learning"></span>
                             </div>
-                            <!-- /.fact-item -->
+                            <div class="alp-stat-card__number">
+                                <span class="count-box"><span class="count-text" data-stop="40.5" data-speed="1500"></span></span><sup>k</sup>
+                            </div>
+                            <div class="alp-stat-card__divider"></div>
+                            <p class="alp-stat-card__label">Classes Completed</p>
                         </div>
-                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                            <div class="fact-two__item text-center">
-                                <div class="fact-two__icon"><span class="icon-ratings"></span></div>
-                                <div class="fact-two__count">
-                                    <span class="count-box">
-                                        <span class="count-text" data-stop="88.9" data-speed="1500"></span>
-                                    </span>%
-                                </div>
-                                <!-- /.fact-two__count -->
-                                <h3 class="fact-two__title">satisfaction rate</h3>
-                                <!-- /.fact-two__title -->
+                    </div>
+                    <!-- Stat 3 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="alp-stat-card">
+                            <div class="alp-stat-card__icon">
+                                <span class="icon-ratings"></span>
                             </div>
-                            <!-- /.fact-item -->
+                            <div class="alp-stat-card__number">
+                                <span class="count-box"><span class="count-text" data-stop="88.9" data-speed="1500"></span></span><sup>%</sup>
+                            </div>
+                            <div class="alp-stat-card__divider"></div>
+                            <p class="alp-stat-card__label">Satisfaction Rate</p>
                         </div>
-                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                            <div class="fact-two__item fact-two__item--noborder text-center">
-                                <div class="fact-two__icon"><span class="icon-instructor"></span></div>
-                                <div class="fact-two__count">
-                                    <span class="count-box">
-                                        <span class="count-text" data-stop="6.30" data-speed="1500"></span>
-                                    </span>+
-                                </div>
-                                <!-- /.fact-two__count -->
-                                <h3 class="fact-two__title">Top instructors</h3>
-                                <!-- /.fact-two__title -->
+                    </div>
+                    <!-- Stat 4 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="alp-stat-card">
+                            <div class="alp-stat-card__icon">
+                                <span class="icon-instructor"></span>
                             </div>
-                            <!-- /.fact-item -->
+                            <div class="alp-stat-card__number">
+                                <span class="count-box"><span class="count-text" data-stop="6.30" data-speed="1500"></span></span><sup>+</sup>
+                            </div>
+                            <div class="alp-stat-card__divider"></div>
+                            <p class="alp-stat-card__label">Top Instructors</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Counter End -->
         <!-- Course Start -->
-        <section class="course-three alp-courses-section" style="background-image: url(assets/images/shapes/course-bg-3.png);">
+        <section id="courses" class="course-three alp-courses-section" style="background-image: url(assets/images/shapes/course-bg-3.png);">
             <div class="container">
                 <div class="section-title wow fadeInUp text-center" data-wow-delay="100ms">
                     <h5 class="section-title__tagline">
@@ -737,7 +858,7 @@
                         <div class="alp-course-card">
                             <a href="course-business-management-l45.html">
                                 <div class="alp-course-card__thumb">
-                                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80" alt="Business Management Levels 4 and 5">
+                                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&q=80" alt="Business Management Levels 4 and 5">
                                     <div class="alp-course-card__badge">Levels 4 &amp; 5 &nbsp;|&nbsp; 240 Credits</div>
                                 </div>
                                 <div class="alp-course-card__content">
@@ -753,7 +874,7 @@
                             <a href="course-business-admin-l6.html">
                                 <div class="alp-course-card__thumb">
                                     <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80" alt="Business Administrative Management Level 6">
-                                    <div class="alp-course-card__badge">Level 6</div>
+                                    <div class="alp-course-card__badge">Level 6 &nbsp;|&nbsp; 120 Credits</div>
                                 </div>
                                 <div class="alp-course-card__content">
                                     <h3 class="alp-course-card__title">Business &amp; Administrative Management</h3>
@@ -771,7 +892,7 @@
                                     <div class="alp-course-card__badge">Levels 4 &amp; 5 &nbsp;|&nbsp; 240 Credits</div>
                                 </div>
                                 <div class="alp-course-card__content">
-                                    <h3 class="alp-course-card__title">Human Resource Management, University 1st &amp; 2nd Year</h3>
+                                    <h3 class="alp-course-card__title">Human Resource Management</h3>
                                     <span class="alp-course-card__link">Learn More <i class="icon-arrow"></i></span>
                                 </div>
                             </a>
@@ -796,546 +917,366 @@
             </div>
         </section>
         <!-- Course End -->
-        <!-- Category Start -->
-        <section class="category-three" style="background-image: url(assets/images/shapes/category-bg-3.jpg);">
-            <div class="container wow fadeInUp" data-wow-delay="200ms">
-                <div class="section-title text-center">
-                    <h5 class="section-title__tagline">
-                        Our Categories
-                        <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
-                            <g clip-path="url(#clip0_324_36194)">
-                                <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
-                                <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
-                                <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
-                                <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
-                            </g>
-                        </svg>
-                    </h5>
-                    <h2 class="section-title__title">Favorite Topics To Learn</h2>
+
+        <!-- Student Feedback Start -->
+        <style>
+            .alp-feedback-section {
+                padding: 90px 0 80px;
+                background: #f5f1ea;
+            }
+            .alp-feedback-section .section-title__tagline {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: #0b1d3e;
+            }
+            .alp-feedback-section .section-title__tagline i {
+                font-size: 18px;
+                color: #0b1d3e;
+            }
+            .alp-feedback-section .section-title__title {
+                font-size: clamp(32px, 4vw, 52px);
+                font-weight: 800;
+                color: #0b1d3e;
+                margin: 10px 0 14px;
+                line-height: 1.15;
+            }
+            .alp-feedback-section .section-title__text {
+                font-size: 16px;
+                color: #6b7280;
+                max-width: 520px;
+                margin: 0 auto;
+                line-height: 1.7;
+            }
+            /* Testimonial Card */
+            .alp-tcard {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 32px 28px 30px;
+                margin-bottom: 30px;
+                position: relative;
+                transition: box-shadow 0.3s ease, transform 0.3s ease;
+            }
+            .alp-tcard:hover {
+                box-shadow: 0 14px 45px rgba(11,29,62,0.10);
+                transform: translateY(-4px);
+            }
+            .alp-tcard__quote {
+                position: absolute;
+                top: 24px;
+                right: 24px;
+                font-size: 52px;
+                line-height: 1;
+                color: #e8d5d5;
+                font-family: Georgia, serif;
+                pointer-events: none;
+                user-select: none;
+            }
+            .alp-tcard__name {
+                font-size: 18px;
+                font-weight: 800;
+                color: #0b1d3e;
+                margin: 0 0 3px;
+            }
+            .alp-tcard__role {
+                font-size: 13px;
+                color: #9ca3af;
+                margin: 0 0 18px;
+                font-weight: 500;
+            }
+            .alp-tcard__rating-row {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 18px;
+            }
+            .alp-tcard__score {
+                font-size: 48px;
+                font-weight: 800;
+                color: #0b1d3e;
+                line-height: 1;
+            }
+            .alp-tcard__stars {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
+            .alp-tcard__stars span {
+                color: #1a4fd8;
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+            .alp-tcard__divider {
+                height: 1px;
+                background: #f0f0f0;
+                margin-bottom: 18px;
+            }
+            .alp-tcard__text {
+                font-size: 14px;
+                color: #4b5563;
+                line-height: 1.75;
+                font-style: italic;
+                margin: 0;
+            }
+        </style>
+        <section class="alp-feedback-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="section-title wow fadeInUp" data-wow-delay="100ms">
+                            <h5 class="section-title__tagline">
+                                <i class="fas fa-user-graduate"></i>
+                                Students Feedback
+                            </h5>
+                            <h2 class="section-title__title">Journey of Our Students</h2>
+                            <p class="section-title__text">Hear directly from learners who have transformed their careers through ALP Business School's Ofqual-regulated programmes.</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- section-title -->
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="category-three__item category-three__item-two">
-                            <div class="category-three__thumb"><img src="assets/images/category/category-3-1.png" alt="eduact" /></div>
-                            <!-- /.category-thumb -->
-                            <div class="category-three__icon">
-                                <span class="icon-portfolio"></span>
+                <div class="row" style="margin-top:40px;">
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="alp-tcard">
+                            <div class="alp-tcard__quote">&ldquo;</div>
+                            <h4 class="alp-tcard__name">Sarah Thompson</h4>
+                            <p class="alp-tcard__role">Business Management Graduate</p>
+                            <div class="alp-tcard__rating-row">
+                                <span class="alp-tcard__score">4.9</span>
+                                <div class="alp-tcard__stars">
+                                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                </div>
                             </div>
-                            <!-- /.category-icon -->
-                            <h3 class="category-three__title"><a href="about.html">Business Management</a></h3>
-                            <!-- /.category-title -->
+                            <div class="alp-tcard__divider"></div>
+                            <p class="alp-tcard__text">"ALP Business School gave me the confidence and knowledge to step into a management role. Studying fully online meant I could balance work and family while earning a Level 5 qualification that employers actually recognise."</p>
                         </div>
-                        <!-- /.category-card-one -->
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="category-three__item">
-                            <div class="category-three__thumb"><img src="assets/images/category/category-3-2.png" alt="eduact" /></div>
-                            <!-- /.category-thumb -->
-                            <div class="category-three__icon">
-                                <span class="icon-computer-science"></span>
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="alp-tcard">
+                            <div class="alp-tcard__quote">&ldquo;</div>
+                            <h4 class="alp-tcard__name">Mohammed Al-Rashid</h4>
+                            <p class="alp-tcard__role">HR Management Student, Level 4 &amp; 5</p>
+                            <div class="alp-tcard__rating-row">
+                                <span class="alp-tcard__score">4.8</span>
+                                <div class="alp-tcard__stars">
+                                    <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                </div>
                             </div>
-                            <!-- /.category-icon -->
-                            <h3 class="category-three__title"><a href="about.html">Computer Science</a></h3>
-                            <!-- /.category-title -->
+                            <div class="alp-tcard__divider"></div>
+                            <p class="alp-tcard__text">"The HR Management programme is genuinely world-class. The course materials are thorough and up to date, and the support team is always on hand. Being Ofqual-regulated gave me real assurance about the quality of my qualification."</p>
                         </div>
-                        <!-- /.category-card-one -->
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="category-three__item">
-                            <div class="category-three__thumb"><img src="assets/images/category/category-3-3.png" alt="eduact" /></div>
-                            <!-- /.category-thumb -->
-                            <div class="category-three__icon">
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="alp-tcard">
+                            <div class="alp-tcard__quote">&ldquo;</div>
+                            <h4 class="alp-tcard__name">Priya Sharma</h4>
+                            <p class="alp-tcard__role">Teacher Training Graduate, Level 5</p>
+                            <div class="alp-tcard__rating-row">
+                                <span class="alp-tcard__score">5.0</span>
+                                <div class="alp-tcard__stars">
+                                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                </div>
+                            </div>
+                            <div class="alp-tcard__divider"></div>
+                            <p class="alp-tcard__text">"I completed the Level 5 Teacher Training course while working full-time. ALP's flexible online model was perfect for me � the structured learning, practical assessments and dedicated tutors transformed my teaching career completely."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Student Feedback End -->
+
+        <!-- Category Start -->
+        <style>
+            .alp-topics-section {
+                background: linear-gradient(135deg, #050d1f 0%, #0b1d3e 55%, #112660 100%);
+                padding: 90px 0 80px;
+                position: relative;
+                overflow: hidden;
+            }
+            .alp-topics-section::before {
+                content: '';
+                position: absolute;
+                top: -140px; right: -100px;
+                width: 500px; height: 500px;
+                border-radius: 50%;
+                background: rgba(26,79,216,0.09);
+                pointer-events: none;
+            }
+            .alp-topics-section::after {
+                content: '';
+                position: absolute;
+                bottom: -120px; left: -80px;
+                width: 380px; height: 380px;
+                border-radius: 50%;
+                background: rgba(26,79,216,0.06);
+                pointer-events: none;
+            }
+            .alp-topics-section .section-title__tagline {
+                color: rgba(255,255,255,0.75);
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .alp-topics-section .section-title__tagline svg path {
+                fill: rgba(255,255,255,0.5);
+            }
+            .alp-topics-section .section-title__title {
+                color: #ffffff;
+            }
+            .alp-topic-card {
+                background: rgba(255,255,255,0.05);
+                border: 1px solid rgba(255,255,255,0.10);
+                border-radius: 16px;
+                padding: 40px 28px 36px;
+                text-align: center;
+                position: relative;
+                transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+                margin-bottom: 28px;
+                backdrop-filter: blur(4px);
+                overflow: hidden;
+            }
+            .alp-topic-card::before {
+                content: '';
+                position: absolute;
+                top: 0; left: 0; right: 0;
+                height: 3px;
+                background: linear-gradient(90deg, #1a4fd8, #6ea8ff);
+                border-radius: 16px 16px 0 0;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .alp-topic-card:hover {
+                background: rgba(26,79,216,0.18);
+                transform: translateY(-8px);
+                border-color: rgba(26,79,216,0.45);
+            }
+            .alp-topic-card:hover::before {
+                opacity: 1;
+            }
+            .alp-topic-card__icon {
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                background: rgba(26,79,216,0.22);
+                border: 2px solid rgba(26,79,216,0.45);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 22px;
+                font-size: 30px;
+                color: #6ea8ff;
+                transition: background 0.3s ease, transform 0.3s ease;
+            }
+            .alp-topic-card:hover .alp-topic-card__icon {
+                background: rgba(26,79,216,0.45);
+                transform: scale(1.08);
+            }
+            .alp-topic-card__title {
+                font-size: 17px;
+                font-weight: 700;
+                color: #ffffff;
+                margin: 0 0 10px;
+                line-height: 1.4;
+            }
+            .alp-topic-card__title a {
+                color: inherit;
+                text-decoration: none;
+                transition: color 0.2s;
+            }
+            .alp-topic-card__title a:hover {
+                color: #6ea8ff;
+            }
+            .alp-topic-card__meta {
+                font-size: 13px;
+                color: rgba(255,255,255,0.45);
+                font-weight: 500;
+                margin: 0;
+                text-transform: uppercase;
+                letter-spacing: 0.8px;
+            }
+            .alp-topic-card__divider {
+                width: 32px;
+                height: 2px;
+                background: #1a4fd8;
+                border-radius: 2px;
+                margin: 12px auto;
+            }
+        </style>
+        <section class="alp-topics-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 text-center wow fadeInUp" data-wow-delay="100ms">
+                        <div class="section-title">
+                            <h5 class="section-title__tagline">
+                                Our Categories
+                                <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
+                                    <g clip-path="url(#clip0_324_36194)">
+                                        <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
+                                        <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
+                                        <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
+                                        <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
+                                    </g>
+                                </svg>
+                            </h5>
+                            <h2 class="section-title__title">Favorite Topics To Learn</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:40px;">
+                    <!-- Topic 1 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="alp-topic-card">
+                            <div class="alp-topic-card__icon">
+                                <span class="icon-business"></span>
+                            </div>
+                            <h3 class="alp-topic-card__title"><a href="course-business-management-l3.html">Business Management</a></h3>
+                            <div class="alp-topic-card__divider"></div>
+                            <p class="alp-topic-card__meta">4 Programmes</p>
+                        </div>
+                    </div>
+                    <!-- Topic 2 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="alp-topic-card">
+                            <div class="alp-topic-card__icon">
+                                <span class="icon-education"></span>
+                            </div>
+                            <h3 class="alp-topic-card__title"><a href="course-hrm-l45.html">Human Resource Management</a></h3>
+                            <div class="alp-topic-card__divider"></div>
+                            <p class="alp-topic-card__meta">1 Programme</p>
+                        </div>
+                    </div>
+                    <!-- Topic 3 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="alp-topic-card">
+                            <div class="alp-topic-card__icon">
+                                <span class="icon-webinar"></span>
+                            </div>
+                            <h3 class="alp-topic-card__title"><a href="course-teacher-training-l5.html">Teacher Training</a></h3>
+                            <div class="alp-topic-card__divider"></div>
+                            <p class="alp-topic-card__meta">1 Programme</p>
+                        </div>
+                    </div>
+                    <!-- Topic 4 -->
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="500ms">
+                        <div class="alp-topic-card">
+                            <div class="alp-topic-card__icon">
                                 <span class="icon-chart-up"></span>
                             </div>
-                            <!-- /.category-icon -->
-                            <h3 class="category-three__title"><a href="about.html">Personal Development</a></h3>
-                            <!-- /.category-title -->
+                            <h3 class="alp-topic-card__title"><a href="course-business-admin-l6.html">Administration &amp; Management</a></h3>
+                            <div class="alp-topic-card__divider"></div>
+                            <p class="alp-topic-card__meta">1 Programme</p>
                         </div>
-                        <!-- /.category-card-one -->
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="category-three__item category-three__item-four">
-                            <div class="category-three__thumb"><img src="assets/images/category/category-3-4.png" alt="eduact" /></div>
-                            <!-- /.category-thumb -->
-                            <div class="category-three__icon">
-                                <span class="icon-art"></span>
-                            </div>
-                            <!-- /.category-icon -->
-                            <h3 class="category-three__title"><a href="about.html">Arts and Design</a></h3>
-                            <!-- /.category-title -->
-                        </div>
-                        <!-- /.category-card-one -->
                     </div>
                 </div>
             </div>
         </section>
         <!-- Category End -->
-        <!-- Testimonial Start -->
-        <section class="testimonial-three">
-            <div class="container">
-                <div class="section-title">
-                    <h5 class="section-title__tagline">
-                        Testimonial
-                        <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
-                            <g clip-path="url(#clip0_324_36194)">
-                                <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
-                                <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
-                                <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
-                                <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
-                            </g>
-                        </svg>
-                    </h5>
-                    <h2 class="section-title__title">What Our Student Feedback</h2>
-                </div>
-                <!-- section-title -->
-                <div class="testimonial-three__wrapper">
-                    <!-- Testimonial Thumb -->
-                    <div class="testimonial-three__carousel__thumb eduact-owl__carousel owl-theme owl-carousel" data-owl-options='{
-                "items": 3,
-                "margin": 36,
-                "smartSpeed": 700,
-                "loop":true,
-                "autoplay": true,
-                "URLhashListener":true,
-                "center": true,
-                "dots":false
-                }'>
-                        <a href="#item1" class="item" data-hash="item1"><img src="assets/images/resources/testimonial-3-1.jpg" alt="eduact"></a>
-                        <!-- Testimonial Item -->
-                        <a href="#item2" class="item" data-hash="item2"><img src="assets/images/resources/testimonial-3-2.jpg" alt="eduact"></a>
-                        <!-- Testimonial Item -->
-                        <a href="#item3" class="item" data-hash="item3"><img src="assets/images/resources/testimonial-3-3.jpg" alt="eduact"></a>
-                        <!-- Testimonial Item -->
-                    </div>
-                    <!-- Testimonial Thumb -->
-                    <div class="testimonial-three__carousel eduact-owl__carousel owl-theme owl-carousel" data-owl-options='{
-                "items": 1,
-                "margin": 0,
-                "smartSpeed": 700,
-                "loop":true,
-                "autoplay": true,
-                "nav":true,
-                "URLhashListener":true,
-                "dots":false,
-                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow\"></span>"]
-                }'>
-                        <!-- Testimonial Item -->
-                        <div class="item" data-hash="item1">
-                            <div class="testimonial-three__item">
-                                <div class="testimonial-three__author">
-                                    <img src="assets/images/resources/testimonial-3-1.jpg" alt="eduact">
-                                </div>
-                                <!-- testimonial-author -->
-                                <div class="testimonial-three__content">
-                                    <div class="testimonial-three__quote">
-                                        Flexible Classes refers to the process of acquiring knowledge or skills through the use of digital technologies and the internet. Flexible Classes refers to the process flexible Classes refers to the process Flexible Classes refers to the process of acquiring
-                                        knowledge or skills
-                                    </div>
-                                    <!-- testimonial-quote -->
-                                    <p class="testimonial-three__average-ratings">4.7 Average Rating</p>
-                                    <div class="testimonial-three__ratings">
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                    </div>
-                                    <!-- testimonial-ratings -->
-                                    <div class="testimonial-three__meta">
-                                        <h5 class="testimonial-three__title">Savannah Nguyen</h5>
-                                        <span class="testimonial-three__designation">UI/UX Designer</span>
-                                    </div>
-                                    <!-- testimonial-meta -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Testimonial Item -->
-                        <!-- Testimonial Item -->
-                        <div class="item" data-hash="item2">
-                            <div class="testimonial-three__item">
-                                <div class="testimonial-three__author">
-                                    <img src="assets/images/resources/testimonial-3-2.jpg" alt="eduact">
-                                </div>
-                                <!-- testimonial-author -->
-                                <div class="testimonial-three__content">
-                                    <div class="testimonial-three__quote">
-                                        Flexible Classes refers to the process of acquiring knowledge or skills through the use of digital technologies and the internet. Flexible Classes refers to the process flexible Classes refers to the process Flexible Classes refers to the process of acquiring
-                                        knowledge or skills
-                                    </div>
-                                    <!-- testimonial-quote -->
-                                    <p class="testimonial-three__average-ratings">4.7 Average Rating</p>
-                                    <div class="testimonial-three__ratings">
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                    </div>
-                                    <!-- testimonial-ratings -->
-                                    <div class="testimonial-three__meta">
-                                        <h5 class="testimonial-three__title">Sarah Taylor</h5>
-                                        <span class="testimonial-three__designation">Seo Expert</span>
-                                    </div>
-                                    <!-- testimonial-meta -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Testimonial Item -->
-                        <!-- Testimonial Item -->
-                        <div class="item" data-hash="item3">
-                            <div class="testimonial-three__item">
-                                <div class="testimonial-three__author">
-                                    <img src="assets/images/resources/testimonial-3-3.jpg" alt="eduact">
-                                </div>
-                                <!-- testimonial-author -->
-                                <div class="testimonial-three__content">
-                                    <div class="testimonial-three__quote">
-                                        Flexible Classes refers to the process of acquiring knowledge or skills through the use of digital technologies and the internet. Flexible Classes refers to the process flexible Classes refers to the process Flexible Classes refers to the process of acquiring
-                                        knowledge or skills
-                                    </div>
-                                    <!-- testimonial-quote -->
-                                    <p class="testimonial-three__average-ratings">4.7 Average Rating</p>
-                                    <div class="testimonial-three__ratings">
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                    </div>
-                                    <!-- testimonial-ratings -->
-                                    <div class="testimonial-three__meta">
-                                        <h5 class="testimonial-three__title">Christine Eve</h5>
-                                        <span class="testimonial-three__designation">Web Developer</span>
-                                    </div>
-                                    <!-- testimonial-meta -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Testimonial Item -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Testimonial End -->
-        <!-- Team Start -->
-        <section class="team-three" style="background-image: url(assets/images/shapes/team-bg-3.png);">
-            <div class="container">
-                <div class="section-title text-center wow fadeInUp" data-wow-delay="100ms">
-                    <h5 class="section-title__tagline">
-                        Our Team
-                        <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
-                            <g clip-path="url(#clip0_324_36194)">
-                                <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
-                                <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
-                                <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
-                                <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
-                            </g>
-                        </svg>
-                    </h5>
-                    <h2 class="section-title__title">Meet Our Professional<br> Instructor</h2>
-                </div>
-                <!-- section-title -->
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="team-three__item">
-                            <div class="team-three__image">
-                                <img src="assets/images/team/team-3-1.jpg" alt="eduact">
-                            </div>
-                            <!-- /.team-image -->
-                            <svg viewBox="0 0 314 318" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 128.442C0 127.672 0.466088 126.978 1.17922 126.687L309.669 0.767858C311.736 -0.076079 314 1.44482 314 3.67798V161C314 247.709 243.709 318 157 318C70.2913 318 0 247.709 0 161V128.442Z" />
-                            </svg>
-                            <div class="team-three__content">
-                                <a class="team-three__rm" href="team-details.html"><span class="icon-arrow"></span></a>
-                                <!-- /.read-more-btn -->
-                                <h3 class="team-three__title">
-                                    <a href="team-details.html">Aleesha Brown</a>
-                                </h3>
-                                <!-- /.team-name -->
-                                <span class="team-three__designation">Web Developer</span>
-                                <!-- /.team-designation -->
-                                <div class="team-three__social">
-                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                                </div>
-                                <!-- /.team-social -->
-                            </div>
-                            <!-- /.team-content -->
-                        </div>
-                        <!-- /.team-three -->
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="team-three__item">
-                            <div class="team-three__image">
-                                <img src="assets/images/team/team-3-2.jpg" alt="eduact">
-                            </div>
-                            <!-- /.team-image -->
-                            <svg viewBox="0 0 314 318" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 128.442C0 127.672 0.466088 126.978 1.17922 126.687L309.669 0.767858C311.736 -0.076079 314 1.44482 314 3.67798V161C314 247.709 243.709 318 157 318C70.2913 318 0 247.709 0 161V128.442Z" />
-                            </svg>
-                            <div class="team-three__content">
-                                <a class="team-three__rm" href="team-details.html"><span class="icon-arrow"></span></a>
-                                <!-- /.read-more-btn -->
-                                <h3 class="team-three__title">
-                                    <a href="team-details.html">Devon Lane</a>
-                                </h3>
-                                <!-- /.team-name -->
-                                <span class="team-three__designation">UI/UX Designer</span>
-                                <!-- /.team-designation -->
-                                <div class="team-three__social">
-                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                                </div>
-                                <!-- /.team-social -->
-                            </div>
-                            <!-- /.team-content -->
-                        </div>
-                        <!-- /.team-three -->
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="team-three__item">
-                            <div class="team-three__image">
-                                <img src="assets/images/team/team-3-3.jpg" alt="eduact">
-                            </div>
-                            <!-- /.team-image -->
-                            <svg viewBox="0 0 314 318" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 128.442C0 127.672 0.466088 126.978 1.17922 126.687L309.669 0.767858C311.736 -0.076079 314 1.44482 314 3.67798V161C314 247.709 243.709 318 157 318C70.2913 318 0 247.709 0 161V128.442Z" />
-                            </svg>
-                            <div class="team-three__content">
-                                <a class="team-three__rm" href="team-details.html"><span class="icon-arrow"></span></a>
-                                <!-- /.read-more-btn -->
-                                <h3 class="team-three__title">
-                                    <a href="team-details.html">Mike Hardson</a>
-                                </h3>
-                                <!-- /.team-name -->
-                                <span class="team-three__designation">Designer</span>
-                                <!-- /.team-designation -->
-                                <div class="team-three__social">
-                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                                </div>
-                                <!-- /.team-social -->
-                            </div>
-                            <!-- /.team-content -->
-                        </div>
-                        <!-- /.team-three -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Team End -->
-        <!-- Blog Start -->
-        <section class="blog-three" style="background-image: url(assets/images/shapes/blog-bg-3.jpg);">
-            <div class="container">
-                <div class="section-title text-center wow fadeInUp" data-wow-delay="100ms">
-                    <h5 class="section-title__tagline">
-                        Latest Blog
-                        <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
-                            <g clip-path="url(#clip0_324_36194)">
-                                <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
-                                <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
-                                <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
-                                <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
-                            </g>
-                        </svg>
-                    </h5>
-                    <h2 class="section-title__title">Latest Updates & Articles</h2>
-                </div>
-                <!-- section-title -->
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="blog-three__item">
-                            <div class="blog-three__image">
-                                <img src="assets/images/blog/blog-3-1.jpg" alt="eduact">
-                                <a href="blog-details-right.html"></a>
-                            </div>
-                            <!-- /.blog-image -->
-                            <div class="blog-three__content">
-                                <div class="blog-three__top-meta">
-                                    <div class="blog-three__cats"><a href="blog-list-right.html">Development</a></div>
-                                    <!-- /.blog-cats -->
-                                    <div class="blog-three__date">26 Mar, 2023</div>
-                                    <!-- /.blog-date -->
-                                </div>
-                                <h3 class="blog-three__title">
-                                    <a href="blog-details-right.html">The Complete Web Developer Guideline 2023</a>
-                                </h3>
-                                <!-- /.blog-title -->
-                                <div class="blog-three__meta">
-                                    <div class="blog-three__meta__author">
-                                        <img src="assets/images/blog/author-1.png" alt="eduact" />
-                                        <a href="blog-list-right.html">Darrell Steward</a> Fronted Developer
-                                    </div>
-                                    <a class="blog-three__rm" href="blog-details-right.html"><span class="icon-arrow"></span></a>
-                                    <!-- /.read-more-btn -->
-                                </div>
-                                <!-- /.blog-meta -->
-                            </div>
-                            <!-- /.blog-content -->
-                        </div>
-                        <!-- /.blog-card-one -->
-                    </div>
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="blog-three__item">
-                            <div class="blog-three__image">
-                                <img src="assets/images/blog/blog-3-2.jpg" alt="eduact">
-                                <a href="blog-details.html"></a>
-                            </div>
-                            <!-- /.blog-image -->
-                            <div class="blog-three__content">
-                                <div class="blog-three__top-meta">
-                                    <div class="blog-three__cats"><a href="blog-list.html">Development</a></div>
-                                    <!-- /.blog-cats -->
-                                    <div class="blog-three__date">26 Mar, 2023</div>
-                                    <!-- /.blog-date -->
-                                </div>
-                                <h3 class="blog-three__title">
-                                    <a href="blog-details.html">Introducing the Latest Tech Features in your Business</a>
-                                </h3>
-                                <!-- /.blog-title -->
-                                <div class="blog-three__meta">
-                                    <div class="blog-three__meta__author">
-                                        <img src="assets/images/blog/author-1.png" alt="eduact" />
-                                        <a href="blog-list.html">Darrell Steward</a> Fronted Developer
-                                    </div>
-                                    <a class="blog-three__rm" href="blog-details.html"><span class="icon-arrow"></span></a>
-                                    <!-- /.read-more-btn -->
-                                </div>
-                                <!-- /.blog-meta -->
-                            </div>
-                            <!-- /.blog-content -->
-                        </div>
-                        <!-- /.blog-card-one -->
-                    </div>
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="blog-three__item">
-                            <div class="blog-three__image">
-                                <img src="assets/images/blog/blog-3-3.jpg" alt="eduact">
-                                <a href="blog-details-left.html"></a>
-                            </div>
-                            <!-- /.blog-image -->
-                            <div class="blog-three__content">
-                                <div class="blog-three__top-meta">
-                                    <div class="blog-three__cats"><a href="blog-list-left.html">Development</a></div>
-                                    <!-- /.blog-cats -->
-                                    <div class="blog-three__date">26 Mar, 2023</div>
-                                    <!-- /.blog-date -->
-                                </div>
-                                <h3 class="blog-three__title">
-                                    <a href="blog-details-left.html">Basic Rules of Running Web Agency Business Solution</a>
-                                </h3>
-                                <!-- /.blog-title -->
-                                <div class="blog-three__meta">
-                                    <div class="blog-three__meta__author">
-                                        <img src="assets/images/blog/author-1.png" alt="eduact" />
-                                        <a href="blog-list-left.html">Darrell Steward</a> Fronted Developer
-                                    </div>
-                                    <a class="blog-three__rm" href="blog-details-left.html"><span class="icon-arrow"></span></a>
-                                    <!-- /.read-more-btn -->
-                                </div>
-                                <!-- /.blog-meta -->
-                            </div>
-                            <!-- /.blog-content -->
-                        </div>
-                        <!-- /.blog-card-one -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Blog End -->
-        <div class="client-carousel @@extraClassName">
-            <div class="container">
-                <div class="client-carousel__one eduact-owl__carousel owl-theme owl-carousel" data-owl-options='{
-            "items": 5,
-            "margin": 65,
-            "smartSpeed": 700,
-            "loop":true,
-            "autoplay": 6000,
-            "nav":false,
-            "dots":false,
-            "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
-            "responsive":{
-                "0":{
-                    "items":1,
-                    "margin": 0
-                },
-                "450":{
-                    "items":2,
-                    "margin": 0
-                },
-                "768":{
-                    "items":3,
-                    "margin": 40
-                },
-                "992":{
-                    "items": 4,
-                    "margin": 40
-                },
-                "1200":{
-                    "items": 5
-                }
-            }
-            }'>
-                    <div class="client-carousel__one__item">
-                        <img class="client-carousel__normal" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                        <img class="client-carousel__hover" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                    </div>
-                    <!-- /.owl-slide-item-->
-                    <div class="client-carousel__one__item">
-                        <img class="client-carousel__normal" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                        <img class="client-carousel__hover" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                    </div>
-                    <!-- /.owl-slide-item-->
-                    <div class="client-carousel__one__item">
-                        <img class="client-carousel__normal" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                        <img class="client-carousel__hover" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                    </div>
-                    <!-- /.owl-slide-item-->
-                    <div class="client-carousel__one__item">
-                        <img class="client-carousel__normal" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                        <img class="client-carousel__hover" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                    </div>
-                    <!-- /.owl-slide-item-->
-                    <div class="client-carousel__one__item">
-                        <img class="client-carousel__normal" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                        <img class="client-carousel__hover" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                    </div>
-                    <!-- /.owl-slide-item-->
-                    <div class="client-carousel__one__item">
-                        <img class="client-carousel__normal" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                        <img class="client-carousel__hover" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                    </div>
-                    <!-- /.owl-slide-item-->
-                    <div class="client-carousel__one__item">
-                        <img class="client-carousel__normal" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                        <img class="client-carousel__hover" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                    </div>
-                    <!-- /.owl-slide-item-->
-                    <div class="client-carousel__one__item">
-                        <img class="client-carousel__normal" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                        <img class="client-carousel__hover" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                    </div>
-                    <!-- /.owl-slide-item-->
-                    <div class="client-carousel__one__item">
-                        <img class="client-carousel__normal" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                        <img class="client-carousel__hover" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                    </div>
-                    <!-- /.owl-slide-item-->
-                    <div class="client-carousel__one__item">
-                        <img class="client-carousel__normal" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                        <img class="client-carousel__hover" src="assets/images/brand/brand-1-1.png" alt="eduact">
-                    </div>
-                    <!-- /.owl-slide-item-->
-                </div>
-                <!-- /.thm-owl__slider -->
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.client-carousel -->
         <!-- Call To Action Start -->
         <section class="cta-three" data-jarallax data-speed="0.3" data-imgPosition="50% -100%">
             <div class="cta-three__bg jarallax-img" style="background-image: url(assets/images/backgrounds/cta-bg-3.jpg);"></div>
@@ -1346,80 +1287,359 @@
                         <h3 class="cta-three__title"><span>Skills Certificate</span><br> From <span>ALP Business School</span></h3>
                     </div>
                     <div class="col-md-6 wow fadeInRight" data-wow-delay="300ms">
-                        <div class="cta-three__btn"><a href="contact.html" class="eduact-btn"><span class="eduact-btn__curve"></span>Get In Touch</a></div>
+                        <div class="cta-three__btn"><a href="#contact" class="eduact-btn"><span class="eduact-btn__curve"></span>Get In Touch</a></div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Call To Action End -->
 
+        <!-- Contact Us Start -->
+        <style>
+            .alp-contact-section {
+                padding: 90px 0 80px;
+                background: #f8f9fc;
+                position: relative;
+            }
+            .alp-contact-section::before {
+                content: '';
+                position: absolute;
+                top: 0; left: 0; right: 0;
+                height: 4px;
+                background: linear-gradient(90deg, #0b1d3e, #1a4fd8, #0b1d3e);
+            }
+            .alp-contact-wrap {
+                background: #ffffff;
+                border-radius: 18px;
+                box-shadow: 0 10px 60px rgba(11,29,62,0.10);
+                overflow: hidden;
+            }
+            .alp-contact-info {
+                background: linear-gradient(135deg, #050d1f 0%, #0b1d3e 60%, #112660 100%);
+                padding: 52px 40px;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+            }
+            .alp-contact-info::before {
+                content: '';
+                position: absolute;
+                bottom: -80px; right: -80px;
+                width: 300px; height: 300px;
+                border-radius: 50%;
+                background: rgba(26,79,216,0.12);
+            }
+            .alp-contact-info__title {
+                font-size: 26px;
+                font-weight: 800;
+                color: #ffffff;
+                margin: 0 0 12px;
+                line-height: 1.3;
+            }
+            .alp-contact-info__text {
+                font-size: 14px;
+                color: rgba(255,255,255,0.65);
+                line-height: 1.75;
+                margin-bottom: 36px;
+            }
+            .alp-contact-info__item {
+                display: flex;
+                align-items: flex-start;
+                gap: 14px;
+                margin-bottom: 24px;
+            }
+            .alp-contact-info__item-icon {
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background: rgba(26,79,216,0.30);
+                border: 1px solid rgba(26,79,216,0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                color: #6ea8ff;
+                flex-shrink: 0;
+            }
+            .alp-contact-info__item-text p {
+                margin: 0;
+                font-size: 12px;
+                color: rgba(255,255,255,0.5);
+                text-transform: uppercase;
+                letter-spacing: 0.8px;
+                font-weight: 600;
+            }
+            .alp-contact-info__item-text a,
+            .alp-contact-info__item-text span {
+                font-size: 14px;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.2s;
+            }
+            .alp-contact-info__item-text a:hover { color: #6ea8ff; }
+            /* Form side */
+            .alp-contact-form-side {
+                padding: 52px 44px;
+            }
+            .alp-contact-form-side .section-title__tagline {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: #1a4fd8;
+            }
+            .alp-contact-form-side .section-title__title {
+                font-size: clamp(24px, 3vw, 34px);
+                font-weight: 800;
+                color: #0b1d3e;
+                margin: 10px 0 28px;
+                line-height: 1.2;
+            }
+            .alp-cf-group {
+                margin-bottom: 20px;
+            }
+            .alp-cf-group label {
+                display: block;
+                font-size: 13px;
+                font-weight: 700;
+                color: #0b1d3e;
+                margin-bottom: 7px;
+                letter-spacing: 0.3px;
+            }
+            .alp-cf-control {
+                width: 100%;
+                border: 1.5px solid #e2e8f0;
+                border-radius: 8px;
+                padding: 12px 16px;
+                font-size: 14px;
+                color: #0b1d3e;
+                background: #f8f9fc;
+                transition: border-color 0.2s, background 0.2s;
+                outline: none;
+                font-family: inherit;
+            }
+            .alp-cf-control:focus {
+                border-color: #1a4fd8;
+                background: #ffffff;
+                box-shadow: 0 0 0 3px rgba(26,79,216,0.08);
+            }
+            textarea.alp-cf-control {
+                resize: vertical;
+                min-height: 120px;
+            }
+            .alp-cf-submit {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                background: #1a4fd8;
+                color: #ffffff;
+                font-size: 15px;
+                font-weight: 700;
+                padding: 14px 36px;
+                border-radius: 50px;
+                border: none;
+                cursor: pointer;
+                letter-spacing: 0.4px;
+                transition: background 0.2s ease, transform 0.2s ease;
+                margin-top: 6px;
+            }
+            .alp-cf-submit:hover {
+                background: #0b1d3e;
+                transform: translateY(-2px);
+            }
+            .alp-cf-success {
+                display: none;
+                background: #edfaf1;
+                border: 1px solid #6ee7a0;
+                border-radius: 10px;
+                padding: 18px 24px;
+                color: #166534;
+                font-size: 15px;
+                font-weight: 600;
+                margin-top: 20px;
+                text-align: center;
+            }
+            @media (max-width: 991px) {
+                .alp-contact-form-side { padding: 36px 28px; }
+                .alp-contact-info { padding: 40px 28px; }
+            }
+        </style>
+        <section class="alp-contact-section" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-10">
+                        <div class="alp-contact-wrap">
+                            <div class="row g-0">
+                                <!-- Info Panel -->
+                                <div class="col-lg-4 wow fadeInLeft" data-wow-delay="100ms">
+                                    <div class="alp-contact-info">
+                                        <h3 class="alp-contact-info__title">Let's Start a Conversation</h3>
+                                        <p class="alp-contact-info__text">We're here to help you find the right programme. Reach out and our team will get back to you promptly.</p>
+                                        <div class="alp-contact-info__item">
+                                            <div class="alp-contact-info__item-icon"><i class="fas fa-phone-alt"></i></div>
+                                            <div class="alp-contact-info__item-text">
+                                                <p>Phone</p>
+                                                <a href="tel:+441234567890">+44 (0) 123 456 7890</a>
+                                            </div>
+                                        </div>
+                                        <div class="alp-contact-info__item">
+                                            <div class="alp-contact-info__item-icon"><i class="fas fa-envelope"></i></div>
+                                            <div class="alp-contact-info__item-text">
+                                                <p>Email</p>
+                                                <a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a>
+                                            </div>
+                                        </div>
+                                        <div class="alp-contact-info__item">
+                                            <div class="alp-contact-info__item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                            <div class="alp-contact-info__item-text">
+                                                <p>Location</p>
+                                                <span>London, United Kingdom</span>
+                                            </div>
+                                        </div>
+                                        <div class="alp-contact-info__item">
+                                            <div class="alp-contact-info__item-icon"><i class="fas fa-clock"></i></div>
+                                            <div class="alp-contact-info__item-text">
+                                                <p>Office Hours</p>
+                                                <span>Mon – Fri, 9am – 6pm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Form Panel -->
+                                <div class="col-lg-8 wow fadeInRight" data-wow-delay="200ms">
+                                    <div class="alp-contact-form-side">
+                                        <h5 class="section-title__tagline"><i class="fas fa-paper-plane"></i> Send Us a Message</h5>
+                                        <h2 class="section-title__title">Contact Us</h2>
+                                        <form id="alpContactForm" novalidate>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="alp-cf-group">
+                                                        <label for="cf-name">Full Name <span style="color:#1a4fd8;">*</span></label>
+                                                        <input type="text" id="cf-name" class="alp-cf-control" placeholder="e.g. John Smith" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="alp-cf-group">
+                                                        <label for="cf-email">Email Address <span style="color:#1a4fd8;">*</span></label>
+                                                        <input type="email" id="cf-email" class="alp-cf-control" placeholder="e.g. john@example.com" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="alp-cf-group">
+                                                        <label for="cf-phone">Phone Number</label>
+                                                        <input type="tel" id="cf-phone" class="alp-cf-control" placeholder="e.g. +44 7700 900000">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="alp-cf-group">
+                                                        <label for="cf-subject">Subject</label>
+                                                        <input type="text" id="cf-subject" class="alp-cf-control" placeholder="e.g. Course Enquiry">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="alp-cf-group">
+                                                        <label for="cf-message">Message <span style="color:#1a4fd8;">*</span></label>
+                                                        <textarea id="cf-message" class="alp-cf-control" placeholder="Tell us how we can help you..." required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="alp-cf-submit">
+                                                        Send Message <i class="fas fa-paper-plane"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="alp-cf-success" id="alpCFSuccess">
+                                            <i class="fas fa-check-circle" style="margin-right:8px;"></i> Thank you! Your message has been sent. We'll be in touch shortly.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.getElementById('alpContactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                this.style.display = 'none';
+                document.getElementById('alpCFSuccess').style.display = 'block';
+            });
+        </script>
+        <!-- Contact Us End -->
+
         <footer class="main-footer-two">
             <div class="main-footer-two__bg" style="background-image: url(assets/images/shapes/footer-bg-2.png);"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-4 col-md-5 wow fadeInUp" data-wow-delay="100ms">
+                    <!-- Col 1: Logo + About -->
+                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                         <div class="main-footer-two__about">
-                            <a href="index.html" class="main-footer-two__logo">
-                                <img src="assets/images/apl_logo.png" alt="ALP Business School" height="50" style="width:auto;max-width:180px;object-fit:contain;">
+                            <a href="index.html" class="main-footer-two__logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:18px;">
+                                <img src="assets/images/apl_logo.png" alt="ALP Business School" height="54" style="width:auto;max-width:60px;object-fit:contain;">
+                                <div style="line-height:1.2;">
+                                    <div style="font-size:17px;font-weight:800;color:#ffffff;letter-spacing:0.3px;">ALP Business School</div>
+                                    <div style="font-size:11px;color:#1a4fd8;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;">Up Lift Your Career</div>
+                                </div>
                             </a>
-                            <!-- /.footer-logo -->
+                            <p style="color:#aab3c6;font-size:14px;line-height:1.7;margin-bottom:18px;">Ofqual-regulated professional qualifications from Level 3 to Level 7 � delivered fully online to learners across the UK and worldwide.</p>
                             <ul class="main-footer-two__info-list">
-                                <li><span class="icon-Location"></span>6391 Elgin St. Celina, Delaware 10299</li>
-                                <li><span class="icon-Telephone"></span><a href="tel:3035550105">(303) 555-0105</a></li>
-                                <li><span class="icon-Email"></span><a href="mailto:michael.mitc@example.com">michael.mitc@example.com</a></li>
+                                <li><span class="icon-Location"></span>London, United Kingdom</li>
+                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456 7890</a></li>
+                                <li><span class="icon-Email"></span><a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
                             </ul>
                             <div class="main-footer-two__social">
-                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://twitter.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                             </div>
-                            <!-- /.footer-social -->
                         </div>
-                        <!-- footer-top -->
                     </div>
-                    <div class="col-xl-3 col-md-4 wow fadeInUp" data-wow-delay="200ms">
+                    <!-- Col 2: Quick Links -->
+                    <div class="col-xl-2 col-md-3 col-6 wow fadeInUp" data-wow-delay="200ms">
                         <div class="main-footer-two__navmenu main-footer-two__widget01">
                             <h3 class="main-footer-two__title">Quick Links</h3>
                             <ul>
-                                <li><a href="course.html">Latest Courses</a></li>
-                                <li><a href="about.html">Mission & Vision</a></li>
-                                <li><a href="services.html">Our Approach</a></li>
-                                <li><a href="team.html">Exclusive Advisors</a></li>
-                                <li><a href="team-become.html">Join a Carrer</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html#about">About Us</a></li>
+                                <li><a href="#courses">Our Courses</a></li>
+                                <li><a href="#contact">Contact Us</a></li>
+                                <li><a href="index.html#enrol">How to Enrol</a></li>
                             </ul>
-                            <!-- /.list-unstyled -->
                         </div>
-                        <!-- /.footer-menu -->
                     </div>
-                    <div class="col-xl-2 col-md-3 wow fadeInUp" data-wow-delay="300ms">
+                    <!-- Col 3: Our Courses -->
+                    <div class="col-xl-3 col-md-3 col-6 wow fadeInUp" data-wow-delay="300ms">
                         <div class="main-footer-two__navmenu main-footer-two__widget02">
-                            <h3 class="main-footer-two__title">Explore</h3>
+                            <h3 class="main-footer-two__title">Our Courses</h3>
                             <ul>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="course.html">Upcoming Events</a></li>
-                                <li><a href="blog-grid-right.html">Blog & News</a></li>
-                                <li><a href="faq.html">FAQ Question</a></li>
-                                <li><a href="pricing.html">Testimonial</a></li>
-                                <li><a href="contact.html">Privacy Policy</a></li>
+                                <li><a href="course-intro-management-l3.html">Intro to Management (L3)</a></li>
+                                <li><a href="course-business-management-l3.html">Business Management (L3)</a></li>
+                                <li><a href="course-business-management-l45.html">Business Management (L4&amp;5)</a></li>
+                                <li><a href="course-business-admin-l6.html">Business Admin (L6)</a></li>
+                                <li><a href="course-hrm-l45.html">HR Management (L4&amp;5)</a></li>
+                                <li><a href="course-teacher-training-l5.html">Teacher Training (L5)</a></li>
                             </ul>
-                            <!-- /.list-unstyled -->
                         </div>
-                        <!-- /.footer-menu -->
                     </div>
-                    <div class="col-xl-3 col-md-12 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="main-footer-two__gallery">
-                            <h3 class="main-footer-two__title">Gallery</h3>
-                            <div class="main-footer-two__galleries">
-                                <a class="img-popup" href="assets/images/gallery/fg-1.jpg"><img src="assets/images/gallery/fg-1.jpg" alt="eduact"></a>
-                                <a class="img-popup" href="assets/images/gallery/fg-2.jpg"><img src="assets/images/gallery/fg-2.jpg" alt="eduact"></a>
-                                <a class="img-popup" href="assets/images/gallery/fg-3.jpg"><img src="assets/images/gallery/fg-3.jpg" alt="eduact"></a>
-                                <a class="img-popup" href="assets/images/gallery/fg-4.jpg"><img src="assets/images/gallery/fg-4.jpg" alt="eduact"></a>
-                                <a class="img-popup" href="assets/images/gallery/fg-5.jpg"><img src="assets/images/gallery/fg-5.jpg" alt="eduact"></a>
-                                <a class="img-popup" href="assets/images/gallery/fg-6.jpg"><img src="assets/images/gallery/fg-6.jpg" alt="eduact"></a>
-                            </div>
+                    <!-- Col 4: Contact Info -->
+                    <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="main-footer-two__navmenu">
+                            <h3 class="main-footer-two__title">Get In Touch</h3>
+                            <ul class="main-footer-two__info-list" style="margin-bottom:20px;">
+                                <li><span class="icon-Location"></span>London, United Kingdom</li>
+                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456 7890</a></li>
+                                <li><span class="icon-Email"></span><a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
+                                <li><span class="icon-clock" style="font-family:inherit;">&#128337;</span>&nbsp;Mon � Fri: 9:00am � 6:00pm</li>
+                            </ul>
+                            <a href="#contact" class="eduact-btn eduact-btn-second" style="font-size:13px;padding:10px 22px;"><span class="eduact-btn__curve"></span>Enquire Now <i class="icon-arrow"></i></a>
                         </div>
-                        <!-- /.gallery -->
                     </div>
                 </div>
                 <!-- /.row -->
@@ -1455,11 +1675,11 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                    <a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:+9236809850">+92 (3680) - 9850</a>
+                    <a href="tel:+441234567890">+44 (0) 123 456 7890</a>
                 </li>
             </ul>
             <!-- /.mobile-nav__contact -->

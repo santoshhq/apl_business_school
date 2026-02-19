@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply Now | ALP Business School</title>
+    <meta name="description" content="Apply online for an Ofqual-regulated qualification at ALP Business School. Choose from Level 3 to Level 7 programmes in Business, HR, Teaching and more." />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/eduact-icons/style.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/eduact.css" />
+    <style>
+        /* ── Nav override: solid white on inner pages ── */
+        .main-menu.main-menu-with-bg {
+            background: #ffffff !important;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+        }
+        .main-menu.main-menu-with-bg .main-menu__list > li > a { color: #1a1a2e !important; }
+        .main-menu.main-menu-with-bg .main-menu__list > li > a:hover { color: #1a4fd8 !important; }
+
+        /* ── Page Banner ── */
+        .alp-page-banner {
+            background: linear-gradient(135deg, #050d1f 0%, #0b1d3e 60%, #162755 100%);
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .alp-page-banner::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 420px; height: 420px;
+            border-radius: 50%;
+            background: rgba(249,115,22,.09);
+        }
+        .alp-page-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -60px; left: -60px;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.03);
+        }
+        .alp-page-banner__breadcrumb { font-size: 13px; color: rgba(255,255,255,.65); margin-bottom: 14px; }
+        .alp-page-banner__breadcrumb a { color: rgba(255,255,255,.65); text-decoration: none; }
+        .alp-page-banner__breadcrumb a:hover { color: #1a4fd8; }
+        .alp-page-banner__badge {
+            display: inline-block;
+            background: #1a4fd8;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 16px;
+            border-radius: 30px;
+            margin-bottom: 18px;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+        .alp-page-banner__title { font-size: 40px; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 14px; }
+        .alp-page-banner__subtitle { font-size: 16px; color: rgba(255,255,255,.78); max-width: 600px; line-height: 1.7; }
+        @media(max-width:767px) { .alp-page-banner__title { font-size: 26px; } }
+
+        /* ── Apply Section ── */
+        .alp-apply-section { padding: 80px 0 90px; background: #f7f8fc; }
+
+        /* ── Form Card ── */
+        .alp-apply-form-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 6px 32px rgba(11,29,62,.09);
+            padding: 42px 40px 48px;
+        }
+        .alp-apply-form-card h2 {
+            font-size: 24px;
+            font-weight: 800;
+            color: #0b1d3e;
+            margin-bottom: 6px;
+        }
+        .alp-apply-form-card > p {
+            font-size: 15px;
+            color: #6b7280;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .alp-form-section-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a4fd8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 30px 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .alp-form-section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e8ecf2;
+        }
+        .alp-form-group { margin-bottom: 20px; }
+        .alp-form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 7px;
+            letter-spacing: .2px;
+        }
+        .alp-form-group label span { color: #1a4fd8; }
+        .alp-form-control {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #1a1a2e;
+            background: #f9fafb;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color .2s, box-shadow .2s;
+            font-family: inherit;
+        }
+        .alp-form-control:focus {
+            border-color: #1a4fd8;
+            box-shadow: 0 0 0 3px rgba(249,115,22,.12);
+            background: #fff;
+        }
+        .alp-form-control::placeholder { color: #9ca3af; }
+        select.alp-form-control { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b7280'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-size: 18px; padding-right: 40px; }
+        textarea.alp-form-control { resize: vertical; min-height: 110px; }
+        .alp-form-check { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+        .alp-form-check input[type="checkbox"] { width: 17px; height: 17px; margin-top: 2px; accent-color: #1a4fd8; flex-shrink: 0; cursor: pointer; }
+        .alp-form-check label { font-size: 13.5px; color: #4b5563; cursor: pointer; line-height: 1.55; }
+        .alp-form-check label a { color: #1a4fd8; text-decoration: underline; }
+        .alp-submit-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #0b1d3e;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 15px 36px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: background .25s, transform .2s;
+            letter-spacing: .3px;
+            margin-top: 10px;
+        }
+        .alp-submit-btn:hover { background: #1a4fd8; transform: translateY(-2px); }
+        .alp-submit-btn i { font-size: 15px; }
+        @media(max-width:767px) {
+            .alp-apply-form-card { padding: 28px 20px 32px; }
+        }
+
+        /* ── Sidebar ── */
+        .alp-apply-sidebar { position: sticky; top: 104px; }
+        .alp-sidebar-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 6px 28px rgba(11,29,62,.09);
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+        .alp-sidebar-card__header {
+            background: linear-gradient(135deg, #0b1d3e, #1a3a6e);
+            padding: 22px 24px;
+        }
+        .alp-sidebar-card__header h3 { font-size: 17px; font-weight: 800; color: #fff; margin: 0; }
+        .alp-sidebar-card__header p { font-size: 13px; color: rgba(255,255,255,.7); margin: 5px 0 0; }
+        .alp-sidebar-card__body { padding: 22px 24px 26px; }
+        .alp-sidebar-step {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+        .alp-sidebar-step:last-child { margin-bottom: 0; }
+        .alp-sidebar-step__num {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #1a4fd8;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .alp-sidebar-step__text strong { display: block; font-size: 14px; font-weight: 700; color: #0b1d3e; margin-bottom: 3px; }
+        .alp-sidebar-step__text span { font-size: 13px; color: #6b7280; line-height: 1.5; }
+
+        .alp-sidebar-info { padding: 20px 24px; }
+        .alp-sidebar-info-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 11px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+        }
+        .alp-sidebar-info-row:last-child { border-bottom: none; }
+        .alp-sidebar-info-row i { width: 18px; color: #1a4fd8; font-size: 14px; text-align: center; flex-shrink: 0; }
+        .alp-sidebar-info-row span { color: #374151; }
+        .alp-sidebar-info-row a { color: #0b1d3e; font-weight: 600; text-decoration: none; }
+        .alp-sidebar-info-row a:hover { color: #1a4fd8; }
+
+        .alp-trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px 24px 22px;
+            border-top: 1px solid #f0f0f0;
+        }
+        .alp-trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f0f5ff;
+            color: #0b1d3e;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+        .alp-trust-badge i { color: #1a4fd8; font-size: 12px; }
+
+        /* ── Success message ── */
+        .alp-form-success {
+            display: none;
+            text-align: center;
+            padding: 50px 30px;
+        }
+        .alp-form-success i { font-size: 56px; color: #22c55e; margin-bottom: 18px; }
+        .alp-form-success h3 { font-size: 22px; font-weight: 800; color: #0b1d3e; margin-bottom: 10px; }
+        .alp-form-success p { font-size: 15px; color: #6b7280; }
+    </style>
+</head>
+<body class="custom-cursor">
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+    <div class="preloader">
+        <div class="preloader__image" style="background-image: url(assets/images/loader.png);"></div>
+    </div>
+
+    <div class="page-wrapper">
+
+        <!-- Header -->
+        <header class="main-header">
+            <nav class="main-menu main-menu-with-bg">
+                <div class="container">
+                    <div class="main-menu__logo">
+                        <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+                            <img src="assets/images/apl_logo.png" height="58" style="width:auto;max-width:62px;object-fit:contain;flex-shrink:0;" alt="ALP Business School">
+                            <div style="line-height:1.25;">
+                                <span style="display:block;font-size:17px;font-weight:800;color:#0b1d3e;letter-spacing:0.2px;">ALP Business School</span>
+                                <span style="display:block;font-size:11.5px;font-weight:600;color:#1a4fd8;letter-spacing:1px;text-transform:uppercase;">Up Lift Your Career</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="main-menu__nav">
+                        <ul class="main-menu__list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="#">Courses</a>
+                                <ul>
+                                    <li><a href="course-intro-management-l3.html">Introduction to Management (Level 3)</a></li>
+                                    <li><a href="course-business-management-l3.html">Business Management (Level 3)</a></li>
+                                    <li><a href="course-business-management-l45.html">Business Management (Levels 4 &amp; 5)</a></li>
+                                    <li><a href="course-business-admin-l6.html">Business &amp; Administrative Management (Level 6)</a></li>
+                                    <li><a href="course-hrm-l45.html">Human Resource Management (Levels 4 &amp; 5)</a></li>
+                                    <li><a href="course-teacher-training-l5.html">Teacher Training (Level 5)</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="main-menu__right">
+                        <a href="#" class="main-menu__toggler mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                        <a href="apply-now.html" style="display:inline-flex;align-items:center;gap:9px;background:#1a4fd8;color:#ffffff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:50px;text-decoration:none;margin-right:8px;letter-spacing:0.3px;">Apply Now <i class="fas fa-sign-in-alt" style="font-size:13px;"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu main-menu-with-bg">
+            <div class="sticky-header__content"></div>
+        </div>
+
+        <!-- Page Banner -->
+        <section class="alp-page-banner">
+            <div class="container">
+                <div class="alp-page-banner__breadcrumb">
+                    <a href="index.html">Home</a> &nbsp;/&nbsp; Apply Now
+                </div>
+                <div class="alp-page-banner__badge">Applications Open</div>
+                <h1 class="alp-page-banner__title">Apply Now &amp; Start Your Journey</h1>
+                <p class="alp-page-banner__subtitle">Complete the form below and one of our enrolment advisers will be in touch within one working day to guide you through the next steps.</p>
+            </div>
+        </section>
+
+        <!-- Apply Section -->
+        <section class="alp-apply-section">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Form Column -->
+                    <div class="col-lg-8 wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="alp-apply-form-card">
+                            <h2>Your Application</h2>
+                            <p>Fields marked with <span style="color:#1a4fd8;">*</span> are required. All information is kept strictly confidential.</p>
+
+                            <form id="alpApplyForm" novalidate>
+
+                                <!-- Personal Details -->
+                                <div class="alp-form-section-title"><i class="fas fa-user"></i> Personal Details</div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="alp-form-group">
+                                            <label>First Name <span>*</span></label>
+                                            <input type="text" class="alp-form-control" placeholder="e.g. Sarah" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="alp-form-group">
+                                            <label>Last Name <span>*</span></label>
+                                            <input type="text" class="alp-form-control" placeholder="e.g. Thompson" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="alp-form-group">
+                                            <label>Email Address <span>*</span></label>
+                                            <input type="email" class="alp-form-control" placeholder="you@email.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="alp-form-group">
+                                            <label>Phone Number <span>*</span></label>
+                                            <input type="tel" class="alp-form-control" placeholder="+44 7700 900000" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="alp-form-group">
+                                            <label>Date of Birth</label>
+                                            <input type="date" class="alp-form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="alp-form-group">
+                                            <label>Nationality / Country of Residence</label>
+                                            <input type="text" class="alp-form-control" placeholder="e.g. United Kingdom">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Course Selection -->
+                                <div class="alp-form-section-title"><i class="fas fa-graduation-cap"></i> Course Selection</div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="alp-form-group">
+                                            <label>Which programme are you applying for? <span>*</span></label>
+                                            <select class="alp-form-control" required>
+                                                <option value="" disabled selected>— Select a programme —</option>
+                                                <option>Introduction to Management (Level 3) — 60 Credits</option>
+                                                <option>Business Management (Level 3) — 120 Credits</option>
+                                                <option>Business Management (Levels 4 &amp; 5) — 240 Credits</option>
+                                                <option>Business &amp; Administrative Management (Level 6) — 120 Credits</option>
+                                                <option>Human Resource Management (Levels 4 &amp; 5) — 240 Credits</option>
+                                                <option>Teacher Training (Level 5) — 120 Credits</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="alp-form-group">
+                                            <label>Preferred Start Date</label>
+                                            <select class="alp-form-control">
+                                                <option value="" disabled selected>Select</option>
+                                                <option>As soon as possible</option>
+                                                <option>Within 1 month</option>
+                                                <option>1–3 months</option>
+                                                <option>3–6 months</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="alp-form-group">
+                                            <label>How do you plan to fund your studies?</label>
+                                            <select class="alp-form-control">
+                                                <option value="" disabled selected>— Select funding method —</option>
+                                                <option>Self-funded</option>
+                                                <option>Employer-sponsored</option>
+                                                <option>ELCAS (Military funding)</option>
+                                                <option>Student loan / other funding</option>
+                                                <option>Not sure yet — please advise</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Education & Background -->
+                                <div class="alp-form-section-title"><i class="fas fa-book-open"></i> Education &amp; Background</div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="alp-form-group">
+                                            <label>Highest Qualification Achieved</label>
+                                            <select class="alp-form-control">
+                                                <option value="" disabled selected>— Select level —</option>
+                                                <option>GCSEs / O-Levels</option>
+                                                <option>A-Levels / BTEC</option>
+                                                <option>Level 3 / Foundation Diploma</option>
+                                                <option>Level 4 / HNC</option>
+                                                <option>Level 5 / HND / Foundation Degree</option>
+                                                <option>Bachelor's Degree (Level 6)</option>
+                                                <option>Master's Degree or above (Level 7+)</option>
+                                                <option>Other / International equivalent</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="alp-form-group">
+                                            <label>Current Employment Status</label>
+                                            <select class="alp-form-control">
+                                                <option value="" disabled selected>— Select —</option>
+                                                <option>Employed full-time</option>
+                                                <option>Employed part-time</option>
+                                                <option>Self-employed</option>
+                                                <option>Military / Armed Forces</option>
+                                                <option>Unemployed / seeking work</option>
+                                                <option>Student</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="alp-form-group">
+                                            <label>Brief Personal Statement</label>
+                                            <textarea class="alp-form-control" placeholder="Tell us a little about yourself, your career goals, and why you are applying for this programme..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- How did you hear -->
+                                <div class="alp-form-section-title"><i class="fas fa-bullhorn"></i> How Did You Hear About Us?</div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="alp-form-group">
+                                            <label>Source</label>
+                                            <select class="alp-form-control">
+                                                <option value="" disabled selected>— Select —</option>
+                                                <option>Google / Search Engine</option>
+                                                <option>Social Media (Facebook, LinkedIn, etc.)</option>
+                                                <option>Friend or Family Recommendation</option>
+                                                <option>Employer / Workplace</option>
+                                                <option>Armed Forces Network</option>
+                                                <option>Advertisement</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="alp-form-group">
+                                            <label>Any questions or special requirements?</label>
+                                            <input type="text" class="alp-form-control" placeholder="Optional — we will respond to all queries">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Consent -->
+                                <div style="margin-top:24px;padding:22px 22px 18px;background:#f9fafb;border-radius:10px;border:1.5px solid #e8ecf2;">
+                                    <div class="alp-form-check">
+                                        <input type="checkbox" id="chk-age" required>
+                                        <label for="chk-age">I confirm that I am 18 years of age or older. <span style="color:#1a4fd8;">*</span></label>
+                                    </div>
+                                    <div class="alp-form-check">
+                                        <input type="checkbox" id="chk-terms" required>
+                                        <label for="chk-terms">I have read and agree to ALP Business School's <a href="contact.html">Terms &amp; Conditions</a> and <a href="contact.html">Privacy Policy</a>. <span style="color:#1a4fd8;">*</span></label>
+                                    </div>
+                                    <div class="alp-form-check">
+                                        <input type="checkbox" id="chk-marketing">
+                                        <label for="chk-marketing">I would like to receive updates about courses, events and offers from ALP Business School. You can unsubscribe at any time.</label>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top:28px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+                                    <button type="submit" class="alp-submit-btn">
+                                        Submit Application <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                    <span style="font-size:13px;color:#9ca3af;"><i class="fas fa-lock" style="margin-right:5px;"></i>Your data is encrypted &amp; secure</span>
+                                </div>
+                            </form>
+
+                            <!-- Success Message -->
+                            <div class="alp-form-success" id="alpFormSuccess">
+                                <i class="fas fa-check-circle"></i>
+                                <h3>Application Received!</h3>
+                                <p>Thank you for applying to ALP Business School. One of our enrolment advisers will contact you within one working day to discuss your application and next steps.</p>
+                                <a href="index.html" class="eduact-btn" style="margin-top:20px;display:inline-flex;align-items:center;gap:8px;"><span class="eduact-btn__curve"></span>Back to Home <i class="icon-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4 wow fadeInRight" data-wow-delay="200ms">
+                        <div class="alp-apply-sidebar">
+
+                            <!-- How it works -->
+                            <div class="alp-sidebar-card">
+                                <div class="alp-sidebar-card__header">
+                                    <h3>How Enrolment Works</h3>
+                                    <p>Simple 4-step process</p>
+                                </div>
+                                <div class="alp-sidebar-card__body">
+                                    <div class="alp-sidebar-step">
+                                        <div class="alp-sidebar-step__num">1</div>
+                                        <div class="alp-sidebar-step__text">
+                                            <strong>Submit Application</strong>
+                                            <span>Complete this form — takes less than 5 minutes.</span>
+                                        </div>
+                                    </div>
+                                    <div class="alp-sidebar-step">
+                                        <div class="alp-sidebar-step__num">2</div>
+                                        <div class="alp-sidebar-step__text">
+                                            <strong>Adviser Call</strong>
+                                            <span>We'll call you within 1 working day to discuss your goals and confirm your place.</span>
+                                        </div>
+                                    </div>
+                                    <div class="alp-sidebar-step">
+                                        <div class="alp-sidebar-step__num">3</div>
+                                        <div class="alp-sidebar-step__text">
+                                            <strong>Enrolment &amp; Payment</strong>
+                                            <span>Choose a payment plan and complete your enrolment online.</span>
+                                        </div>
+                                    </div>
+                                    <div class="alp-sidebar-step">
+                                        <div class="alp-sidebar-step__num">4</div>
+                                        <div class="alp-sidebar-step__text">
+                                            <strong>Start Learning</strong>
+                                            <span>Access your course materials and begin studying at your own pace.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact info -->
+                            <div class="alp-sidebar-card">
+                                <div class="alp-sidebar-card__header">
+                                    <h3>Need Help Applying?</h3>
+                                    <p>Speak to our enrolment team</p>
+                                </div>
+                                <div class="alp-sidebar-info">
+                                    <div class="alp-sidebar-info-row">
+                                        <i class="fas fa-phone-alt"></i>
+                                        <span><a href="tel:+441234567890">+44 (0) 123 456 7890</a></span>
+                                    </div>
+                                    <div class="alp-sidebar-info-row">
+                                        <i class="fas fa-envelope"></i>
+                                        <span><a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></span>
+                                    </div>
+                                    <div class="alp-sidebar-info-row">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Mon – Fri: 9:00am – 6:00pm</span>
+                                    </div>
+                                    <div class="alp-sidebar-info-row">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>London, United Kingdom</span>
+                                    </div>
+                                </div>
+                                <div class="alp-trust-badges">
+                                    <div class="alp-trust-badge"><i class="fas fa-shield-alt"></i> Ofqual Regulated</div>
+                                    <div class="alp-trust-badge"><i class="fas fa-laptop"></i> 100% Online</div>
+                                    <div class="alp-trust-badge"><i class="fas fa-star"></i> Level 3–7</div>
+                                    <div class="alp-trust-badge"><i class="fas fa-medal"></i> ELCAS Eligible</div>
+                                </div>
+                            </div>
+
+                            <!-- CTA -->
+                            <div style="background:linear-gradient(135deg,#0b1d3e,#1a3a6e);border-radius:14px;padding:28px 24px;text-align:center;">
+                                <p style="color:rgba(255,255,255,.75);font-size:13px;margin-bottom:8px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;">Not ready to apply?</p>
+                                <h4 style="font-size:18px;font-weight:800;color:#fff;margin-bottom:18px;line-height:1.4;">Book a Free Advice Session</h4>
+                                <a href="contact.html" class="eduact-btn eduact-btn-second" style="font-size:13px;padding:11px 24px;display:inline-flex;align-items:center;gap:7px;"><span class="eduact-btn__curve"></span>Speak to an Adviser <i class="icon-arrow"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer-two">
+            <div class="main-footer-two__bg" style="background-image: url(assets/images/shapes/footer-bg-2.png);"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6">
+                        <div class="main-footer-two__about">
+                            <a href="index.html" class="main-footer-two__logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:18px;">
+                                <img src="assets/images/apl_logo.png" alt="ALP Business School" height="54" style="width:auto;max-width:60px;object-fit:contain;">
+                                <div style="line-height:1.2;">
+                                    <div style="font-size:17px;font-weight:800;color:#ffffff;letter-spacing:0.3px;">ALP Business School</div>
+                                    <div style="font-size:11px;color:#1a4fd8;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;">Up Lift Your Career</div>
+                                </div>
+                            </a>
+                            <p style="color:#aab3c6;font-size:14px;line-height:1.7;margin-bottom:18px;">Ofqual-regulated professional qualifications from Level 3 to Level 7 — delivered fully online to learners across the UK and worldwide.</p>
+                            <ul class="main-footer-two__info-list">
+                                <li><span class="icon-Location"></span>London, United Kingdom</li>
+                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456 7890</a></li>
+                                <li><span class="icon-Email"></span><a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
+                            </ul>
+                            <div class="main-footer-two__social">
+                                <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://twitter.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-3 col-6">
+                        <div class="main-footer-two__navmenu main-footer-two__widget01">
+                            <h3 class="main-footer-two__title">Quick Links</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html#about">About Us</a></li>
+                                <li><a href="index.html#courses">Our Courses</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="apply-now.html">Apply Now</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-3 col-6">
+                        <div class="main-footer-two__navmenu main-footer-two__widget02">
+                            <h3 class="main-footer-two__title">Our Courses</h3>
+                            <ul>
+                                <li><a href="course-intro-management-l3.html">Intro to Management (L3)</a></li>
+                                <li><a href="course-business-management-l3.html">Business Management (L3)</a></li>
+                                <li><a href="course-business-management-l45.html">Business Management (L4&amp;5)</a></li>
+                                <li><a href="course-business-admin-l6.html">Business Admin (L6)</a></li>
+                                <li><a href="course-hrm-l45.html">HR Management (L4&amp;5)</a></li>
+                                <li><a href="course-teacher-training-l5.html">Teacher Training (L5)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="main-footer-two__navmenu">
+                            <h3 class="main-footer-two__title">Get In Touch</h3>
+                            <ul class="main-footer-two__info-list" style="margin-bottom:20px;">
+                                <li><span class="icon-Location"></span>London, United Kingdom</li>
+                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456 7890</a></li>
+                                <li><span class="icon-Email"></span><a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
+                                <li>&#128337;&nbsp;Mon – Fri: 9:00am – 6:00pm</li>
+                            </ul>
+                            <a href="contact.html" class="eduact-btn eduact-btn-second" style="font-size:13px;padding:10px 22px;"><span class="eduact-btn__curve"></span>Enquire Now <i class="icon-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <section class="copyright text-center">
+            <div class="container">
+                <p class="copyright__text">Copyright <span class="dynamic-year"></span> &copy; ALP Business School. All Rights Reserved</p>
+            </div>
+        </section>
+
+    </div><!-- /.page-wrapper -->
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box"><a href="index.html"><img src="assets/images/apl_logo.png" height="50" style="width:auto;max-width:200px;object-fit:contain;" alt="ALP Business School" /></a></div>
+            <div class="mobile-nav__container"></div>
+        </div>
+    </div>
+
+    <a href="#" class="scroll-top">
+        <svg class="scroll-top__circle" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" /></svg>
+    </a>
+
+    <script src="assets/vendors/jquery/jquery-3.5.1.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/tilt/tilt.jquery.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/js/eduact.js"></script>
+    <script>
+        // Form submit handler — show success message
+        document.getElementById('alpApplyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('alpFormSuccess').style.display = 'block';
+            window.scrollTo({ top: document.querySelector('.alp-apply-form-card').offsetTop - 120, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
