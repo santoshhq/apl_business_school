@@ -1,0 +1,455 @@
+/* ==========================================================================
+   ALP Business School — Royal Academic Theme
+   Global color system override loaded LAST to supersede all template styles.
+   Uses CSS custom properties for easy future theming.
+   Designed to convey: Accredited | Premium | Established | UK University
+   ========================================================================== */
+
+/* ── CSS Variables ── */
+:root {
+    --alp-primary: #1E3A4C;
+    /* Logo Navy – navbar, dark surfaces         */
+    --alp-secondary: #2F5D75;
+    /* Muted Blue – links, icons, sub-elements   */
+    --alp-accent: #C6A75E;
+    /* Muted Gold – buttons, highlights, CTAs    */
+    --alp-bg: #F7F9FB;
+    /* Soft Light Grey – section backgrounds     */
+    --alp-text-dark: #0F2230;
+    /* Near Black – headings, bold text          */
+    --alp-white: #FFFFFF;
+    /* White – cards, nav text, button labels    */
+
+    /* Derived / utility */
+    --alp-accent-hover: #a8893d;
+    --alp-primary-hover: #152d3c;
+    --alp-secondary-light: rgba(47, 93, 117, 0.18);
+    --alp-border: rgba(47, 93, 117, 0.22);
+    --alp-shadow: 0 4px 20px rgba(30, 58, 76, 0.10);
+
+    /* Re-map eduact template vars so all template components inherit our palette */
+    --eduact-base: #1E3A4C;
+    --eduact-base-rgb: 30, 58, 76;
+    --eduact-secondary: #C6A75E;
+    --eduact-secondary-rgb: 198, 167, 94;
+    --eduact-black: #0F2230;
+    --eduact-black-rgb: 15, 34, 48;
+    --eduact-soft: #F7F9FB;
+    --eduact-soft-rgb: 247, 249, 251;
+    --eduact-text: #3d4f5d;
+    --eduact-text-rgb: 61, 79, 93;
+}
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+
+.main-header,
+.main-menu.main-menu-with-bg,
+.stricky-header.stricked-menu {
+    background-color: var(--alp-primary) !important;
+}
+
+.main-menu__list>li>a {
+    color: var(--alp-white) !important;
+}
+
+.main-menu__list>li>a:hover,
+.main-menu__list>li.current>a,
+.main-menu__list>li.current>a:hover {
+    color: var(--alp-accent) !important;
+}
+
+/* Dropdown — use specificity to match template without breaking opacity/visibility */
+.main-menu .main-menu__list li ul,
+.stricky-header .main-menu__list li ul {
+    background-color: var(--alp-primary) !important;
+    border-top: 3px solid var(--alp-accent) !important;
+    box-shadow: 0 10px 40px rgba(15, 34, 48, 0.5) !important;
+}
+
+.main-menu .main-menu__list li ul li>a,
+.stricky-header .main-menu__list li ul li>a {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.main-menu .main-menu__list li ul li:hover>a,
+.stricky-header .main-menu__list li ul li:hover>a {
+    color: var(--alp-accent) !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Mobile toggler */
+.main-menu__toggler i,
+.mobile-nav__toggler i {
+    color: var(--alp-white) !important;
+}
+
+/* ==========================================================================
+   APPLY NOW BUTTON (header)
+   ========================================================================== */
+
+.alp-apply-btn {
+    background: var(--alp-accent) !important;
+    color: var(--alp-text-dark) !important;
+    font-weight: 700 !important;
+}
+
+.alp-apply-btn:hover {
+    background: var(--alp-primary-hover) !important;
+    color: var(--alp-white) !important;
+}
+
+/* ==========================================================================
+   GLOBAL BUTTONS (.eduact-btn)
+   ========================================================================== */
+
+.eduact-btn,
+.eduact-btn-second,
+a.eduact-btn,
+a.eduact-btn-second,
+button.eduact-btn {
+    background-color: var(--alp-accent) !important;
+    border-color: var(--alp-accent) !important;
+    color: var(--alp-text-dark) !important;
+}
+
+.eduact-btn:hover,
+.eduact-btn-second:hover,
+a.eduact-btn:hover,
+a.eduact-btn-second:hover,
+button.eduact-btn:hover {
+    background-color: var(--alp-primary) !important;
+    border-color: var(--alp-primary) !important;
+    color: var(--alp-white) !important;
+}
+
+.eduact-btn__curve {
+    background-color: var(--alp-primary) !important;
+}
+
+/* ==========================================================================
+   LINKS
+   ========================================================================== */
+
+a {
+    color: var(--alp-secondary);
+}
+
+a:hover {
+    color: var(--alp-accent);
+}
+
+/* ==========================================================================
+   HEADINGS
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--alp-text-dark);
+}
+
+/* ==========================================================================
+   HERO / MAIN SLIDER
+   ========================================================================== */
+
+.main-slider__title span {
+    color: var(--alp-accent) !important;
+}
+
+.main-slider__content .section-title__tagline,
+.section-title__tagline {
+    color: var(--alp-accent) !important;
+}
+
+.section-title__tagline svg path {
+    fill: var(--alp-accent) !important;
+}
+
+/* ==========================================================================
+   SECTION BACKGROUNDS — alternate sections
+   ========================================================================== */
+
+.section-bg,
+.about-two__right,
+.funfact-one,
+.client-carousel-one {
+    background-color: var(--alp-bg) !important;
+}
+
+/* ==========================================================================
+   CARDS
+   ========================================================================== */
+
+/* ALP Course Cards */
+.alp-course-card {
+    border-top: 3px solid var(--alp-accent) !important;
+    box-shadow: var(--alp-shadow) !important;
+}
+
+.alp-course-card__badge {
+    background: var(--alp-primary) !important;
+    color: var(--alp-white) !important;
+}
+
+.alp-course-card__title {
+    color: var(--alp-text-dark) !important;
+}
+
+.alp-course-card:hover .alp-course-card__title {
+    color: var(--alp-accent) !important;
+}
+
+.alp-course-card__link {
+    color: var(--alp-secondary) !important;
+}
+
+.alp-course-card__link:hover {
+    color: var(--alp-accent) !important;
+}
+
+/* Template course cards */
+.course-one__item {
+    border-top: 3px solid var(--alp-accent) !important;
+}
+
+/* ==========================================================================
+   ICONS
+   ========================================================================== */
+
+.course-one__icon,
+.service-one__icon,
+.about-two__points-icon {
+    color: var(--alp-secondary) !important;
+}
+
+/* Icon boxes with background */
+[class*="__icon-box"],
+[class*="__icon"] i {
+    color: var(--alp-secondary);
+}
+
+/* ==========================================================================
+   COUNTER / FUNFACT
+   ========================================================================== */
+
+.funfact-one__number,
+.counter-one__number {
+    color: var(--alp-accent) !important;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.main-footer-two,
+.main-footer-two__bg,
+.site-footer {
+    background-color: var(--alp-primary) !important;
+}
+
+.main-footer-two__title,
+.main-footer-two__about .main-footer-two__logo span,
+.main-footer-two__info-list li {
+    color: var(--alp-white) !important;
+}
+
+.main-footer-two__navmenu ul li a {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.main-footer-two__navmenu ul li a:hover {
+    color: var(--alp-accent) !important;
+}
+
+.main-footer-two__social a {
+    background-color: var(--alp-secondary) !important;
+    color: var(--alp-white) !important;
+    border-color: var(--alp-secondary) !important;
+}
+
+.main-footer-two__social a:hover {
+    background-color: var(--alp-accent) !important;
+    border-color: var(--alp-accent) !important;
+    color: var(--alp-text-dark) !important;
+}
+
+/* Footer bottom bar */
+.footer-bottom,
+.main-footer-two__bottom {
+    border-top: 1px solid var(--alp-border) !important;
+}
+
+/* ==========================================================================
+   PAGE BANNER (course pages)
+   ========================================================================== */
+
+.alp-page-banner {
+    background: linear-gradient(135deg, var(--alp-primary) 0%, #1E3A4C 60%, var(--alp-secondary) 100%) !important;
+}
+
+.alp-page-banner__breadcrumb a:hover {
+    color: var(--alp-accent) !important;
+}
+
+/* ==========================================================================
+   COURSE DETAIL (course pages)
+   ========================================================================== */
+
+.alp-course-detail h2 {
+    border-bottom-color: var(--alp-accent) !important;
+}
+
+.alp-course-detail ul li::before {
+    color: var(--alp-accent) !important;
+}
+
+.alp-course-sidebar__level-badge {
+    background: rgba(198, 167, 94, 0.12) !important;
+    color: var(--alp-primary) !important;
+    border: 1px solid var(--alp-accent) !important;
+}
+
+.alp-level-box {
+    border-left-color: var(--alp-accent) !important;
+    background: rgba(198, 167, 94, 0.07) !important;
+}
+
+/* ==========================================================================
+   MOBILE NAV
+   ========================================================================== */
+
+.mobile-nav__wrapper {
+    background-color: var(--alp-primary) !important;
+}
+
+.mobile-nav__top {
+    border-bottom: 1px solid var(--alp-border) !important;
+}
+
+.mobile-nav__main-menu li a {
+    color: var(--alp-white) !important;
+    border-bottom: 1px solid var(--alp-border) !important;
+}
+
+.mobile-nav__main-menu li a:hover {
+    color: var(--alp-accent) !important;
+}
+
+.mobile-nav__contact li a {
+    color: var(--alp-white) !important;
+}
+
+/* ==========================================================================
+   FORMS / INPUTS (apply-now page)
+   ========================================================================== */
+
+.contact-one__form input:focus,
+.contact-one__form textarea:focus,
+input:focus,
+textarea:focus {
+    border-color: var(--alp-secondary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(47, 93, 117, 0.18) !important;
+}
+
+/* Required field star color */
+label span[style*="color:#1a4fd8"],
+label span[style*="color: #1a4fd8"] {
+    color: var(--alp-accent) !important;
+}
+
+/* ==========================================================================
+   LOGO TEXT (inline-styled in HTML)
+   ========================================================================== */
+
+/* The logo brand text and caption use inline colors — override via parent */
+.main-menu__logo span[style*="color:#0b1d3e"],
+.main-menu__logo span[style*="color: #0b1d3e"] {
+    color: var(--alp-white) !important;
+}
+
+.main-menu__logo span[style*="color:#1a4fd8"],
+.main-menu__logo span[style*="color: #1a4fd8"] {
+    color: var(--alp-accent) !important;
+}
+
+/* Footer logo text overrides */
+.main-footer-two__logo div[style*="color:#ffffff"],
+.main-footer-two__logo div[style*="color: #ffffff"] {
+    color: var(--alp-white) !important;
+}
+
+.main-footer-two__logo div[style*="color:#1a4fd8"],
+.main-footer-two__logo div[style*="color: #1a4fd8"] {
+    color: var(--alp-accent) !important;
+}
+
+/* ==========================================================================
+   TESTIMONIALS
+   ========================================================================== */
+
+.testimonial-one__star {
+    color: var(--alp-accent) !important;
+}
+
+.testimonial-one__content::before {
+    color: var(--alp-secondary) !important;
+}
+
+/* ==========================================================================
+   MISC HIGHLIGHTS
+   ========================================================================== */
+
+/* Active pill / badge */
+.badge-primary,
+[class*="__badge"] {
+    background-color: var(--alp-secondary) !important;
+}
+
+/* Borders / dividers */
+hr,
+[class*="__separator"],
+[class*="__divider"] {
+    border-color: var(--alp-border) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+    background: var(--alp-secondary) !important;
+}
+
+/* ==========================================================================
+   LOGO TAGLINE color used for footer "Up Lift Your Career" text
+   overriding inline style via attribute selector
+   ========================================================================== */
+
+[style*="color:#1a4fd8"],
+[style*="color: #1a4fd8"] {
+    color: var(--alp-accent) !important;
+}
+
+[style*="color:#0b1d3e"],
+[style*="color: #0b1d3e"] {
+    color: var(--alp-text-dark) !important;
+}
+
+/* Background overrides for inline #1a4fd8 backgrounds */
+[style*="background:#1a4fd8"],
+[style*="background: #1a4fd8"],
+[style*="background-color:#1a4fd8"],
+[style*="background-color: #1a4fd8"] {
+    background-color: var(--alp-secondary) !important;
+}
+
+/* ==========================================================================
+   PRELOADER
+   ========================================================================== */
+
+.preloader {
+    background-color: var(--alp-primary) !important;
+}

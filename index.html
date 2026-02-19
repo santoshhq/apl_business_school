@@ -38,71 +38,27 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/eduact.css" />
     <link rel="stylesheet" href="assets/css/alp-header.css" />
+    <link rel="stylesheet" href="assets/css/alp-theme.css" />
     <!-- ALP Business School Custom Styles -->
     <style>
         html {
             scroll-behavior: smooth;
         }
 
-        /* -------- Global Button Overrides (blue instead of template orange) -------- */
-        .eduact-btn,
-        .eduact-btn-second,
-        a.eduact-btn,
-        a.eduact-btn-second,
-        button.eduact-btn {
-            background-color: #1a4fd8 !important;
-            border-color: #1a4fd8 !important;
-            color: #ffffff !important;
-        }
-
-        .eduact-btn:hover,
-        .eduact-btn-second:hover,
-        a.eduact-btn:hover,
-        a.eduact-btn-second:hover {
-            background-color: #0b1d3e !important;
-            border-color: #0b1d3e !important;
-            color: #ffffff !important;
-        }
-
-        .eduact-btn__curve {
-            background-color: #0b1d3e !important;
-        }
-
-        .main-slider__title span {
-            color: #1a4fd8 !important;
-        }
-
-        .section-title__tagline {
-            color: #1a4fd8 !important;
-        }
-
-        .section-title__tagline svg path {
-            fill: #1a4fd8 !important;
-        }
-
-        a:hover,
-        .main-menu__list>li>a:hover {
-            color: #1a4fd8 !important;
-        }
-
-        .main-menu__list>li.current>a,
-        .main-menu__list>li.current>a:hover {
-            color: #1a4fd8 !important;
-        }
-
         /* -------- ALP Course Cards -------- */
         .alp-course-card {
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+            box-shadow: var(--alp-shadow, 0 4px 20px rgba(30, 58, 76, 0.10));
             margin-bottom: 30px;
             background: #fff;
             transition: transform 0.35s ease, box-shadow 0.35s ease;
+            border-top: 3px solid var(--alp-accent, #C6A75E);
         }
 
         .alp-course-card:hover {
             transform: translateY(-7px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 32px rgba(30, 58, 76, 0.18);
         }
 
         .alp-course-card>a {
@@ -133,8 +89,8 @@
             position: absolute;
             top: 14px;
             left: 14px;
-            background: #1a4fd8;
-            color: #fff;
+            background: var(--alp-primary, #1E3A4C);
+            color: var(--alp-white, #fff);
             font-size: 12px;
             font-weight: 700;
             padding: 5px 14px;
@@ -151,34 +107,32 @@
         .alp-course-card__title {
             font-size: 17px;
             font-weight: 700;
-            color: #1a1a2e;
+            color: var(--alp-text-dark, #0F2230);
             margin-bottom: 14px;
             line-height: 1.45;
             transition: color 0.3s ease;
         }
 
         .alp-course-card:hover .alp-course-card__title {
-            color: #1a4fd8;
+            color: var(--alp-accent, #C6A75E);
         }
 
         .alp-course-card__link {
             font-size: 14px;
             font-weight: 600;
-            color: #1a4fd8;
+            color: var(--alp-secondary, #2F5D75);
             display: inline-flex;
             align-items: center;
             gap: 5px;
         }
 
+        .alp-course-card__link:hover {
+            color: var(--alp-accent, #C6A75E);
+        }
+
         .alp-courses-section {
             padding-top: 70px;
             padding-bottom: 70px;
-        }
-    </style>
-    <style>
-        /* ALP Brand: Navy + Gold */
-        .alp-course-card {
-            border-top: 3px solid #1a4fd8
         }
     </style>
 </head>
@@ -203,10 +157,10 @@
                                 alt="ALP Business School">
                             <div style="line-height:1.25;">
                                 <span
-                                    style="display:block;font-size:17px;font-weight:800;color:#0b1d3e;letter-spacing:0.2px;">ALP
+                                    style="display:block;font-size:17px;font-weight:800;color:var(--alp-text-dark, #0F2230);letter-spacing:0.2px;">ALP
                                     Business School</span>
                                 <span
-                                    style="display:block;font-size:11.5px;font-weight:600;color:#1a4fd8;letter-spacing:1px;text-transform:uppercase;">Up
+                                    style="display:block;font-size:11.5px;font-weight:600;color:var(--alp-accent, #C6A75E);letter-spacing:1px;text-transform:uppercase;">Up
                                     Lift Your Career</span>
                             </div>
                         </a>
@@ -361,7 +315,8 @@
                                 <div class="col-lg-6">
                                     <div class="main-slider__content">
                                         <h2 class="main-slider__title">
-                                            <span>Professional</span><br>Qualifications<br>from Level 3 to 7</h2>
+                                            <span>Professional</span><br>Qualifications<br>from Level 3 to 7
+                                        </h2>
                                         <!-- slider-title -->
                                         <p class="main-slider__text">Business Management, HR, Teacher Training &amp;
                                             more �<br>all 100% online and fully regulated by Ofqual.</p>
@@ -578,16 +533,19 @@
                             <div class="about-three__thumb__shape-two"></div>
                             <!-- /.about-shape-two -->
                             <div class="about-three__thumb__shape-three">
-                                <span></span><span></span><span></span><span></span><span></span></div>
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
                             <!-- /.about-shape-three -->
                             <div class="about-three__thumb__shape-four"><img
                                     src="assets/images/shapes/about-3-shape-1.png" alt="eduact" /></div>
                             <!-- /.about-shape-four -->
                             <div class="about-three__thumb__shape-five">
-                                <span></span><span></span><span></span><span></span><span></span></div>
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
                             <!-- /.about-shape-five -->
                             <div class="about-three__thumb__shape-six">
-                                <span></span><span></span><span></span><span></span><span></span></div>
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
                             <!-- /.about-shape-six -->
                             <div class="about-three__thumb__shape-seven"></div>
                             <!-- /.about-shape-seven -->
@@ -699,8 +657,8 @@
                     <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                         <div class="alp-cat-card">
                             <div class="alp-cat-card__line-zone">
-                                <div class="alp-cat-card__line" style="background:#1a4fd8;"></div>
-                                <div class="alp-cat-card__icon" style="background:#1a4fd8;">
+                                <div class="alp-cat-card__line" style="background:var(--alp-primary, #1E3A4C);"></div>
+                                <div class="alp-cat-card__icon" style="background:var(--alp-primary, #1E3A4C);">
                                     <span class="icon-business"></span>
                                 </div>
                             </div>
@@ -774,7 +732,7 @@
         <!-- Counter Start -->
         <style>
             .alp-stats-section {
-                background: linear-gradient(135deg, #050d1f 0%, #0b1d3e 55%, #112660 100%);
+                background: linear-gradient(135deg, var(--alp-primary, #1E3A4C) 0%, #1c3848 55%, var(--alp-secondary, #2F5D75) 100%);
                 padding: 80px 0;
                 position: relative;
                 overflow: hidden;
@@ -788,7 +746,7 @@
                 width: 480px;
                 height: 480px;
                 border-radius: 50%;
-                background: rgba(26, 79, 216, 0.10);
+                background: rgba(198, 167, 94, 0.08);
                 pointer-events: none;
             }
 
@@ -800,7 +758,7 @@
                 width: 360px;
                 height: 360px;
                 border-radius: 50%;
-                background: rgba(26, 79, 216, 0.07);
+                background: rgba(198, 167, 94, 0.06);
                 pointer-events: none;
             }
 
@@ -817,28 +775,28 @@
             }
 
             .alp-stat-card:hover {
-                background: rgba(26, 79, 216, 0.18);
+                background: rgba(198, 167, 94, 0.12);
                 transform: translateY(-6px);
-                border-color: rgba(26, 79, 216, 0.5);
+                border-color: rgba(198, 167, 94, 0.4);
             }
 
             .alp-stat-card__icon {
                 width: 64px;
                 height: 64px;
                 border-radius: 50%;
-                background: rgba(26, 79, 216, 0.25);
-                border: 2px solid rgba(26, 79, 216, 0.5);
+                background: rgba(198, 167, 94, 0.2);
+                border: 2px solid rgba(198, 167, 94, 0.45);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 margin: 0 auto 20px;
                 font-size: 26px;
-                color: #6ea8ff;
+                color: var(--alp-accent, #C6A75E);
                 transition: background 0.3s ease;
             }
 
             .alp-stat-card:hover .alp-stat-card__icon {
-                background: rgba(26, 79, 216, 0.45);
+                background: rgba(198, 167, 94, 0.35);
             }
 
             .alp-stat-card__number {
@@ -854,7 +812,7 @@
                 font-size: 24px;
                 font-weight: 700;
                 vertical-align: super;
-                color: #6ea8ff;
+                color: var(--alp-accent, #C6A75E);
             }
 
             .alp-stat-card__label {
@@ -869,7 +827,7 @@
             .alp-stat-card__divider {
                 width: 36px;
                 height: 3px;
-                background: #1a4fd8;
+                background: var(--alp-accent, #C6A75E);
                 border-radius: 2px;
                 margin: 12px auto 14px;
             }
@@ -1267,7 +1225,7 @@
         <!-- Category Start -->
         <style>
             .alp-topics-section {
-                background: linear-gradient(135deg, #050d1f 0%, #0b1d3e 55%, #112660 100%);
+                background: linear-gradient(135deg, var(--alp-primary, #1E3A4C) 0%, #1c3848 55%, var(--alp-secondary, #2F5D75) 100%);
                 padding: 90px 0 80px;
                 position: relative;
                 overflow: hidden;
@@ -1339,7 +1297,7 @@
             }
 
             .alp-topic-card:hover {
-                background: rgba(26, 79, 216, 0.18);
+                background: rgba(198, 167, 94, 0.12);
                 transform: translateY(-8px);
                 border-color: rgba(26, 79, 216, 0.45);
             }
@@ -1359,12 +1317,12 @@
                 justify-content: center;
                 margin: 0 auto 22px;
                 font-size: 30px;
-                color: #6ea8ff;
+                color: var(--alp-accent, #C6A75E);
                 transition: background 0.3s ease, transform 0.3s ease;
             }
 
             .alp-topic-card:hover .alp-topic-card__icon {
-                background: rgba(26, 79, 216, 0.45);
+                background: rgba(198, 167, 94, 0.35);
                 transform: scale(1.08);
             }
 
@@ -1383,7 +1341,7 @@
             }
 
             .alp-topic-card__title a:hover {
-                color: #6ea8ff;
+                color: var(--alp-accent, #C6A75E);
             }
 
             .alp-topic-card__meta {
@@ -1398,7 +1356,7 @@
             .alp-topic-card__divider {
                 width: 32px;
                 height: 2px;
-                background: #1a4fd8;
+                background: var(--alp-accent, #C6A75E);
                 border-radius: 2px;
                 margin: 12px auto;
             }
@@ -1526,7 +1484,7 @@
             }
 
             .alp-contact-info {
-                background: linear-gradient(135deg, #050d1f 0%, #0b1d3e 60%, #112660 100%);
+                background: linear-gradient(135deg, var(--alp-primary, #1E3A4C) 0%, #1c3848 60%, var(--alp-secondary, #2F5D75) 100%);
                 padding: 52px 40px;
                 height: 100%;
                 position: relative;
@@ -1576,7 +1534,7 @@
                 align-items: center;
                 justify-content: center;
                 font-size: 16px;
-                color: #6ea8ff;
+                color: var(--alp-accent, #C6A75E);
                 flex-shrink: 0;
             }
 
@@ -1599,7 +1557,7 @@
             }
 
             .alp-contact-info__item-text a:hover {
-                color: #6ea8ff;
+                color: var(--alp-accent, #C6A75E);
             }
 
             /* Form side */
@@ -1667,7 +1625,7 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 10px;
-                background: #1a4fd8;
+                background: var(--alp-accent, #C6A75E);
                 color: #ffffff;
                 font-size: 15px;
                 font-weight: 700;
@@ -1764,7 +1722,7 @@
                                                 <div class="col-md-6">
                                                     <div class="alp-cf-group">
                                                         <label for="cf-name">Full Name <span
-                                                                style="color:#1a4fd8;">*</span></label>
+                                                                style="color:var(--alp-accent, #C6A75E);">*</span></label>
                                                         <input type="text" id="cf-name" class="alp-cf-control"
                                                             placeholder="e.g. John Smith" required>
                                                     </div>
@@ -1772,7 +1730,7 @@
                                                 <div class="col-md-6">
                                                     <div class="alp-cf-group">
                                                         <label for="cf-email">Email Address <span
-                                                                style="color:#1a4fd8;">*</span></label>
+                                                                style="color:var(--alp-accent, #C6A75E);">*</span></label>
                                                         <input type="email" id="cf-email" class="alp-cf-control"
                                                             placeholder="e.g. john@example.com" required>
                                                     </div>
@@ -1794,7 +1752,7 @@
                                                 <div class="col-12">
                                                     <div class="alp-cf-group">
                                                         <label for="cf-message">Message <span
-                                                                style="color:#1a4fd8;">*</span></label>
+                                                                style="color:var(--alp-accent, #C6A75E);">*</span></label>
                                                         <textarea id="cf-message" class="alp-cf-control"
                                                             placeholder="Tell us how we can help you..."
                                                             required></textarea>
@@ -1843,7 +1801,7 @@
                                     <div style="font-size:17px;font-weight:800;color:#ffffff;letter-spacing:0.3px;">ALP
                                         Business School</div>
                                     <div
-                                        style="font-size:11px;color:#1a4fd8;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;">
+                                        style="font-size:11px;color:var(--alp-accent, #C6A75E);font-weight:600;letter-spacing:0.8px;text-transform:uppercase;">
                                         Up Lift Your Career</div>
                                 </div>
                             </a>
