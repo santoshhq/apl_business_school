@@ -1,0 +1,138 @@
+/* ==========================================================================
+   ALP Business School — Responsive Header
+   Single source of truth for header/logo/nav responsiveness.
+   Uses clamp() for smooth viewport-proportional scaling.
+   ========================================================================== */
+
+/* ── Nav container: flexbox row, vertically centred ── */
+.main-menu .container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    width: 100%;
+}
+
+/* ── Logo wrapper ── */
+.main-menu__logo {
+    display: flex !important;
+    align-items: center !important;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* ── Logo link ── */
+.main-menu__logo a.alp-logo-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: clamp(8px, 2vw, 12px);
+    text-decoration: none;
+}
+
+/* ── Logo image — smooth scale from 38px (≈320 vw) → 58px (desktop) ── */
+.main-menu__logo .alp-logo-img {
+    height: clamp(38px, 8vw, 58px);
+    width: auto;
+    max-width: clamp(42px, 9vw, 62px);
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* ── Logo text wrapper ── */
+.alp-logo-text {
+    line-height: 1.25;
+}
+
+/* ── Brand name — smooth scale 13px → 17px ── */
+.alp-logo-name {
+    display: block;
+    font-weight: 800;
+    color: #0b1d3e;
+    letter-spacing: 0.2px;
+    font-size: clamp(13px, 2.2vw, 17px);
+    white-space: nowrap;
+}
+
+/* ── Tagline — smooth scale 9.5px → 11.5px ── */
+.alp-logo-caption {
+    display: block;
+    font-weight: 600;
+    color: #1a4fd8;
+    letter-spacing: clamp(0.3px, 0.15vw, 1px);
+    text-transform: uppercase;
+    font-size: clamp(9.5px, 1.5vw, 11.5px);
+    white-space: nowrap;
+}
+
+/* ── Nav links area ── */
+.main-menu__nav {
+    flex: 1 1 auto;
+}
+
+/* ── Right-side controls ── */
+.main-menu__right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* ── Mobile hamburger toggler ── */
+.main-menu__toggler {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 44px !important;
+    width: 44px !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.main-menu__toggler i.fa-bars {
+    display: block !important;
+    line-height: 1 !important;
+    font-size: 22px !important;
+}
+
+/* ── Apply Now button (replaces inline styles) ── */
+.alp-apply-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #1a4fd8;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-right: 8px;
+    letter-spacing: 0.3px;
+    transition: background 0.2s ease;
+}
+
+.alp-apply-btn:hover {
+    background: #0b1d3e;
+    color: #ffffff;
+}
+
+.alp-apply-btn i {
+    font-size: 13px;
+}
+
+/* ── Prevent nav overflow ── */
+.main-menu {
+    overflow: hidden;
+}
+
+/* ========================================================================
+   Single breakpoint: tablets & phones (≤ 991px)
+   ======================================================================== */
+@media (max-width: 991px) {
+
+    /* Hide "Apply Now" on mobile/tablet */
+    .alp-apply-btn {
+        display: none !important;
+    }
+}

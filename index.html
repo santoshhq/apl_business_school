@@ -10,12 +10,15 @@
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png" />
     <link rel="icon" href="assets/images/favicon/favicon.ico" />
     <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
-    <meta name="description" content="ALP Business School � Professional Business & Management Qualifications online." />
+    <meta name="description"
+        content="ALP Business School � Professional Business & Management Qualifications online." />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Water+Brush&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Water+Brush&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
@@ -34,9 +37,13 @@
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/eduact.css" />
+    <link rel="stylesheet" href="assets/css/alp-header.css" />
     <!-- ALP Business School Custom Styles -->
     <style>
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* -------- Global Button Overrides (blue instead of template orange) -------- */
         .eduact-btn,
         .eduact-btn-second,
@@ -47,6 +54,7 @@
             border-color: #1a4fd8 !important;
             color: #ffffff !important;
         }
+
         .eduact-btn:hover,
         .eduact-btn-second:hover,
         a.eduact-btn:hover,
@@ -55,36 +63,60 @@
             border-color: #0b1d3e !important;
             color: #ffffff !important;
         }
-        .eduact-btn__curve { background-color: #0b1d3e !important; }
-        .main-slider__title span { color: #1a4fd8 !important; }
-        .section-title__tagline { color: #1a4fd8 !important; }
-        .section-title__tagline svg path { fill: #1a4fd8 !important; }
-        a:hover, .main-menu__list > li > a:hover { color: #1a4fd8 !important; }
-        .main-menu__list > li.current > a,
-        .main-menu__list > li.current > a:hover { color: #1a4fd8 !important; }
+
+        .eduact-btn__curve {
+            background-color: #0b1d3e !important;
+        }
+
+        .main-slider__title span {
+            color: #1a4fd8 !important;
+        }
+
+        .section-title__tagline {
+            color: #1a4fd8 !important;
+        }
+
+        .section-title__tagline svg path {
+            fill: #1a4fd8 !important;
+        }
+
+        a:hover,
+        .main-menu__list>li>a:hover {
+            color: #1a4fd8 !important;
+        }
+
+        .main-menu__list>li.current>a,
+        .main-menu__list>li.current>a:hover {
+            color: #1a4fd8 !important;
+        }
+
         /* -------- ALP Course Cards -------- */
         .alp-course-card {
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
             margin-bottom: 30px;
             background: #fff;
             transition: transform 0.35s ease, box-shadow 0.35s ease;
         }
+
         .alp-course-card:hover {
             transform: translateY(-7px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
         }
-        .alp-course-card > a {
+
+        .alp-course-card>a {
             text-decoration: none;
             color: inherit;
             display: block;
         }
+
         .alp-course-card__thumb {
             position: relative;
             overflow: hidden;
             height: 210px;
         }
+
         .alp-course-card__thumb img {
             width: 100%;
             height: 100%;
@@ -92,9 +124,11 @@
             display: block;
             transition: transform 0.45s ease;
         }
+
         .alp-course-card:hover .alp-course-card__thumb img {
             transform: scale(1.06);
         }
+
         .alp-course-card__badge {
             position: absolute;
             top: 14px;
@@ -109,9 +143,11 @@
             z-index: 2;
             text-transform: uppercase;
         }
+
         .alp-course-card__content {
             padding: 20px 22px 24px;
         }
+
         .alp-course-card__title {
             font-size: 17px;
             font-weight: 700;
@@ -120,9 +156,11 @@
             line-height: 1.45;
             transition: color 0.3s ease;
         }
+
         .alp-course-card:hover .alp-course-card__title {
             color: #1a4fd8;
         }
+
         .alp-course-card__link {
             font-size: 14px;
             font-weight: 600;
@@ -131,6 +169,7 @@
             align-items: center;
             gap: 5px;
         }
+
         .alp-courses-section {
             padding-top: 70px;
             padding-bottom: 70px;
@@ -138,7 +177,9 @@
     </style>
     <style>
         /* ALP Brand: Navy + Gold */
-        .alp-course-card{border-top:3px solid #1a4fd8}
+        .alp-course-card {
+            border-top: 3px solid #1a4fd8
+        }
     </style>
 </head>
 
@@ -157,10 +198,16 @@
                 <div class="container">
                     <div class="main-menu__logo">
                         <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
-                            <img src="assets/images/apl_logo.png" height="58" style="width:auto;max-width:62px;object-fit:contain;flex-shrink:0;" alt="ALP Business School">
+                            <img src="assets/images/apl_logo.png" height="58"
+                                style="width:auto;max-width:62px;object-fit:contain;flex-shrink:0;"
+                                alt="ALP Business School">
                             <div style="line-height:1.25;">
-                                <span style="display:block;font-size:17px;font-weight:800;color:#0b1d3e;letter-spacing:0.2px;">ALP Business School</span>
-                                <span style="display:block;font-size:11.5px;font-weight:600;color:#1a4fd8;letter-spacing:1px;text-transform:uppercase;">Up Lift Your Career</span>
+                                <span
+                                    style="display:block;font-size:17px;font-weight:800;color:#0b1d3e;letter-spacing:0.2px;">ALP
+                                    Business School</span>
+                                <span
+                                    style="display:block;font-size:11.5px;font-weight:600;color:#1a4fd8;letter-spacing:1px;text-transform:uppercase;">Up
+                                    Lift Your Career</span>
                             </div>
                         </a>
                     </div>
@@ -172,11 +219,16 @@
                             <li class="dropdown">
                                 <a href="#">Courses</a>
                                 <ul>
-                                    <li><a href="course-intro-management-l3.html">Introduction to Management (Level 3)</a></li>
-                                    <li><a href="course-business-management-l3.html">Business Management (Level 3)</a></li>
-                                    <li><a href="course-business-management-l45.html">Business Management (Levels 4 &amp; 5)</a></li>
-                                    <li><a href="course-business-admin-l6.html">Business &amp; Administrative Management (Level 6)</a></li>
-                                    <li><a href="course-hrm-l45.html">Human Resource Management (Levels 4 &amp; 5)</a></li>
+                                    <li><a href="course-intro-management-l3.html">Introduction to Management (Level
+                                            3)</a></li>
+                                    <li><a href="course-business-management-l3.html">Business Management (Level 3)</a>
+                                    </li>
+                                    <li><a href="course-business-management-l45.html">Business Management (Levels 4
+                                            &amp; 5)</a></li>
+                                    <li><a href="course-business-admin-l6.html">Business &amp; Administrative Management
+                                            (Level 6)</a></li>
+                                    <li><a href="course-hrm-l45.html">Human Resource Management (Levels 4 &amp; 5)</a>
+                                    </li>
                                     <li><a href="course-teacher-training-l5.html">Teacher Training (Level 5)</a></li>
                                 </ul>
                             </li>
@@ -189,7 +241,7 @@
                             <i class="fa fa-bars"></i>
                         </a>
                         <!-- /.mobile menu btn -->
-                        <a href="apply-now.html" style="display:inline-flex;align-items:center;gap:9px;background:#1a4fd8;color:#ffffff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:50px;text-decoration:none;margin-right:8px;letter-spacing:0.3px;transition:background 0.2s ease;">Apply Now <i class="fas fa-sign-in-alt" style="font-size:13px;"></i></a>
+                        <a href="apply-now.html" class="alp-apply-btn">Apply Now <i class="fas fa-sign-in-alt"></i></a>
                     </div>
                     <!-- /.main-menu__right -->
                 </div>
@@ -222,32 +274,41 @@
                 <div class="item">
                     <!-- slider-item-start -->
                     <div class="main-slider__item">
-                        <div class="main-slider__bg" style="background-image: url(assets/images/shapes/slider-bg-1.jpg);"></div>
+                        <div class="main-slider__bg"
+                            style="background-image: url(assets/images/shapes/slider-bg-1.jpg);"></div>
                         <!-- slider-image-->
-                        <div class="main-slider__shape-two"><img src="assets/images/shapes/slider-shape-2.png" alt="eduact" /></div>
+                        <div class="main-slider__shape-two"><img src="assets/images/shapes/slider-shape-2.png"
+                                alt="eduact" /></div>
                         <!-- slider-shape-2 -->
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="main-slider__content">
-                                        <h2 class="main-slider__title"><span>Uplift</span> Your Career<br>with ALP<br>Business School</h2>
+                                        <h2 class="main-slider__title"><span>Uplift</span> Your Career<br>with
+                                            ALP<br>Business School</h2>
                                         <!-- slider-title -->
-                                        <p class="main-slider__text">Ofqual-regulated qualifications from Level 3 to Level 7,<br>designed to fast-track your career or university journey.</p>
+                                        <p class="main-slider__text">Ofqual-regulated qualifications from Level 3 to
+                                            Level 7,<br>designed to fast-track your career or university journey.</p>
                                         <!-- slider-text -->
                                         <div class="main-slider__btn">
-                                            <a href="#courses" class="eduact-btn eduact-btn-second"><span class="eduact-btn__curve"></span>Explore Courses<i class="icon-arrow"></i></a>
+                                            <a href="#courses" class="eduact-btn eduact-btn-second"><span
+                                                    class="eduact-btn__curve"></span>Explore Courses<i
+                                                    class="icon-arrow"></i></a>
                                             <!-- /.btn -->
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="main-slider__layer">
-                                        <div class="main-slider__layer-thumb eduact-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 2, "speed": 700, "scale": 1 }'>
+                                        <div class="main-slider__layer-thumb eduact-tilt"
+                                            data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 2, "speed": 700, "scale": 1 }'>
                                             <img src="assets/images/resources/slider-layer.png" alt="eduact">
                                         </div>
                                         <svg viewBox="0 0 884 578" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
-                                            <path d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
+                                            <path
+                                                d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
+                                            <path
+                                                d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
                                         </svg>
                                     </div>
                                     <div class="main-slider__shape-three">
@@ -262,7 +323,7 @@
                                         </svg>
                                     </div>
                                     <!-- slider-shape-4 -->
-                                    
+
                                     <!-- slider-shape-5 -->
                                     <div class="main-slider__shape-six">
                                         <img src="assets/images/shapes/slider-shape-6.png" alt="eduact" />
@@ -289,32 +350,42 @@
                 <div class="item">
                     <!-- slider-item-start -->
                     <div class="main-slider__item">
-                        <div class="main-slider__bg" style="background-image: url(assets/images/shapes/slider-bg-1.jpg);"></div>
+                        <div class="main-slider__bg"
+                            style="background-image: url(assets/images/shapes/slider-bg-1.jpg);"></div>
                         <!-- slider-image-->
-                        <div class="main-slider__shape-two"><img src="assets/images/shapes/slider-shape-2.png" alt="eduact" /></div>
+                        <div class="main-slider__shape-two"><img src="assets/images/shapes/slider-shape-2.png"
+                                alt="eduact" /></div>
                         <!-- slider-shape-2 -->
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="main-slider__content">
-                                        <h2 class="main-slider__title"><span>Professional</span><br>Qualifications<br>from Level 3 to 7</h2>
+                                        <h2 class="main-slider__title">
+                                            <span>Professional</span><br>Qualifications<br>from Level 3 to 7</h2>
                                         <!-- slider-title -->
-                                        <p class="main-slider__text">Business Management, HR, Teacher Training &amp; more �<br>all 100% online and fully regulated by Ofqual.</p>
+                                        <p class="main-slider__text">Business Management, HR, Teacher Training &amp;
+                                            more �<br>all 100% online and fully regulated by Ofqual.</p>
                                         <!-- slider-text -->
                                         <div class="main-slider__btn">
-                                            <a href="course-business-management-l3.html" class="eduact-btn eduact-btn-second"><span class="eduact-btn__curve"></span>View Courses<i class="icon-arrow"></i></a>
+                                            <a href="course-business-management-l3.html"
+                                                class="eduact-btn eduact-btn-second"><span
+                                                    class="eduact-btn__curve"></span>View Courses<i
+                                                    class="icon-arrow"></i></a>
                                             <!-- /.btn -->
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="main-slider__layer">
-                                        <div class="main-slider__layer-thumb eduact-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 2, "speed": 700, "scale": 1 }'>
+                                        <div class="main-slider__layer-thumb eduact-tilt"
+                                            data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 2, "speed": 700, "scale": 1 }'>
                                             <img src="assets/images/resources/slider-layer.png" alt="eduact">
                                         </div>
                                         <svg viewBox="0 0 884 578" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
-                                            <path d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
+                                            <path
+                                                d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
+                                            <path
+                                                d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
                                         </svg>
                                     </div>
                                     <div class="main-slider__shape-three">
@@ -331,7 +402,8 @@
                                     <!-- slider-shape-4 -->
                                     <div class="main-slider__shape-five">
                                         <svg viewBox="0 0 124 101" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M118.712 10.0661C118.712 10.0661 48.8261 -23.0444 10.0927 36.3064C3.19101 46.8818 -5.89196 76.3137 5.86651 93.2798C17.625 110.246 31.9191 95.0447 39.4615 82.9168C47.0161 70.7815 63.3887 39.7207 103.51 21.3862C112.963 17.063 132.273 16.0369 118.712 10.0661Z" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M118.712 10.0661C118.712 10.0661 48.8261 -23.0444 10.0927 36.3064C3.19101 46.8818 -5.89196 76.3137 5.86651 93.2798C17.625 110.246 31.9191 95.0447 39.4615 82.9168C47.0161 70.7815 63.3887 39.7207 103.51 21.3862C112.963 17.063 132.273 16.0369 118.712 10.0661Z" />
                                         </svg>
                                     </div>
                                     <!-- slider-shape-5 -->
@@ -360,29 +432,39 @@
                 <div class="item">
                     <!-- slider-item-start -->
                     <div class="main-slider__item">
-                        <div class="main-slider__bg" style="background-image: url(assets/images/shapes/slider-bg-1.jpg);"></div>
-                        <div class="main-slider__shape-two"><img src="assets/images/shapes/slider-shape-2.png" alt="" /></div>
+                        <div class="main-slider__bg"
+                            style="background-image: url(assets/images/shapes/slider-bg-1.jpg);"></div>
+                        <div class="main-slider__shape-two"><img src="assets/images/shapes/slider-shape-2.png" alt="" />
+                        </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="main-slider__content">
-                                        <h2 class="main-slider__title"><span>Study Online,</span><br>Progress to<br>University</h2>
+                                        <h2 class="main-slider__title"><span>Study Online,</span><br>Progress
+                                            to<br>University</h2>
                                         <!-- slider-title -->
-                                        <p class="main-slider__text">Our Level 4/5 diplomas are equivalent to the first<br>two years of a university degree � study from anywhere.</p>
+                                        <p class="main-slider__text">Our Level 4/5 diplomas are equivalent to the
+                                            first<br>two years of a university degree � study from anywhere.</p>
                                         <!-- slider-text -->
                                         <div class="main-slider__btn">
-                                            <a href="#contact" class="eduact-btn eduact-btn-second"><span class="eduact-btn__curve"></span>Get In Touch<i class="icon-arrow"></i></a>
+                                            <a href="#contact" class="eduact-btn eduact-btn-second"><span
+                                                    class="eduact-btn__curve"></span>Get In Touch<i
+                                                    class="icon-arrow"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="main-slider__layer">
-                                        <div class="main-slider__layer-thumb eduact-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 2, "speed": 700, "scale": 1 }'>
-                                            <img src="assets/images/resources/slider-layer.png" alt="ALP Business School">
+                                        <div class="main-slider__layer-thumb eduact-tilt"
+                                            data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 2, "speed": 700, "scale": 1 }'>
+                                            <img src="assets/images/resources/slider-layer.png"
+                                                alt="ALP Business School">
                                         </div>
                                         <svg viewBox="0 0 884 578" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
-                                            <path d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
+                                            <path
+                                                d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
+                                            <path
+                                                d="M77.978 55.4516C245.177 -111.529 296.923 154.357 535.599 128.113C909.567 87.0169 938.305 347.546 826.648 525.777C714.974 704.007 550.407 814.987 320.862 731.954C54.1102 635.466 -103.473 236.656 77.978 55.4516Z" />
                                         </svg>
                                     </div>
                                     <div class="main-slider__shape-three">
@@ -397,13 +479,17 @@
                                     </div>
                                     <div class="main-slider__shape-five">
                                         <svg viewBox="0 0 124 101" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M118.712 10.0661C118.712 10.0661 48.8261 -23.0444 10.0927 36.3064C3.19101 46.8818 -5.89196 76.3137 5.86651 93.2798C17.625 110.246 31.9191 95.0447 39.4615 82.9168C47.0161 70.7815 63.3887 39.7207 103.51 21.3862C112.963 17.063 132.273 16.0369 118.712 10.0661Z" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M118.712 10.0661C118.712 10.0661 48.8261 -23.0444 10.0927 36.3064C3.19101 46.8818 -5.89196 76.3137 5.86651 93.2798C17.625 110.246 31.9191 95.0447 39.4615 82.9168C47.0161 70.7815 63.3887 39.7207 103.51 21.3862C112.963 17.063 132.273 16.0369 118.712 10.0661Z" />
                                         </svg>
                                     </div>
-                                    <div class="main-slider__shape-six"><img src="assets/images/shapes/slider-shape-6.png" alt="" /></div>
-                                    <div class="main-slider__shape-seven"><img src="assets/images/shapes/slider-shape-7.png" alt="" /></div>
+                                    <div class="main-slider__shape-six"><img
+                                            src="assets/images/shapes/slider-shape-6.png" alt="" /></div>
+                                    <div class="main-slider__shape-seven"><img
+                                            src="assets/images/shapes/slider-shape-7.png" alt="" /></div>
                                     <div class="main-slider__shape-eight"><span class="icon-business"></span></div>
-                                    <div class="main-slider__shape-nine"><img src="assets/images/shapes/slider-shape-9.png" alt="" /></div>
+                                    <div class="main-slider__shape-nine"><img
+                                            src="assets/images/shapes/slider-shape-9.png" alt="" /></div>
                                 </div>
                             </div>
                         </div>
@@ -425,10 +511,14 @@
                                     About Us
                                     <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
                                         <g clip-path="url(#clip0_324_36194)">
-                                            <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
-                                            <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
-                                            <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
-                                            <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
+                                            <path
+                                                d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
+                                            <path
+                                                d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
+                                            <path
+                                                d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
+                                            <path
+                                                d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
                                         </g>
                                     </svg>
                                 </h5>
@@ -436,21 +526,25 @@
                             </div>
                             <!-- section-title -->
                             <p class="about-three__content__text">
-                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum.
+                                There are many variations of passages of Lorem Ipsum available, but the majority have
+                                suffered alteration in some form, by injected humour, or randomised words which don't
+                                look even slightly believable. If you are going to use a passage of Lorem Ipsum.
                                 Class aptent taciti sociosqu ad litora torquent
                             </p>
                             <div class="about-three__box">
                                 <div class="about-three__box__icon"><span class="icon-Presentation"></span></div>
                                 <h4 class="about-three__box__title">Flexible Classes</h4>
                                 <p class="about-three__box__text">
-                                    The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                                    The generated Lorem Ipsum is therefore always free from repetition, injected humour,
+                                    or non-characteristic words etc.
                                 </p>
                             </div>
                             <!-- /.icon-box -->
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="about-three__author">
-                                        <div class="about-three__author__thumb"><img src="assets/images/resources/about-author.jpg" alt="eduact"></div>
+                                        <div class="about-three__author__thumb"><img
+                                                src="assets/images/resources/about-author.jpg" alt="eduact"></div>
                                         <img src="assets/images/resources/about-sign.png" alt="eduact">
                                         <p class="about-three__author__text">Jone Martin, CEO </p>
                                     </div>
@@ -459,12 +553,14 @@
                                     <div class="about-three__info">
                                         <div class="about-three__info__icon"><span class="icon-Call"></span></div>
                                         <p class="about-three__info__text">Need to Know More Details?</p>
-                                        <h4 class="about-three__info__title"><a href="tel:6845550102">+(684) 555-0102</a></h4>
+                                        <h4 class="about-three__info__title"><a href="tel:6845550102">+(684)
+                                                555-0102</a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="about-three__br"></div>
-                            <a href="about.html" class="eduact-btn"><span class="eduact-btn__curve"></span>Discover More<i class="icon-arrow"></i></a>
+                            <a href="about.html" class="eduact-btn"><span class="eduact-btn__curve"></span>Discover
+                                More<i class="icon-arrow"></i></a>
                             <!-- /.btn -->
                         </div>
                         <!-- about content end -->
@@ -472,7 +568,8 @@
                     <div class="col-xl-6 wow fadeInRight" data-wow-delay="100ms">
                         <div class="about-three__thumb">
                             <!-- about thumb start -->
-                            <div class="about-three__thumb__one eduact-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 2, "speed": 700, "scale": 1 }'>
+                            <div class="about-three__thumb__one eduact-tilt"
+                                data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 2, "speed": 700, "scale": 1 }'>
                                 <img src="assets/images/resources/about-3-1.jpg" alt="eduact">
                             </div>
                             <!-- /.about-thumb-one -->
@@ -480,13 +577,17 @@
                             <!-- /.about-shape-one -->
                             <div class="about-three__thumb__shape-two"></div>
                             <!-- /.about-shape-two -->
-                            <div class="about-three__thumb__shape-three"><span></span><span></span><span></span><span></span><span></span></div>
+                            <div class="about-three__thumb__shape-three">
+                                <span></span><span></span><span></span><span></span><span></span></div>
                             <!-- /.about-shape-three -->
-                            <div class="about-three__thumb__shape-four"><img src="assets/images/shapes/about-3-shape-1.png" alt="eduact" /></div>
+                            <div class="about-three__thumb__shape-four"><img
+                                    src="assets/images/shapes/about-3-shape-1.png" alt="eduact" /></div>
                             <!-- /.about-shape-four -->
-                            <div class="about-three__thumb__shape-five"><span></span><span></span><span></span><span></span><span></span></div>
+                            <div class="about-three__thumb__shape-five">
+                                <span></span><span></span><span></span><span></span><span></span></div>
                             <!-- /.about-shape-five -->
-                            <div class="about-three__thumb__shape-six"><span></span><span></span><span></span><span></span><span></span></div>
+                            <div class="about-three__thumb__shape-six">
+                                <span></span><span></span><span></span><span></span><span></span></div>
                             <!-- /.about-shape-six -->
                             <div class="about-three__thumb__shape-seven"></div>
                             <!-- /.about-shape-seven -->
@@ -503,6 +604,7 @@
                 padding: 80px 0 70px;
                 background: #ffffff;
             }
+
             /* Cards row */
             .alp-cat-card {
                 background: #fff;
@@ -514,10 +616,12 @@
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 position: relative;
             }
+
             .alp-cat-card:hover {
                 transform: translateY(-6px);
-                box-shadow: 0 12px 40px rgba(11,29,62,0.12);
+                box-shadow: 0 12px 40px rgba(11, 29, 62, 0.12);
             }
+
             /* Line + icon assembly */
             .alp-cat-card__line-zone {
                 position: relative;
@@ -527,6 +631,7 @@
                 justify-content: center;
                 margin-bottom: 22px;
             }
+
             .alp-cat-card__line {
                 position: absolute;
                 left: 0;
@@ -535,6 +640,7 @@
                 transform: translateY(-50%);
                 height: 2px;
             }
+
             .alp-cat-card__icon {
                 width: 58px;
                 height: 58px;
@@ -548,6 +654,7 @@
                 z-index: 2;
                 flex-shrink: 0;
             }
+
             .alp-cat-card__title {
                 font-size: 16px;
                 font-weight: 700;
@@ -555,6 +662,7 @@
                 margin: 0 0 8px;
                 line-height: 1.4;
             }
+
             .alp-cat-card__sub {
                 font-size: 13px;
                 color: #8a94a6;
@@ -571,10 +679,14 @@
                                 Course Categories
                                 <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
                                     <g clip-path="url(#clip0_324_36194)">
-                                        <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
-                                        <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
-                                        <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
-                                        <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
+                                        <path
+                                            d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
+                                        <path
+                                            d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
+                                        <path
+                                            d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
+                                        <path
+                                            d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
                                     </g>
                                 </svg>
                             </h5>
@@ -641,14 +753,19 @@
         <!-- Service End -->
         <!-- Video Start -->
         <section class="video-two" data-jarallax data-speed="0.3" data-imgPosition="50% -100%">
-            <div class="video-two__bg jarallax-img" style="background-image: url(assets/images/backgrounds/video-bg-2.jpg);"></div>
+            <div class="video-two__bg jarallax-img"
+                style="background-image: url(assets/images/backgrounds/video-bg-2.jpg);"></div>
             <div class="video-two__shape" style="background-image: url(assets/images/shapes/video-shape-3.png);"></div>
             <div class="container">
                 <div class="row d-flex align-items-center justify-content-center text-center">
                     <div class="col-xl-8 col-md-10 wow fadeInUp" data-wow-delay="200ms">
-                        <h3 class="video-two__title">Ready to Advance Your Career<br>with an Ofqual-Regulated Qualification?</h3>
-                        <p style="color:#d4dbe8;font-size:16px;margin:0 0 30px;line-height:1.7;">Join hundreds of learners across the UK studying 100% online at their own pace � from Level 3 right through to Level 7, equivalent to a Master's degree.</p>
-                        <a href="#contact" class="eduact-btn eduact-btn-second"><span class="eduact-btn__curve"></span>Speak to an Adviser<i class="icon-arrow"></i></a>
+                        <h3 class="video-two__title">Ready to Advance Your Career<br>with an Ofqual-Regulated
+                            Qualification?</h3>
+                        <p style="color:#d4dbe8;font-size:16px;margin:0 0 30px;line-height:1.7;">Join hundreds of
+                            learners across the UK studying 100% online at their own pace � from Level 3 right through
+                            to Level 7, equivalent to a Master's degree.</p>
+                        <a href="#contact" class="eduact-btn eduact-btn-second"><span
+                                class="eduact-btn__curve"></span>Speak to an Adviser<i class="icon-arrow"></i></a>
                     </div>
                 </div>
             </div>
@@ -662,27 +779,34 @@
                 position: relative;
                 overflow: hidden;
             }
+
             .alp-stats-section::before {
                 content: '';
                 position: absolute;
-                top: -120px; right: -120px;
-                width: 480px; height: 480px;
+                top: -120px;
+                right: -120px;
+                width: 480px;
+                height: 480px;
                 border-radius: 50%;
-                background: rgba(26,79,216,0.10);
+                background: rgba(26, 79, 216, 0.10);
                 pointer-events: none;
             }
+
             .alp-stats-section::after {
                 content: '';
                 position: absolute;
-                bottom: -100px; left: -100px;
-                width: 360px; height: 360px;
+                bottom: -100px;
+                left: -100px;
+                width: 360px;
+                height: 360px;
                 border-radius: 50%;
-                background: rgba(26,79,216,0.07);
+                background: rgba(26, 79, 216, 0.07);
                 pointer-events: none;
             }
+
             .alp-stat-card {
-                background: rgba(255,255,255,0.05);
-                border: 1px solid rgba(255,255,255,0.10);
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.10);
                 border-radius: 16px;
                 padding: 40px 24px 36px;
                 text-align: center;
@@ -691,17 +815,19 @@
                 margin-bottom: 24px;
                 backdrop-filter: blur(4px);
             }
+
             .alp-stat-card:hover {
-                background: rgba(26,79,216,0.18);
+                background: rgba(26, 79, 216, 0.18);
                 transform: translateY(-6px);
-                border-color: rgba(26,79,216,0.5);
+                border-color: rgba(26, 79, 216, 0.5);
             }
+
             .alp-stat-card__icon {
                 width: 64px;
                 height: 64px;
                 border-radius: 50%;
-                background: rgba(26,79,216,0.25);
-                border: 2px solid rgba(26,79,216,0.5);
+                background: rgba(26, 79, 216, 0.25);
+                border: 2px solid rgba(26, 79, 216, 0.5);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -710,9 +836,11 @@
                 color: #6ea8ff;
                 transition: background 0.3s ease;
             }
+
             .alp-stat-card:hover .alp-stat-card__icon {
-                background: rgba(26,79,216,0.45);
+                background: rgba(26, 79, 216, 0.45);
             }
+
             .alp-stat-card__number {
                 font-size: 52px;
                 font-weight: 900;
@@ -721,20 +849,23 @@
                 margin-bottom: 6px;
                 letter-spacing: -1px;
             }
+
             .alp-stat-card__number sup {
                 font-size: 24px;
                 font-weight: 700;
                 vertical-align: super;
                 color: #6ea8ff;
             }
+
             .alp-stat-card__label {
                 font-size: 14px;
                 font-weight: 600;
-                color: rgba(255,255,255,0.65);
+                color: rgba(255, 255, 255, 0.65);
                 text-transform: uppercase;
                 letter-spacing: 1.2px;
                 margin: 0;
             }
+
             .alp-stat-card__divider {
                 width: 36px;
                 height: 3px;
@@ -742,8 +873,11 @@
                 border-radius: 2px;
                 margin: 12px auto 14px;
             }
+
             @media (max-width: 767px) {
-                .alp-stat-card__number { font-size: 40px; }
+                .alp-stat-card__number {
+                    font-size: 40px;
+                }
             }
         </style>
         <section class="alp-stats-section">
@@ -756,7 +890,8 @@
                                 <span class="icon-Headphone-Women"></span>
                             </div>
                             <div class="alp-stat-card__number">
-                                <span class="count-box"><span class="count-text" data-stop="30.3" data-speed="1500"></span></span><sup>k</sup>
+                                <span class="count-box"><span class="count-text" data-stop="30.3"
+                                        data-speed="1500"></span></span><sup>k</sup>
                             </div>
                             <div class="alp-stat-card__divider"></div>
                             <p class="alp-stat-card__label">Students Enrolled</p>
@@ -769,7 +904,8 @@
                                 <span class="icon-Online-learning"></span>
                             </div>
                             <div class="alp-stat-card__number">
-                                <span class="count-box"><span class="count-text" data-stop="40.5" data-speed="1500"></span></span><sup>k</sup>
+                                <span class="count-box"><span class="count-text" data-stop="40.5"
+                                        data-speed="1500"></span></span><sup>k</sup>
                             </div>
                             <div class="alp-stat-card__divider"></div>
                             <p class="alp-stat-card__label">Classes Completed</p>
@@ -782,7 +918,8 @@
                                 <span class="icon-ratings"></span>
                             </div>
                             <div class="alp-stat-card__number">
-                                <span class="count-box"><span class="count-text" data-stop="88.9" data-speed="1500"></span></span><sup>%</sup>
+                                <span class="count-box"><span class="count-text" data-stop="88.9"
+                                        data-speed="1500"></span></span><sup>%</sup>
                             </div>
                             <div class="alp-stat-card__divider"></div>
                             <p class="alp-stat-card__label">Satisfaction Rate</p>
@@ -795,7 +932,8 @@
                                 <span class="icon-instructor"></span>
                             </div>
                             <div class="alp-stat-card__number">
-                                <span class="count-box"><span class="count-text" data-stop="6.30" data-speed="1500"></span></span><sup>+</sup>
+                                <span class="count-box"><span class="count-text" data-stop="6.30"
+                                        data-speed="1500"></span></span><sup>+</sup>
                             </div>
                             <div class="alp-stat-card__divider"></div>
                             <p class="alp-stat-card__label">Top Instructors</p>
@@ -805,17 +943,22 @@
             </div>
         </section>
         <!-- Course Start -->
-        <section id="courses" class="course-three alp-courses-section" style="background-image: url(assets/images/shapes/course-bg-3.png);">
+        <section id="courses" class="course-three alp-courses-section"
+            style="background-image: url(assets/images/shapes/course-bg-3.png);">
             <div class="container">
                 <div class="section-title wow fadeInUp text-center" data-wow-delay="100ms">
                     <h5 class="section-title__tagline">
                         Our Courses
                         <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
                             <g clip-path="url(#clip0_324_36194)">
-                                <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
-                                <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
-                                <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
-                                <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
+                                <path
+                                    d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
+                                <path
+                                    d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
+                                <path
+                                    d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
+                                <path
+                                    d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
                             </g>
                         </svg>
                     </h5>
@@ -828,7 +971,8 @@
                         <div class="alp-course-card">
                             <a href="course-intro-management-l3.html">
                                 <div class="alp-course-card__thumb">
-                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Introduction to Management">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80"
+                                        alt="Introduction to Management">
                                     <div class="alp-course-card__badge">Level 3 &nbsp;|&nbsp; 60 Credits</div>
                                 </div>
                                 <div class="alp-course-card__content">
@@ -843,7 +987,8 @@
                         <div class="alp-course-card">
                             <a href="course-business-management-l3.html">
                                 <div class="alp-course-card__thumb">
-                                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Business Management Level 3">
+                                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80"
+                                        alt="Business Management Level 3">
                                     <div class="alp-course-card__badge">Level 3 &nbsp;|&nbsp; 120 Credits</div>
                                 </div>
                                 <div class="alp-course-card__content">
@@ -858,11 +1003,13 @@
                         <div class="alp-course-card">
                             <a href="course-business-management-l45.html">
                                 <div class="alp-course-card__thumb">
-                                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&q=80" alt="Business Management Levels 4 and 5">
+                                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&q=80"
+                                        alt="Business Management Levels 4 and 5">
                                     <div class="alp-course-card__badge">Levels 4 &amp; 5 &nbsp;|&nbsp; 240 Credits</div>
                                 </div>
                                 <div class="alp-course-card__content">
-                                    <h3 class="alp-course-card__title">Business Management, University 1st &amp; 2nd Year</h3>
+                                    <h3 class="alp-course-card__title">Business Management, University 1st &amp; 2nd
+                                        Year</h3>
                                     <span class="alp-course-card__link">Learn More <i class="icon-arrow"></i></span>
                                 </div>
                             </a>
@@ -873,7 +1020,8 @@
                         <div class="alp-course-card">
                             <a href="course-business-admin-l6.html">
                                 <div class="alp-course-card__thumb">
-                                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80" alt="Business Administrative Management Level 6">
+                                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80"
+                                        alt="Business Administrative Management Level 6">
                                     <div class="alp-course-card__badge">Level 6 &nbsp;|&nbsp; 120 Credits</div>
                                 </div>
                                 <div class="alp-course-card__content">
@@ -888,7 +1036,8 @@
                         <div class="alp-course-card">
                             <a href="course-hrm-l45.html">
                                 <div class="alp-course-card__thumb">
-                                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80" alt="Human Resource Management Levels 4 and 5">
+                                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80"
+                                        alt="Human Resource Management Levels 4 and 5">
                                     <div class="alp-course-card__badge">Levels 4 &amp; 5 &nbsp;|&nbsp; 240 Credits</div>
                                 </div>
                                 <div class="alp-course-card__content">
@@ -903,7 +1052,8 @@
                         <div class="alp-course-card">
                             <a href="course-teacher-training-l5.html">
                                 <div class="alp-course-card__thumb">
-                                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80" alt="Teacher Training Level 5">
+                                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80"
+                                        alt="Teacher Training Level 5">
                                     <div class="alp-course-card__badge">Level 5 &nbsp;|&nbsp; 120 Credits</div>
                                 </div>
                                 <div class="alp-course-card__content">
@@ -924,6 +1074,7 @@
                 padding: 90px 0 80px;
                 background: #f5f1ea;
             }
+
             .alp-feedback-section .section-title__tagline {
                 display: inline-flex;
                 align-items: center;
@@ -934,10 +1085,12 @@
                 text-transform: uppercase;
                 color: #0b1d3e;
             }
+
             .alp-feedback-section .section-title__tagline i {
                 font-size: 18px;
                 color: #0b1d3e;
             }
+
             .alp-feedback-section .section-title__title {
                 font-size: clamp(32px, 4vw, 52px);
                 font-weight: 800;
@@ -945,6 +1098,7 @@
                 margin: 10px 0 14px;
                 line-height: 1.15;
             }
+
             .alp-feedback-section .section-title__text {
                 font-size: 16px;
                 color: #6b7280;
@@ -952,6 +1106,7 @@
                 margin: 0 auto;
                 line-height: 1.7;
             }
+
             /* Testimonial Card */
             .alp-tcard {
                 background: #ffffff;
@@ -961,10 +1116,12 @@
                 position: relative;
                 transition: box-shadow 0.3s ease, transform 0.3s ease;
             }
+
             .alp-tcard:hover {
-                box-shadow: 0 14px 45px rgba(11,29,62,0.10);
+                box-shadow: 0 14px 45px rgba(11, 29, 62, 0.10);
                 transform: translateY(-4px);
             }
+
             .alp-tcard__quote {
                 position: absolute;
                 top: 24px;
@@ -976,45 +1133,53 @@
                 pointer-events: none;
                 user-select: none;
             }
+
             .alp-tcard__name {
                 font-size: 18px;
                 font-weight: 800;
                 color: #0b1d3e;
                 margin: 0 0 3px;
             }
+
             .alp-tcard__role {
                 font-size: 13px;
                 color: #9ca3af;
                 margin: 0 0 18px;
                 font-weight: 500;
             }
+
             .alp-tcard__rating-row {
                 display: flex;
                 align-items: center;
                 gap: 10px;
                 margin-bottom: 18px;
             }
+
             .alp-tcard__score {
                 font-size: 48px;
                 font-weight: 800;
                 color: #0b1d3e;
                 line-height: 1;
             }
+
             .alp-tcard__stars {
                 display: flex;
                 flex-direction: column;
                 gap: 2px;
             }
+
             .alp-tcard__stars span {
                 color: #1a4fd8;
                 font-size: 16px;
                 letter-spacing: 1px;
             }
+
             .alp-tcard__divider {
                 height: 1px;
                 background: #f0f0f0;
                 margin-bottom: 18px;
             }
+
             .alp-tcard__text {
                 font-size: 14px;
                 color: #4b5563;
@@ -1033,7 +1198,8 @@
                                 Students Feedback
                             </h5>
                             <h2 class="section-title__title">Journey of Our Students</h2>
-                            <p class="section-title__text">Hear directly from learners who have transformed their careers through ALP Business School's Ofqual-regulated programmes.</p>
+                            <p class="section-title__text">Hear directly from learners who have transformed their
+                                careers through ALP Business School's Ofqual-regulated programmes.</p>
                         </div>
                     </div>
                 </div>
@@ -1051,7 +1217,9 @@
                                 </div>
                             </div>
                             <div class="alp-tcard__divider"></div>
-                            <p class="alp-tcard__text">"ALP Business School gave me the confidence and knowledge to step into a management role. Studying fully online meant I could balance work and family while earning a Level 5 qualification that employers actually recognise."</p>
+                            <p class="alp-tcard__text">"ALP Business School gave me the confidence and knowledge to step
+                                into a management role. Studying fully online meant I could balance work and family
+                                while earning a Level 5 qualification that employers actually recognise."</p>
                         </div>
                     </div>
                     <!-- Card 2 -->
@@ -1067,7 +1235,9 @@
                                 </div>
                             </div>
                             <div class="alp-tcard__divider"></div>
-                            <p class="alp-tcard__text">"The HR Management programme is genuinely world-class. The course materials are thorough and up to date, and the support team is always on hand. Being Ofqual-regulated gave me real assurance about the quality of my qualification."</p>
+                            <p class="alp-tcard__text">"The HR Management programme is genuinely world-class. The course
+                                materials are thorough and up to date, and the support team is always on hand. Being
+                                Ofqual-regulated gave me real assurance about the quality of my qualification."</p>
                         </div>
                     </div>
                     <!-- Card 3 -->
@@ -1083,7 +1253,10 @@
                                 </div>
                             </div>
                             <div class="alp-tcard__divider"></div>
-                            <p class="alp-tcard__text">"I completed the Level 5 Teacher Training course while working full-time. ALP's flexible online model was perfect for me � the structured learning, practical assessments and dedicated tutors transformed my teaching career completely."</p>
+                            <p class="alp-tcard__text">"I completed the Level 5 Teacher Training course while working
+                                full-time. ALP's flexible online model was perfect for me � the structured learning,
+                                practical assessments and dedicated tutors transformed my teaching career completely."
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1099,39 +1272,49 @@
                 position: relative;
                 overflow: hidden;
             }
+
             .alp-topics-section::before {
                 content: '';
                 position: absolute;
-                top: -140px; right: -100px;
-                width: 500px; height: 500px;
+                top: -140px;
+                right: -100px;
+                width: 500px;
+                height: 500px;
                 border-radius: 50%;
-                background: rgba(26,79,216,0.09);
+                background: rgba(26, 79, 216, 0.09);
                 pointer-events: none;
             }
+
             .alp-topics-section::after {
                 content: '';
                 position: absolute;
-                bottom: -120px; left: -80px;
-                width: 380px; height: 380px;
+                bottom: -120px;
+                left: -80px;
+                width: 380px;
+                height: 380px;
                 border-radius: 50%;
-                background: rgba(26,79,216,0.06);
+                background: rgba(26, 79, 216, 0.06);
                 pointer-events: none;
             }
+
             .alp-topics-section .section-title__tagline {
-                color: rgba(255,255,255,0.75);
+                color: rgba(255, 255, 255, 0.75);
                 display: inline-flex;
                 align-items: center;
                 gap: 8px;
             }
+
             .alp-topics-section .section-title__tagline svg path {
-                fill: rgba(255,255,255,0.5);
+                fill: rgba(255, 255, 255, 0.5);
             }
+
             .alp-topics-section .section-title__title {
                 color: #ffffff;
             }
+
             .alp-topic-card {
-                background: rgba(255,255,255,0.05);
-                border: 1px solid rgba(255,255,255,0.10);
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.10);
                 border-radius: 16px;
                 padding: 40px 28px 36px;
                 text-align: center;
@@ -1141,30 +1324,36 @@
                 backdrop-filter: blur(4px);
                 overflow: hidden;
             }
+
             .alp-topic-card::before {
                 content: '';
                 position: absolute;
-                top: 0; left: 0; right: 0;
+                top: 0;
+                left: 0;
+                right: 0;
                 height: 3px;
                 background: linear-gradient(90deg, #1a4fd8, #6ea8ff);
                 border-radius: 16px 16px 0 0;
                 opacity: 0;
                 transition: opacity 0.3s ease;
             }
+
             .alp-topic-card:hover {
-                background: rgba(26,79,216,0.18);
+                background: rgba(26, 79, 216, 0.18);
                 transform: translateY(-8px);
-                border-color: rgba(26,79,216,0.45);
+                border-color: rgba(26, 79, 216, 0.45);
             }
+
             .alp-topic-card:hover::before {
                 opacity: 1;
             }
+
             .alp-topic-card__icon {
                 width: 72px;
                 height: 72px;
                 border-radius: 50%;
-                background: rgba(26,79,216,0.22);
-                border: 2px solid rgba(26,79,216,0.45);
+                background: rgba(26, 79, 216, 0.22);
+                border: 2px solid rgba(26, 79, 216, 0.45);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1173,10 +1362,12 @@
                 color: #6ea8ff;
                 transition: background 0.3s ease, transform 0.3s ease;
             }
+
             .alp-topic-card:hover .alp-topic-card__icon {
-                background: rgba(26,79,216,0.45);
+                background: rgba(26, 79, 216, 0.45);
                 transform: scale(1.08);
             }
+
             .alp-topic-card__title {
                 font-size: 17px;
                 font-weight: 700;
@@ -1184,22 +1375,26 @@
                 margin: 0 0 10px;
                 line-height: 1.4;
             }
+
             .alp-topic-card__title a {
                 color: inherit;
                 text-decoration: none;
                 transition: color 0.2s;
             }
+
             .alp-topic-card__title a:hover {
                 color: #6ea8ff;
             }
+
             .alp-topic-card__meta {
                 font-size: 13px;
-                color: rgba(255,255,255,0.45);
+                color: rgba(255, 255, 255, 0.45);
                 font-weight: 500;
                 margin: 0;
                 text-transform: uppercase;
                 letter-spacing: 0.8px;
             }
+
             .alp-topic-card__divider {
                 width: 32px;
                 height: 2px;
@@ -1217,10 +1412,14 @@
                                 Our Categories
                                 <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
                                     <g clip-path="url(#clip0_324_36194)">
-                                        <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
-                                        <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
-                                        <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
-                                        <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
+                                        <path
+                                            d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
+                                        <path
+                                            d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
+                                        <path
+                                            d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
+                                        <path
+                                            d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
                                     </g>
                                 </svg>
                             </h5>
@@ -1235,7 +1434,8 @@
                             <div class="alp-topic-card__icon">
                                 <span class="icon-business"></span>
                             </div>
-                            <h3 class="alp-topic-card__title"><a href="course-business-management-l3.html">Business Management</a></h3>
+                            <h3 class="alp-topic-card__title"><a href="course-business-management-l3.html">Business
+                                    Management</a></h3>
                             <div class="alp-topic-card__divider"></div>
                             <p class="alp-topic-card__meta">4 Programmes</p>
                         </div>
@@ -1246,7 +1446,8 @@
                             <div class="alp-topic-card__icon">
                                 <span class="icon-education"></span>
                             </div>
-                            <h3 class="alp-topic-card__title"><a href="course-hrm-l45.html">Human Resource Management</a></h3>
+                            <h3 class="alp-topic-card__title"><a href="course-hrm-l45.html">Human Resource
+                                    Management</a></h3>
                             <div class="alp-topic-card__divider"></div>
                             <p class="alp-topic-card__meta">1 Programme</p>
                         </div>
@@ -1257,7 +1458,8 @@
                             <div class="alp-topic-card__icon">
                                 <span class="icon-webinar"></span>
                             </div>
-                            <h3 class="alp-topic-card__title"><a href="course-teacher-training-l5.html">Teacher Training</a></h3>
+                            <h3 class="alp-topic-card__title"><a href="course-teacher-training-l5.html">Teacher
+                                    Training</a></h3>
                             <div class="alp-topic-card__divider"></div>
                             <p class="alp-topic-card__meta">1 Programme</p>
                         </div>
@@ -1268,7 +1470,8 @@
                             <div class="alp-topic-card__icon">
                                 <span class="icon-chart-up"></span>
                             </div>
-                            <h3 class="alp-topic-card__title"><a href="course-business-admin-l6.html">Administration &amp; Management</a></h3>
+                            <h3 class="alp-topic-card__title"><a href="course-business-admin-l6.html">Administration
+                                    &amp; Management</a></h3>
                             <div class="alp-topic-card__divider"></div>
                             <p class="alp-topic-card__meta">1 Programme</p>
                         </div>
@@ -1279,15 +1482,18 @@
         <!-- Category End -->
         <!-- Call To Action Start -->
         <section class="cta-three" data-jarallax data-speed="0.3" data-imgPosition="50% -100%">
-            <div class="cta-three__bg jarallax-img" style="background-image: url(assets/images/backgrounds/cta-bg-3.jpg);"></div>
+            <div class="cta-three__bg jarallax-img"
+                style="background-image: url(assets/images/backgrounds/cta-bg-3.jpg);"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 wow fadeInLeft" data-wow-delay="200ms">
                         <div class="cta-three__thumb"><img src="assets/images/shapes/cta-3-1.png" alt="eduact" /></div>
-                        <h3 class="cta-three__title"><span>Skills Certificate</span><br> From <span>ALP Business School</span></h3>
+                        <h3 class="cta-three__title"><span>Skills Certificate</span><br> From <span>ALP Business
+                                School</span></h3>
                     </div>
                     <div class="col-md-6 wow fadeInRight" data-wow-delay="300ms">
-                        <div class="cta-three__btn"><a href="#contact" class="eduact-btn"><span class="eduact-btn__curve"></span>Get In Touch</a></div>
+                        <div class="cta-three__btn"><a href="#contact" class="eduact-btn"><span
+                                    class="eduact-btn__curve"></span>Get In Touch</a></div>
                     </div>
                 </div>
             </div>
@@ -1301,19 +1507,24 @@
                 background: #f8f9fc;
                 position: relative;
             }
+
             .alp-contact-section::before {
                 content: '';
                 position: absolute;
-                top: 0; left: 0; right: 0;
+                top: 0;
+                left: 0;
+                right: 0;
                 height: 4px;
                 background: linear-gradient(90deg, #0b1d3e, #1a4fd8, #0b1d3e);
             }
+
             .alp-contact-wrap {
                 background: #ffffff;
                 border-radius: 18px;
-                box-shadow: 0 10px 60px rgba(11,29,62,0.10);
+                box-shadow: 0 10px 60px rgba(11, 29, 62, 0.10);
                 overflow: hidden;
             }
+
             .alp-contact-info {
                 background: linear-gradient(135deg, #050d1f 0%, #0b1d3e 60%, #112660 100%);
                 padding: 52px 40px;
@@ -1321,14 +1532,18 @@
                 position: relative;
                 overflow: hidden;
             }
+
             .alp-contact-info::before {
                 content: '';
                 position: absolute;
-                bottom: -80px; right: -80px;
-                width: 300px; height: 300px;
+                bottom: -80px;
+                right: -80px;
+                width: 300px;
+                height: 300px;
                 border-radius: 50%;
-                background: rgba(26,79,216,0.12);
+                background: rgba(26, 79, 216, 0.12);
             }
+
             .alp-contact-info__title {
                 font-size: 26px;
                 font-weight: 800;
@@ -1336,24 +1551,27 @@
                 margin: 0 0 12px;
                 line-height: 1.3;
             }
+
             .alp-contact-info__text {
                 font-size: 14px;
-                color: rgba(255,255,255,0.65);
+                color: rgba(255, 255, 255, 0.65);
                 line-height: 1.75;
                 margin-bottom: 36px;
             }
+
             .alp-contact-info__item {
                 display: flex;
                 align-items: flex-start;
                 gap: 14px;
                 margin-bottom: 24px;
             }
+
             .alp-contact-info__item-icon {
                 width: 44px;
                 height: 44px;
                 border-radius: 50%;
-                background: rgba(26,79,216,0.30);
-                border: 1px solid rgba(26,79,216,0.5);
+                background: rgba(26, 79, 216, 0.30);
+                border: 1px solid rgba(26, 79, 216, 0.5);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1361,14 +1579,16 @@
                 color: #6ea8ff;
                 flex-shrink: 0;
             }
+
             .alp-contact-info__item-text p {
                 margin: 0;
                 font-size: 12px;
-                color: rgba(255,255,255,0.5);
+                color: rgba(255, 255, 255, 0.5);
                 text-transform: uppercase;
                 letter-spacing: 0.8px;
                 font-weight: 600;
             }
+
             .alp-contact-info__item-text a,
             .alp-contact-info__item-text span {
                 font-size: 14px;
@@ -1377,11 +1597,16 @@
                 font-weight: 500;
                 transition: color 0.2s;
             }
-            .alp-contact-info__item-text a:hover { color: #6ea8ff; }
+
+            .alp-contact-info__item-text a:hover {
+                color: #6ea8ff;
+            }
+
             /* Form side */
             .alp-contact-form-side {
                 padding: 52px 44px;
             }
+
             .alp-contact-form-side .section-title__tagline {
                 display: inline-flex;
                 align-items: center;
@@ -1392,6 +1617,7 @@
                 text-transform: uppercase;
                 color: #1a4fd8;
             }
+
             .alp-contact-form-side .section-title__title {
                 font-size: clamp(24px, 3vw, 34px);
                 font-weight: 800;
@@ -1399,9 +1625,11 @@
                 margin: 10px 0 28px;
                 line-height: 1.2;
             }
+
             .alp-cf-group {
                 margin-bottom: 20px;
             }
+
             .alp-cf-group label {
                 display: block;
                 font-size: 13px;
@@ -1410,6 +1638,7 @@
                 margin-bottom: 7px;
                 letter-spacing: 0.3px;
             }
+
             .alp-cf-control {
                 width: 100%;
                 border: 1.5px solid #e2e8f0;
@@ -1422,15 +1651,18 @@
                 outline: none;
                 font-family: inherit;
             }
+
             .alp-cf-control:focus {
                 border-color: #1a4fd8;
                 background: #ffffff;
-                box-shadow: 0 0 0 3px rgba(26,79,216,0.08);
+                box-shadow: 0 0 0 3px rgba(26, 79, 216, 0.08);
             }
+
             textarea.alp-cf-control {
                 resize: vertical;
                 min-height: 120px;
             }
+
             .alp-cf-submit {
                 display: inline-flex;
                 align-items: center;
@@ -1447,10 +1679,12 @@
                 transition: background 0.2s ease, transform 0.2s ease;
                 margin-top: 6px;
             }
+
             .alp-cf-submit:hover {
                 background: #0b1d3e;
                 transform: translateY(-2px);
             }
+
             .alp-cf-success {
                 display: none;
                 background: #edfaf1;
@@ -1463,9 +1697,15 @@
                 margin-top: 20px;
                 text-align: center;
             }
+
             @media (max-width: 991px) {
-                .alp-contact-form-side { padding: 36px 28px; }
-                .alp-contact-info { padding: 40px 28px; }
+                .alp-contact-form-side {
+                    padding: 36px 28px;
+                }
+
+                .alp-contact-info {
+                    padding: 40px 28px;
+                }
             }
         </style>
         <section class="alp-contact-section" id="contact">
@@ -1478,23 +1718,27 @@
                                 <div class="col-lg-4 wow fadeInLeft" data-wow-delay="100ms">
                                     <div class="alp-contact-info">
                                         <h3 class="alp-contact-info__title">Let's Start a Conversation</h3>
-                                        <p class="alp-contact-info__text">We're here to help you find the right programme. Reach out and our team will get back to you promptly.</p>
+                                        <p class="alp-contact-info__text">We're here to help you find the right
+                                            programme. Reach out and our team will get back to you promptly.</p>
                                         <div class="alp-contact-info__item">
-                                            <div class="alp-contact-info__item-icon"><i class="fas fa-phone-alt"></i></div>
+                                            <div class="alp-contact-info__item-icon"><i class="fas fa-phone-alt"></i>
+                                            </div>
                                             <div class="alp-contact-info__item-text">
                                                 <p>Phone</p>
                                                 <a href="tel:+441234567890">+44 (0) 123 456 7890</a>
                                             </div>
                                         </div>
                                         <div class="alp-contact-info__item">
-                                            <div class="alp-contact-info__item-icon"><i class="fas fa-envelope"></i></div>
+                                            <div class="alp-contact-info__item-icon"><i class="fas fa-envelope"></i>
+                                            </div>
                                             <div class="alp-contact-info__item-text">
                                                 <p>Email</p>
                                                 <a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a>
                                             </div>
                                         </div>
                                         <div class="alp-contact-info__item">
-                                            <div class="alp-contact-info__item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                            <div class="alp-contact-info__item-icon"><i
+                                                    class="fas fa-map-marker-alt"></i></div>
                                             <div class="alp-contact-info__item-text">
                                                 <p>Location</p>
                                                 <span>London, United Kingdom</span>
@@ -1512,38 +1756,48 @@
                                 <!-- Form Panel -->
                                 <div class="col-lg-8 wow fadeInRight" data-wow-delay="200ms">
                                     <div class="alp-contact-form-side">
-                                        <h5 class="section-title__tagline"><i class="fas fa-paper-plane"></i> Send Us a Message</h5>
+                                        <h5 class="section-title__tagline"><i class="fas fa-paper-plane"></i> Send Us a
+                                            Message</h5>
                                         <h2 class="section-title__title">Contact Us</h2>
                                         <form id="alpContactForm" novalidate>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="alp-cf-group">
-                                                        <label for="cf-name">Full Name <span style="color:#1a4fd8;">*</span></label>
-                                                        <input type="text" id="cf-name" class="alp-cf-control" placeholder="e.g. John Smith" required>
+                                                        <label for="cf-name">Full Name <span
+                                                                style="color:#1a4fd8;">*</span></label>
+                                                        <input type="text" id="cf-name" class="alp-cf-control"
+                                                            placeholder="e.g. John Smith" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="alp-cf-group">
-                                                        <label for="cf-email">Email Address <span style="color:#1a4fd8;">*</span></label>
-                                                        <input type="email" id="cf-email" class="alp-cf-control" placeholder="e.g. john@example.com" required>
+                                                        <label for="cf-email">Email Address <span
+                                                                style="color:#1a4fd8;">*</span></label>
+                                                        <input type="email" id="cf-email" class="alp-cf-control"
+                                                            placeholder="e.g. john@example.com" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="alp-cf-group">
                                                         <label for="cf-phone">Phone Number</label>
-                                                        <input type="tel" id="cf-phone" class="alp-cf-control" placeholder="e.g. +44 7700 900000">
+                                                        <input type="tel" id="cf-phone" class="alp-cf-control"
+                                                            placeholder="e.g. +44 7700 900000">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="alp-cf-group">
                                                         <label for="cf-subject">Subject</label>
-                                                        <input type="text" id="cf-subject" class="alp-cf-control" placeholder="e.g. Course Enquiry">
+                                                        <input type="text" id="cf-subject" class="alp-cf-control"
+                                                            placeholder="e.g. Course Enquiry">
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="alp-cf-group">
-                                                        <label for="cf-message">Message <span style="color:#1a4fd8;">*</span></label>
-                                                        <textarea id="cf-message" class="alp-cf-control" placeholder="Tell us how we can help you..." required></textarea>
+                                                        <label for="cf-message">Message <span
+                                                                style="color:#1a4fd8;">*</span></label>
+                                                        <textarea id="cf-message" class="alp-cf-control"
+                                                            placeholder="Tell us how we can help you..."
+                                                            required></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -1554,7 +1808,8 @@
                                             </div>
                                         </form>
                                         <div class="alp-cf-success" id="alpCFSuccess">
-                                            <i class="fas fa-check-circle" style="margin-right:8px;"></i> Thank you! Your message has been sent. We'll be in touch shortly.
+                                            <i class="fas fa-check-circle" style="margin-right:8px;"></i> Thank you!
+                                            Your message has been sent. We'll be in touch shortly.
                                         </div>
                                     </div>
                                 </div>
@@ -1565,7 +1820,7 @@
             </div>
         </section>
         <script>
-            document.getElementById('alpContactForm').addEventListener('submit', function(e) {
+            document.getElementById('alpContactForm').addEventListener('submit', function (e) {
                 e.preventDefault();
                 this.style.display = 'none';
                 document.getElementById('alpCFSuccess').style.display = 'block';
@@ -1580,24 +1835,36 @@
                     <!-- Col 1: Logo + About -->
                     <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                         <div class="main-footer-two__about">
-                            <a href="index.html" class="main-footer-two__logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:18px;">
-                                <img src="assets/images/apl_logo.png" alt="ALP Business School" height="54" style="width:auto;max-width:60px;object-fit:contain;">
+                            <a href="index.html" class="main-footer-two__logo"
+                                style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:18px;">
+                                <img src="assets/images/apl_logo.png" alt="ALP Business School" height="54"
+                                    style="width:auto;max-width:60px;object-fit:contain;">
                                 <div style="line-height:1.2;">
-                                    <div style="font-size:17px;font-weight:800;color:#ffffff;letter-spacing:0.3px;">ALP Business School</div>
-                                    <div style="font-size:11px;color:#1a4fd8;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;">Up Lift Your Career</div>
+                                    <div style="font-size:17px;font-weight:800;color:#ffffff;letter-spacing:0.3px;">ALP
+                                        Business School</div>
+                                    <div
+                                        style="font-size:11px;color:#1a4fd8;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;">
+                                        Up Lift Your Career</div>
                                 </div>
                             </a>
-                            <p style="color:#aab3c6;font-size:14px;line-height:1.7;margin-bottom:18px;">Ofqual-regulated professional qualifications from Level 3 to Level 7 � delivered fully online to learners across the UK and worldwide.</p>
+                            <p style="color:#aab3c6;font-size:14px;line-height:1.7;margin-bottom:18px;">Ofqual-regulated
+                                professional qualifications from Level 3 to Level 7 � delivered fully online to learners
+                                across the UK and worldwide.</p>
                             <ul class="main-footer-two__info-list">
                                 <li><span class="icon-Location"></span>London, United Kingdom</li>
-                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456 7890</a></li>
-                                <li><span class="icon-Email"></span><a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
+                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456
+                                        7890</a></li>
+                                <li><span class="icon-Email"></span><a
+                                        href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
                             </ul>
                             <div class="main-footer-two__social">
-                                <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/" aria-label="Facebook"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i
+                                        class="fab fa-linkedin-in"></i></a>
                                 <a href="https://twitter.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.youtube.com/" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.youtube.com/" aria-label="YouTube"><i
+                                        class="fab fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1621,7 +1888,8 @@
                             <ul>
                                 <li><a href="course-intro-management-l3.html">Intro to Management (L3)</a></li>
                                 <li><a href="course-business-management-l3.html">Business Management (L3)</a></li>
-                                <li><a href="course-business-management-l45.html">Business Management (L4&amp;5)</a></li>
+                                <li><a href="course-business-management-l45.html">Business Management (L4&amp;5)</a>
+                                </li>
                                 <li><a href="course-business-admin-l6.html">Business Admin (L6)</a></li>
                                 <li><a href="course-hrm-l45.html">HR Management (L4&amp;5)</a></li>
                                 <li><a href="course-teacher-training-l5.html">Teacher Training (L5)</a></li>
@@ -1634,11 +1902,16 @@
                             <h3 class="main-footer-two__title">Get In Touch</h3>
                             <ul class="main-footer-two__info-list" style="margin-bottom:20px;">
                                 <li><span class="icon-Location"></span>London, United Kingdom</li>
-                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456 7890</a></li>
-                                <li><span class="icon-Email"></span><a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
-                                <li><span class="icon-clock" style="font-family:inherit;">&#128337;</span>&nbsp;Mon � Fri: 9:00am � 6:00pm</li>
+                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456
+                                        7890</a></li>
+                                <li><span class="icon-Email"></span><a
+                                        href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
+                                <li><span class="icon-clock" style="font-family:inherit;">&#128337;</span>&nbsp;Mon �
+                                    Fri: 9:00am � 6:00pm</li>
                             </ul>
-                            <a href="#contact" class="eduact-btn eduact-btn-second" style="font-size:13px;padding:10px 22px;"><span class="eduact-btn__curve"></span>Enquire Now <i class="icon-arrow"></i></a>
+                            <a href="#contact" class="eduact-btn eduact-btn-second"
+                                style="font-size:13px;padding:10px 22px;"><span class="eduact-btn__curve"></span>Enquire
+                                Now <i class="icon-arrow"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1667,7 +1940,8 @@
         <div class="mobile-nav__content">
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/apl_logo.png" height="50" style="width:auto;max-width:200px;object-fit:contain;" alt="ALP Business School" /></a>
+                <a href="index.html" aria-label="logo image"><img src="assets/images/apl_logo.png" height="50"
+                        style="width:auto;max-width:200px;object-fit:contain;" alt="ALP Business School" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -1701,7 +1975,8 @@
         <div class="search-popup__content">
             <form role="search" method="get" class="search-popup__form" action="#">
                 <input type="text" id="search" placeholder="Search Here..." />
-                <button type="submit" class="eduact-btn"><span class="eduact-btn__curve"></span><i class="icon-Search"></i></button>
+                <button type="submit" class="eduact-btn"><span class="eduact-btn__curve"></span><i
+                        class="icon-Search"></i></button>
             </form>
         </div>
         <!-- /.search-popup__content -->
