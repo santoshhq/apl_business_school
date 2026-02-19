@@ -60,12 +60,30 @@
     color: var(--alp-accent) !important;
 }
 
+/* ── Inner Page Nav Override ── */
+.main-menu-with-bg,
+.main-menu-with-bg.stricky-header {
+    background-color: var(--alp-primary) !important;
+}
+
+.main-menu-with-bg .main-menu__list>li>a,
+.main-menu-with-bg .main-menu__toggler,
+.main-menu-with-bg .main-menu__search,
+.main-menu-with-bg .main-menu__login {
+    color: var(--alp-white) !important;
+}
+
+.main-menu-with-bg .main-menu__list>li:hover>a {
+    color: var(--alp-accent) !important;
+}
+
 /* Dropdown — use specificity to match template without breaking opacity/visibility */
 .main-menu .main-menu__list li ul,
 .stricky-header .main-menu__list li ul {
     background-color: var(--alp-primary) !important;
     border-top: 3px solid var(--alp-accent) !important;
     box-shadow: 0 10px 40px rgba(15, 34, 48, 0.5) !important;
+    z-index: 9999 !important;
 }
 
 .main-menu .main-menu__list li ul li>a,
