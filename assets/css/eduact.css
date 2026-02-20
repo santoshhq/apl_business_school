@@ -4102,6 +4102,11 @@ h6 {
     margin-left: 5px;
 }
 
+.main-menu .main-menu__list>li.dropdown:hover>a::after,
+.stricky-header .main-menu__list>li.dropdown:hover>a::after {
+    content: "\f00d";
+}
+
 .main-menu .main-menu__list>li+li,
 .stricky-header .main-menu__list>li+li {
     margin-left: 55px;

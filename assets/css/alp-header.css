@@ -134,3 +134,12 @@
         display: none !important;
     }
 }
+
+/* ========================================================================
+   Hide mobile hamburger menu on desktop (≥ 1200px)
+   ======================================================================== */
+@media (min-width: 1200px) {
+    .main-menu__toggler {
+        display: none !important;
+    }
+}
