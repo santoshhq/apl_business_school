@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ | ALP Business School</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png" />
+    <link rel="icon" href="assets/images/favicon/favicon.ico" />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+    <meta name="description"
+        content="Frequently Asked Questions about ALP Business School qualifications, courses, and enrollment." />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Water+Brush&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/eduact-icons/style.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/eduact.css" />
+    <link rel="stylesheet" href="assets/css/alp-header.css" />
+    <link rel="stylesheet" href="assets/css/alp-theme.css" />
+
+    <style>
+        .alp-faq-section {
+            padding: 160px 0 100px;
+            background: #f8f9fc;
+        }
+
+        .alp-faq-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .alp-faq-header__title {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--alp-primary, #1E3A4C);
+            margin-bottom: 15px;
+        }
+
+        .alp-faq-header__subtitle {
+            font-size: 18px;
+            color: var(--alp-text, #666);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .alp-faq-accordion {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .alp-faq-item {
+            background: #ffffff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(30, 58, 76, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .alp-faq-item:hover {
+            box-shadow: 0 4px 20px rgba(30, 58, 76, 0.12);
+        }
+
+        .alp-faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            border: none;
+            width: 100%;
+            text-align: left;
+            transition: background 0.3s ease;
+        }
+
+        .alp-faq-question:hover {
+            background: #f8f9fc;
+        }
+
+        .alp-faq-question__text {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--alp-primary, #1E3A4C);
+            margin: 0;
+            padding-right: 20px;
+        }
+
+        .alp-faq-question__icon {
+            font-size: 20px;
+            color: var(--alp-accent, #C6A75E);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .alp-faq-item.active .alp-faq-question__icon {
+            transform: rotate(180deg);
+        }
+
+        .alp-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 30px;
+        }
+
+        .alp-faq-item.active .alp-faq-answer {
+            max-height: 500px;
+            padding: 0 30px 25px;
+        }
+
+        .alp-faq-answer__text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--alp-text, #666);
+            margin: 0;
+        }
+
+        .alp-faq-cta {
+            text-align: center;
+            margin-top: 60px;
+            padding: 50px 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(30, 58, 76, 0.1);
+        }
+
+        .alp-faq-cta__title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--alp-primary, #1E3A4C);
+            margin-bottom: 15px;
+        }
+
+        .alp-faq-cta__text {
+            font-size: 16px;
+            color: var(--alp-text, #666);
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 767px) {
+            .alp-faq-section {
+                padding: 120px 0 60px;
+            }
+
+            .alp-faq-header__title {
+                font-size: 36px;
+            }
+
+            .alp-faq-question__text {
+                font-size: 16px;
+            }
+
+            .alp-faq-question {
+                padding: 20px;
+            }
+
+            .alp-faq-answer__text {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <div class="preloader__image" style="background-image: url(assets/images/apl_logo.png);"></div>
+    </div>
+
+    <div class="page-wrapper">
+        <header class="main-header">
+            <nav class="main-menu main-menu-with-bg">
+                <div class="container">
+                    <div class="main-menu__logo">
+                        <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+                            <img src="assets/images/apl_logo.png" height="58"
+                                style="width:auto;max-width:62px;object-fit:contain;flex-shrink:0;"
+                                alt="ALP Business School">
+                            <div style="line-height:1.25;">
+                                <span
+                                    style="display:block;font-size:17px;font-weight:800;color:var(--alp-white, #FFFFFF);letter-spacing:0.2px;">ALP
+                                    Business School</span>
+                                <span
+                                    style="display:block;font-size:11.5px;font-weight:600;color:var(--alp-accent, #C6A75E);letter-spacing:1px;text-transform:uppercase;">Up
+                                    Lift Your Career</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="main-menu__nav">
+                        <ul class="main-menu__list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="#">Courses</a>
+                                <ul>
+                                    <li><a href="course-intro-management-l3.html">Introduction to Management (Level 3)</a></li>
+                                    <li><a href="course-business-management-l3.html">Business Management (Level 3)</a></li>
+                                    <li><a href="course-business-management-l45.html">Business Management (Levels 4 &amp; 5)</a></li>
+                                    <li><a href="course-business-admin-l6.html">Business &amp; Administrative Management (Level 6)</a></li>
+                                    <li><a href="course-hrm-l45.html">Human Resource Management (Levels 4 &amp; 5)</a></li>
+                                    <li><a href="course-teacher-training-l5.html">Teacher Training (Level 5)</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="main-menu__right">
+                        <a href="#" class="main-menu__toggler mobile-nav__toggler">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <a href="apply-now.html" class="alp-apply-btn">Apply Now <i class="fas fa-sign-in-alt"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu main-menu-with-bg">
+            <div class="sticky-header__content"></div>
+        </div>
+
+        <!-- FAQ Section Start -->
+        <section class="alp-faq-section">
+            <div class="container">
+                <div class="alp-faq-header wow fadeInUp" data-wow-delay="100ms">
+                    <h2 class="alp-faq-header__title">Your Questions Answered</h2>
+                    <p class="alp-faq-header__subtitle">
+                        Find answers to the most common questions about our courses, qualifications, and enrollment process.
+                    </p>
+                </div>
+
+                <div class="alp-faq-accordion wow fadeInUp" data-wow-delay="200ms">
+                    <!-- FAQ Item 1 -->
+                    <div class="alp-faq-item">
+                        <button class="alp-faq-question" onclick="toggleFaq(this)">
+                            <h3 class="alp-faq-question__text">What qualifications does ALP Business School offer?</h3>
+                            <i class="fas fa-chevron-down alp-faq-question__icon"></i>
+                        </button>
+                        <div class="alp-faq-answer">
+                            <p class="alp-faq-answer__text">
+                                ALP Business School offers Ofqual-regulated qualifications ranging from Level 3 to Level 7. Our portfolio includes Business Management, Human Resource Management, Administrative Management, Teacher Training, and Introduction to Management courses. All qualifications are nationally recognized and designed to help you advance your career or progress to university.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="alp-faq-item">
+                        <button class="alp-faq-question" onclick="toggleFaq(this)">
+                            <h3 class="alp-faq-question__text">Are your courses 100% online?</h3>
+                            <i class="fas fa-chevron-down alp-faq-question__icon"></i>
+                        </button>
+                        <div class="alp-faq-answer">
+                            <p class="alp-faq-answer__text">
+                                Yes! All our courses are delivered 100% online, allowing you to study from anywhere in the world at your own pace. You'll have access to comprehensive learning materials, video lectures, interactive assignments, and dedicated tutor support throughout your studies. This flexible approach means you can balance your education with work and personal commitments.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="alp-faq-item">
+                        <button class="alp-faq-question" onclick="toggleFaq(this)">
+                            <h3 class="alp-faq-question__text">How long does it take to complete a course?</h3>
+                            <i class="fas fa-chevron-down alp-faq-question__icon"></i>
+                        </button>
+                        <div class="alp-faq-answer">
+                            <p class="alp-faq-answer__text">
+                                Course duration varies depending on the level and your study pace. Typically, Level 3 courses take 6-9 months, Level 4 & 5 combined diplomas take 12-18 months, and Level 6 courses take 9-12 months. However, as our courses are self-paced, you can complete them faster if you dedicate more time, or take longer if needed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="alp-faq-item">
+                        <button class="alp-faq-question" onclick="toggleFaq(this)">
+                            <h3 class="alp-faq-question__text">What are the entry requirements for your courses?</h3>
+                            <i class="fas fa-chevron-down alp-faq-question__icon"></i>
+                        </button>
+                        <div class="alp-faq-answer">
+                            <p class="alp-faq-answer__text">
+                                Entry requirements vary by level. For Level 3 courses, you typically need basic English proficiency and be 18 years or older. Level 4 & 5 courses generally require a Level 3 qualification or equivalent work experience. Level 6 courses require a Level 5 qualification or substantial management experience. We assess each application individually to ensure you're placed on the right course for your background and goals.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="alp-faq-item">
+                        <button class="alp-faq-question" onclick="toggleFaq(this)">
+                            <h3 class="alp-faq-question__text">Can I progress to university after completing your courses?</h3>
+                            <i class="fas fa-chevron-down alp-faq-question__icon"></i>
+                        </button>
+                        <div class="alp-faq-answer">
+                            <p class="alp-faq-answer__text">
+                                Absolutely! Our Level 4 & 5 diplomas are equivalent to the first two years of a UK undergraduate degree, allowing you to progress directly into the final year (top-up) of a relevant bachelor's degree at many UK universities. Level 6 qualifications are equivalent to a bachelor's degree and can lead to postgraduate studies. We provide guidance on university progression pathways throughout your course.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="alp-faq-item">
+                        <button class="alp-faq-question" onclick="toggleFaq(this)">
+                            <h3 class="alp-faq-question__text">What kind of support will I receive during my studies?</h3>
+                            <i class="fas fa-chevron-down alp-faq-question__icon"></i>
+                        </button>
+                        <div class="alp-faq-answer">
+                            <p class="alp-faq-answer__text">
+                                You'll receive comprehensive support throughout your journey with ALP Business School. This includes a dedicated personal tutor who provides feedback on your assignments, academic guidance, and career advice. You'll also have access to our student support team for administrative queries, online learning resources, webinars, and a student community forum where you can connect with fellow learners.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="alp-faq-item">
+                        <button class="alp-faq-question" onclick="toggleFaq(this)">
+                            <h3 class="alp-faq-question__text">How much do the courses cost and are payment plans available?</h3>
+                            <i class="fas fa-chevron-down alp-faq-question__icon"></i>
+                        </button>
+                        <div class="alp-faq-answer">
+                            <p class="alp-faq-answer__text">
+                                Course fees vary depending on the level and program you choose. We offer competitive pricing compared to traditional education providers. Yes, we offer flexible payment plans to make your education more affordable. You can pay in monthly installments, and we also accept various payment methods. Contact our admissions team for specific pricing and to discuss payment options that suit your budget.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 8 -->
+                    <div class="alp-faq-item">
+                        <button class="alp-faq-question" onclick="toggleFaq(this)">
+                            <h3 class="alp-faq-question__text">Are your qualifications recognized by employers?</h3>
+                            <i class="fas fa-chevron-down alp-faq-question__icon"></i>
+                        </button>
+                        <div class="alp-faq-answer">
+                            <p class="alp-faq-answer__text">
+                                Yes, all our qualifications are regulated by Ofqual (the Office of Qualifications and Examinations Regulation) and are nationally recognized in the UK. They hold the same value as qualifications from traditional educational institutions and are widely respected by employers across various industries. Many of our graduates have successfully used their ALP qualifications to advance their careers, secure promotions, or transition into new roles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 9 -->
+                    <div class="alp-faq-item">
+                        <button class="alp-faq-question" onclick="toggleFaq(this)">
+                            <h3 class="alp-faq-question__text">Can I study if I'm based outside the UK?</h3>
+                            <i class="fas fa-chevron-down alp-faq-question__icon"></i>
+                        </button>
+                        <div class="alp-faq-answer">
+                            <p class="alp-faq-answer__text">
+                                Yes! Our online courses are accessible worldwide, and we welcome international students. As long as you have a reliable internet connection and meet the English language requirements, you can study from anywhere. Our qualifications are recognized internationally, and many of our students study from countries across Europe, Asia, Africa, and the Middle East while working full-time in their home countries.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 10 -->
+                    <div class="alp-faq-item">
+                        <button class="alp-faq-question" onclick="toggleFaq(this)">
+                            <h3 class="alp-faq-question__text">How do I apply and when can I start?</h3>
+                            <i class="fas fa-chevron-down alp-faq-question__icon"></i>
+                        </button>
+                        <div class="alp-faq-answer">
+                            <p class="alp-faq-answer__text">
+                                Applying is easy! Simply visit our Apply Now page and complete the online application form. You'll need to provide some basic personal information, educational background, and your preferred course. Our admissions team will review your application within 2-3 business days. We offer flexible start dates throughout the year, so you can typically begin your studies within 2-4 weeks of your application being approved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alp-faq-cta wow fadeInUp" data-wow-delay="300ms">
+                    <h3 class="alp-faq-cta__title">Still Have Questions?</h3>
+                    <p class="alp-faq-cta__text">
+                        Can't find the answer you're looking for? Our admissions team is here to help.
+                    </p>
+                    <a href="apply-now.html" class="eduact-btn">
+                        <span class="eduact-btn__curve"></span>
+                        Contact Us
+                        <i class="icon-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section End -->
+
+        <!-- Footer Start -->
+        <footer class="main-footer-two">
+            <div class="main-footer-two__bg" style="background-image: url(assets/images/shapes/footer-bg-2.png);"></div>
+            <div class="container">
+                <div class="row">
+                    <!-- Col 1: Logo + About -->
+                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="main-footer-two__about">
+                            <a href="index.html" class="main-footer-two__logo"
+                                style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:18px;">
+                                <img src="assets/images/apl_logo.png" alt="ALP Business School" height="54"
+                                    style="width:auto;max-width:60px;object-fit:contain;">
+                                <div style="line-height:1.2;">
+                                    <div style="font-size:17px;font-weight:800;color:#ffffff;letter-spacing:0.3px;">ALP
+                                        Business School</div>
+                                    <div
+                                        style="font-size:11px;color:var(--alp-accent, #C6A75E);font-weight:600;letter-spacing:0.8px;text-transform:uppercase;">
+                                        Up Lift Your Career</div>
+                                </div>
+                            </a>
+                            <p style="color:#aab3c6;font-size:14px;line-height:1.7;margin-bottom:18px;">Ofqual-regulated
+                                professional qualifications from Level 3 to Level 7 – delivered fully online to learners
+                                across the UK and worldwide.</p>
+                            <ul class="main-footer-two__info-list">
+                                <li><span class="icon-Location"></span>London, United Kingdom</li>
+                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456
+                                        7890</a></li>
+                                <li><span class="icon-Email"></span><a
+                                        href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
+                            </ul>
+                            <div class="main-footer-two__social">
+                                <a href="https://www.facebook.com/" aria-label="Facebook"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="https://twitter.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/" aria-label="YouTube"><i
+                                        class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Col 2: Quick Links -->
+                    <div class="col-xl-2 col-md-3 col-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="main-footer-two__navmenu main-footer-two__widget01">
+                            <h3 class="main-footer-two__title">Quick Links</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html#about">About Us</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="apply-now.html">Apply Now</a></li>
+                                <li><a href="index.html#enrol">How to Enrol</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Col 3: Our Courses -->
+                    <div class="col-xl-3 col-md-3 col-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="main-footer-two__navmenu main-footer-two__widget02">
+                            <h3 class="main-footer-two__title">Our Courses</h3>
+                            <ul>
+                                <li><a href="course-intro-management-l3.html">Intro to Management (L3)</a></li>
+                                <li><a href="course-business-management-l3.html">Business Management (L3)</a></li>
+                                <li><a href="course-business-management-l45.html">Business Management (L4&amp;5)</a>
+                                </li>
+                                <li><a href="course-business-admin-l6.html">Business Admin (L6)</a></li>
+                                <li><a href="course-hrm-l45.html">HR Management (L4&amp;5)</a></li>
+                                <li><a href="course-teacher-training-l5.html">Teacher Training (L5)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Col 4: Contact Info -->
+                    <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="main-footer-two__navmenu">
+                            <h3 class="main-footer-two__title">Get In Touch</h3>
+                            <ul class="main-footer-two__info-list" style="margin-bottom:20px;">
+                                <li><span class="icon-Location"></span>London, United Kingdom</li>
+                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456
+                                        7890</a></li>
+                                <li><span class="icon-Email"></span><a
+                                        href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
+                                <li><span class="icon-clock"></span>Mon –
+                                    Fri: 9:00am – 6:00pm</li>
+                            </ul>
+                            <a href="#contact" class="eduact-btn eduact-btn-second"
+                                style="font-size:13px;padding:10px 22px;"><span class="eduact-btn__curve"></span>Enquire
+                                Now <i class="icon-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </footer>
+        <!-- /.main-footer-two -->
+
+        <section class="copyright text-center">
+            <div class="container wow fadeInUp" data-wow-delay="400ms">
+                <p class="copyright__text">Copyright <span class="dynamic-year"></span>
+                    <!-- /.dynamic-year --> &copy; ALP Business School. All Rights Reserved</p>
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.copyright -->
+
+    </div>
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="assets/images/apl_logo.png" height="50"
+                        style="width:auto;max-width:200px;object-fit:contain;" alt="ALP Business School" /></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:+441234567890">+44 (0) 123 456 7890</a>
+                </li>
+            </ul>
+            <div class="mobile-nav__social">
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="scroll-top">
+        <svg class="scroll-top__circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </a>
+
+    <script src="assets/vendors/jquery/jquery-3.5.1.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/js/eduact.js"></script>
+
+    <script>
+        function toggleFaq(button) {
+            const faqItem = button.closest('.alp-faq-item');
+            const allItems = document.querySelectorAll('.alp-faq-item');
+            
+            // Close all other items
+            allItems.forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            faqItem.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
