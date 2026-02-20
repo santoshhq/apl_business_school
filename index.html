@@ -134,6 +134,109 @@
             padding-top: 70px;
             padding-bottom: 70px;
         }
+
+        /* -------- Building Leaders CTA Section -------- */
+        .alp-leaders-cta {
+            position: relative;
+            padding: 120px 0;
+            overflow: hidden;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+
+        .alp-leaders-cta__bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            z-index: 1;
+        }
+
+        .alp-leaders-cta__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(30, 58, 76, 0.92) 0%, rgba(47, 93, 117, 0.85) 50%, rgba(30, 58, 76, 0.75) 100%);
+            z-index: 2;
+        }
+
+        .alp-leaders-cta .container {
+            position: relative;
+            z-index: 3;
+        }
+
+        .alp-leaders-cta__content {
+            color: #ffffff;
+        }
+
+        .alp-leaders-cta__title {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #ffffff;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .alp-leaders-cta__text {
+            font-size: 17px;
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 35px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .alp-leaders-cta__btn .eduact-btn {
+            background: var(--alp-accent, #C6A75E);
+            color: #ffffff;
+            padding: 14px 35px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .alp-leaders-cta__btn .eduact-btn:hover {
+            background: var(--alp-primary, #1E3A4C);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(198, 167, 94, 0.4);
+        }
+
+        @media (max-width: 991px) {
+            .alp-leaders-cta {
+                padding: 80px 0;
+            }
+
+            .alp-leaders-cta__title {
+                font-size: 36px;
+            }
+
+            .alp-leaders-cta__text {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .alp-leaders-cta {
+                padding: 60px 0;
+            }
+
+            .alp-leaders-cta__title {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .alp-leaders-cta__text {
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+        }
     </style>
 </head>
 
@@ -556,6 +659,34 @@
             </div>
         </section>
         <!-- About End -->
+
+        <!-- Building Leaders Section Start -->
+        <section class="alp-leaders-cta" data-jarallax data-speed="0.3" data-imgPosition="50% 50%">
+            <div class="alp-leaders-cta__bg jarallax-img"
+                style="background-image: url(assets/images/home-showcase/home-showcase-1-2.jpg);"></div>
+            <div class="alp-leaders-cta__overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-xl-7">
+                        <div class="alp-leaders-cta__content wow fadeInUp" data-wow-delay="200ms">
+                            <h2 class="alp-leaders-cta__title">Building Leaders For Business</h2>
+                            <p class="alp-leaders-cta__text">
+                                Success in today's competitive business environment requires more than just knowledge—it demands leadership, strategic thinking, and practical management skills. At ALP Business School, we provide industry-recognized qualifications that equip you with the expertise needed to excel in your career, lead teams effectively, and drive organizational success. Whether you're looking to advance in your current role, transition into management, or launch your own venture, our flexible programs are designed to help you reach your professional goals.
+                            </p>
+                            <div class="alp-leaders-cta__btn">
+                                <a href="apply-now.html" class="eduact-btn eduact-btn-second">
+                                    <span class="eduact-btn__curve"></span>
+                                    ENQUIRE NOW
+                                    <i class="icon-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Building Leaders Section End -->
+
         <!-- Service Start -->
         <style>
             .alp-category-section {
