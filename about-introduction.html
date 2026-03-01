@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction | ALP Business School</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png" />
+    <link rel="icon" href="assets/images/favicon/favicon.ico" />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+    <meta name="description"
+        content="Learn about ALP Business School, a leading provider of professional qualifications in Business Management and Education." />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Water+Brush&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/eduact-icons/style.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/eduact.css" />
+    <link rel="stylesheet" href="assets/css/alp-header.css" />
+    <link rel="stylesheet" href="assets/css/alp-theme.css" />
+
+    <style>
+        .alp-intro-hero {
+            padding: 180px 0 80px;
+            background: linear-gradient(135deg, var(--alp-primary) 0%, var(--alp-secondary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .alp-intro-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1920&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .alp-intro-hero__content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+        }
+
+        .alp-intro-hero__title {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            color: var(--alp-accent);
+        }
+
+        .alp-intro-hero__subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .alp-intro-section {
+            padding: 90px 0;
+            background: linear-gradient(135deg, var(--alp-primary) 0%, var(--alp-secondary) 100%);
+        }
+
+        .alp-intro-section--grey {
+            background: #f8f9fc;
+        }
+
+        .alp-intro-section--grey .alp-intro-heading {
+            color: var(--alp-primary);
+        }
+
+        .alp-intro-section--grey .alp-intro-text {
+            color: #555;
+        }
+
+        .alp-intro-section--grey .alp-intro-text strong {
+            color: var(--alp-primary);
+        }
+
+        .alp-intro-heading {
+            font-size: 38px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .alp-intro-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--alp-accent);
+        }
+
+        .alp-intro-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .alp-intro-text strong {
+            color: var(--alp-accent);
+            font-weight: 700;
+        }
+
+        .alp-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .alp-stat-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(30, 58, 76, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .alp-stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(30, 58, 76, 0.15);
+        }
+
+        .alp-stat-card__icon {
+            font-size: 48px;
+            color: var(--alp-accent);
+            margin-bottom: 20px;
+        }
+
+        .alp-stat-card__number {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--alp-primary);
+            margin-bottom: 10px;
+        }
+
+        .alp-stat-card__label {
+            font-size: 16px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .alp-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .alp-feature-box {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--alp-accent);
+            box-shadow: 0 2px 15px rgba(30, 58, 76, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .alp-feature-box:hover {
+            border-left-color: var(--alp-secondary);
+            box-shadow: 0 6px 25px rgba(30, 58, 76, 0.12);
+            transform: translateX(5px);
+        }
+
+        .alp-feature-box__icon {
+            font-size: 38px;
+            color: var(--alp-accent);
+            margin-bottom: 18px;
+        }
+
+        .alp-feature-box__title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--alp-primary);
+            margin-bottom: 12px;
+        }
+
+        .alp-feature-box__text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        .alp-cta-banner {
+            background: linear-gradient(135deg, var(--alp-primary) 0%, var(--alp-secondary) 100%);
+            padding: 70px 40px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            margin: 60px 0;
+        }
+
+        .alp-cta-banner__title {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--alp-accent);
+        }
+
+        .alp-cta-banner__text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .alp-cta-banner__btn {
+            background: var(--alp-accent);
+            color: #1E3A4C;
+            padding: 15px 40px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(198, 167, 94, 0.3);
+        }
+
+        .alp-cta-banner__btn:hover {
+            background: white;
+            color: var(--alp-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .alp-intro-hero__title {
+                font-size: 38px;
+            }
+
+            .alp-intro-heading {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="page-wrapper">
+
+        <!-- Header Start -->
+        <header class="main-header main-header-one">
+            <nav class="main-menu main-menu-with-bg stricked-menu">
+                <div class="container">
+                    <div class="main-menu__logo">
+                        <a href="index.html" class="alp-logo-link">
+                            <img src="assets/images/apl_logo.png" class="alp-logo-img" alt="ALP Business School">
+                            <div class="alp-logo-text">
+                                <span class="alp-logo-name">ALP Business School</span>
+                                <span class="alp-logo-caption">Up Lift Your Career</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="main-menu__nav">
+                        <ul class="main-menu__list">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="dropdown current">
+                                <a href="#">About Us</a>
+                                <ul>
+                                    <li class="current"><a href="about-introduction.html">Introduction</a></li>
+                                    <li><a href="about-mission-vision.html">Our Mission and Vision</a></li>
+                                    <li><a href="about-equality-diversity.html">Equality and Diversity</a></li>
+                                    <li><a href="about-accreditations.html">Accreditations and Affiliations</a></li>
+                                    <li><a href="about-location.html">Location</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Courses</a>
+                                <ul>
+                                    <li><a href="course-intro-management-l3.html">Introduction to Management (Level 3)</a></li>
+                                    <li><a href="course-business-management-l3.html">Business Management (Level 3)</a></li>
+                                    <li><a href="course-business-management-l45.html">Business Management (Levels 4 &amp; 5)</a></li>
+                                    <li><a href="course-business-admin-l6.html">Business &amp; Administrative Management (Level 6)</a></li>
+                                    <li><a href="course-hrm-l45.html">Human Resource Management (Levels 4 &amp; 5)</a></li>
+                                    <li><a href="course-teacher-training-l5.html">Teacher Training (Level 5)</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="main-menu__right">
+                        <a href="#" class="main-menu__toggler mobile-nav__toggler">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <a href="apply-now.html" class="alp-apply-btn">Apply Now <i class="fas fa-sign-in-alt"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu main-menu-with-bg">
+            <div class="sticky-header__content"></div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="alp-intro-hero">
+            <div class="container">
+                <div class="alp-intro-hero__content wow fadeInUp" data-wow-delay="100ms">
+                    <h1 class="alp-intro-hero__title">Introduction</h1>
+                    <p class="alp-intro-hero__subtitle">Leading the Way in Professional Education and Training</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Introduction Section -->
+        <section class="alp-intro-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="100ms">
+                        <h2 class="alp-intro-heading">The Premier Platform for Professional Learning</h2>
+                        <p class="alp-intro-text">
+                            <strong>ALP Business School</strong> was established as a forward-thinking education and training centre, dedicated to providing high-quality vocational and professional qualifications. We have evolved into a comprehensive higher education provider, offering both <strong>online and on-campus</strong> learning opportunities, with our UK campus based in a vibrant educational environment.
+                        </p>
+                        <p class="alp-intro-text">
+                            Our institution is committed to bridging the gap between academic excellence and real-world application. We understand that today's learners require flexible, accessible, and relevant education that fits around their professional and personal commitments. That's why we've designed our programmes to be available through multiple delivery modes, ensuring that quality education is within reach for everyone.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="alp-stats-grid">
+                    <div class="alp-stat-card wow fadeInUp" data-wow-delay="100ms">
+                        <div class="alp-stat-card__icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="alp-stat-card__number">20+</div>
+                        <div class="alp-stat-card__label">Premium Courses</div>
+                    </div>
+                    <div class="alp-stat-card wow fadeInUp" data-wow-delay="200ms">
+                        <div class="alp-stat-card__icon"><i class="fas fa-users"></i></div>
+                        <div class="alp-stat-card__number">5000+</div>
+                        <div class="alp-stat-card__label">Learners Worldwide</div>
+                    </div>
+                    <div class="alp-stat-card wow fadeInUp" data-wow-delay="300ms">
+                        <div class="alp-stat-card__icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="alp-stat-card__number">Expert</div>
+                        <div class="alp-stat-card__label">Professional Tutors</div>
+                    </div>
+                    <div class="alp-stat-card wow fadeInUp" data-wow-delay="400ms">
+                        <div class="alp-stat-card__icon"><i class="fas fa-award"></i></div>
+                        <div class="alp-stat-card__number">Level 3-7</div>
+                        <div class="alp-stat-card__label">UK Qualifications</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="alp-intro-section alp-intro-section--grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="100ms">
+                        <h2 class="alp-intro-heading">Our Services</h2>
+                        <p class="alp-intro-text">
+                            ALP Business School is a recognised provider of professional qualifications up to Level 7 in <strong>Business Management, Human Resource Management, and Education & Training</strong>. We collaborate with established UK awarding organisations to deliver qualifications through our UK and international learning centres.
+                        </p>
+                        <p class="alp-intro-text">
+                            In today's dynamic business environment, professionals require current knowledge, relevant skills, and recognised qualifications to remain competitive and meet industry demands. To address this need, ALP Business School has meticulously designed qualifications and training programmes that foster and advance individual career development.
+                        </p>
+                        <p class="alp-intro-text">
+                            Our programmes are specifically tailored to meet the needs of working professionals, mature learners, and aspiring business leaders who seek to enhance their qualifications whilst maintaining their existing commitments. Whether you're looking to upskill, change careers, or advance in your current role, our courses provide the knowledge and credentials you need to succeed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Vision Section -->
+        <section class="alp-intro-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="100ms">
+                        <h2 class="alp-intro-heading">A Global Mindset from Day One</h2>
+                        <p class="alp-intro-text">
+                            ALP Business School was founded with an international perspective at its core. We are committed to connecting learners with opportunities that prepare them for success in an ever-evolving global marketplace.
+                        </p>
+                        <p class="alp-intro-text">
+                            We view education not as a barrier, but as a bridge—enabling collaboration, innovation, and knowledge-sharing across borders. From our inception, we have embraced a global outlook in:
+                        </p>
+
+                        <div class="alp-features-grid">
+                            <div class="alp-feature-box wow fadeInUp" data-wow-delay="100ms">
+                                <div class="alp-feature-box__icon"><i class="fas fa-globe-europe"></i></div>
+                                <h3 class="alp-feature-box__title">International Standards</h3>
+                                <p class="alp-feature-box__text">
+                                    Curriculum designed to meet international standards whilst addressing local needs and industry requirements.
+                                </p>
+                            </div>
+                            <div class="alp-feature-box wow fadeInUp" data-wow-delay="200ms">
+                                <div class="alp-feature-box__icon"><i class="fas fa-handshake"></i></div>
+                                <h3 class="alp-feature-box__title">Strategic Partnerships</h3>
+                                <p class="alp-feature-box__text">
+                                    Partnerships that create pathways to higher education, professional development, and career advancement.
+                                </p>
+                            </div>
+                            <div class="alp-feature-box wow fadeInUp" data-wow-delay="300ms">
+                                <div class="alp-feature-box__icon"><i class="fas fa-users-cog"></i></div>
+                                <h3 class="alp-feature-box__title">Community Engagement</h3>
+                                <p class="alp-feature-box__text">
+                                    Equipping students with skills, confidence, and values to thrive in diverse, multicultural environments.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="alp-intro-text" style="margin-top: 40px;">
+                            Our identity as a globally-minded organisation reflects our belief that education should be accessible, forward-looking, and inclusive—preparing learners not only for today's challenges but also for tomorrow's opportunities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Team Section -->
+        <section class="alp-intro-section alp-intro-section--grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="100ms">
+                        <h2 class="alp-intro-heading">A Dedicated Team of Professional Tutors</h2>
+                        <p class="alp-intro-text">
+                            Unlike many institutions, ALP Business School recognises the fundamental importance of quality education for learners of all ages and backgrounds. We have assembled a highly dedicated team of professional tutors who are committed to delivering exceptional support to all our students.
+                        </p>
+                        <p class="alp-intro-text">
+                            Our tutors bring a wealth of industry experience and academic expertise to their teaching. They are not just instructors—they are mentors, guides, and advocates for your success. Each member of our teaching team is selected for their professional credentials, teaching excellence, and genuine passion for student development.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="alp-features-grid" style="margin-top: 40px;">
+                    <div class="alp-feature-box wow fadeInUp" data-wow-delay="100ms">
+                        <div class="alp-feature-box__icon"><i class="fas fa-user-graduate"></i></div>
+                        <h3 class="alp-feature-box__title">Industry Experts</h3>
+                        <p class="alp-feature-box__text">
+                            Our tutors are experienced professionals with real-world expertise in their respective fields.
+                        </p>
+                    </div>
+                    <div class="alp-feature-box wow fadeInUp" data-wow-delay="200ms">
+                        <div class="alp-feature-box__icon"><i class="fas fa-comments"></i></div>
+                        <h3 class="alp-feature-box__title">Personalised Support</h3>
+                        <p class="alp-feature-box__text">
+                            Dedicated one-to-one guidance and feedback tailored to your individual learning needs.
+                        </p>
+                    </div>
+                    <div class="alp-feature-box wow fadeInUp" data-wow-delay="300ms">
+                        <div class="alp-feature-box__icon"><i class="fas fa-clock"></i></div>
+                        <h3 class="alp-feature-box__title">Responsive Assistance</h3>
+                        <p class="alp-feature-box__text">
+                            Quick response times and accessible support throughout your learning journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- E-Learning Section -->
+        <section class="alp-intro-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="100ms">
+                        <h2 class="alp-intro-heading">Professionally Developed E-Learning Courses</h2>
+                        <p class="alp-intro-text">
+                            Our e-learning courses are professionally designed by highly qualified educators and industry specialists to provide our students with an innovative and effective learning experience. Our online programmes offer numerous advantages:
+                        </p>
+
+                        <div class="alp-features-grid" style="margin-top: 40px;">
+                            <div class="alp-feature-box wow fadeInUp" data-wow-delay="100ms">
+                                <div class="alp-feature-box__icon"><i class="fas fa-file-alt"></i></div>
+                                <h3 class="alp-feature-box__title">Minimal Administration</h3>
+                                <p class="alp-feature-box__text">
+                                    Streamlined processes with reduced paperwork, allowing you to focus on learning rather than bureaucracy.
+                                </p>
+                            </div>
+                            <div class="alp-feature-box wow fadeInUp" data-wow-delay="200ms">
+                                <div class="alp-feature-box__icon"><i class="fas fa-bullseye"></i></div>
+                                <h3 class="alp-feature-box__title">Relevant Content</h3>
+                                <p class="alp-feature-box__text">
+                                    Courses designed to be engaging, practical, and directly relevant to your career goals and industry needs.
+                                </p>
+                            </div>
+                            <div class="alp-feature-box wow fadeInUp" data-wow-delay="300ms">
+                                <div class="alp-feature-box__icon"><i class="fas fa-briefcase"></i></div>
+                                <h3 class="alp-feature-box__title">Work-Based Learning</h3>
+                                <p class="alp-feature-box__text">
+                                    Apply what you learn directly in your workplace, enhancing both your education and professional performance.
+                                </p>
+                            </div>
+                            <div class="alp-feature-box wow fadeInUp" data-wow-delay="400ms">
+                                <div class="alp-feature-box__icon"><i class="fas fa-laptop-code"></i></div>
+                                <h3 class="alp-feature-box__title">Modern Technology</h3>
+                                <p class="alp-feature-box__text">
+                                    User-friendly learning platforms with interactive resources, video lectures, and digital assessment tools.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessibility Section -->
+        <section class="alp-intro-section alp-intro-section--grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="100ms">
+                        <h2 class="alp-intro-heading">Commitment to Accessibility</h2>
+                        <p class="alp-intro-text">
+                            ALP Business School is firmly committed to ensuring that individuals with disabilities and those with learning differences are treated fairly and with dignity. We will make all reasonable adjustments to ensure that students with additional needs are not disadvantaged in their educational experience.
+                        </p>
+                        <p class="alp-intro-text">
+                            Our accessibility commitment extends to our physical facilities, online learning platforms, course materials, and support services. We work closely with students to identify any specific requirements and implement appropriate accommodations to support their success.
+                        </p>
+                        <p class="alp-intro-text">
+                            If you have any accessibility needs or would like to discuss reasonable adjustments, please contact our student support team who will be happy to assist you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="alp-intro-section">
+            <div class="container">
+                <div class="alp-cta-banner wow fadeInUp" data-wow-delay="100ms">
+                    <h2 class="alp-cta-banner__title">Ready to Begin Your Journey?</h2>
+                    <p class="alp-cta-banner__text">
+                        Join thousands of professionals who have advanced their careers with ALP Business School
+                    </p>
+                    <a href="apply-now.html" class="alp-cta-banner__btn">
+                        Apply Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer-two">
+            <div class="main-footer-two__bg" style="background-image: url(assets/images/shapes/footer-bg-2.png);"></div>
+            <div class="container">
+                <div class="row">
+                    <!-- Col 1: Logo + About -->
+                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="main-footer-two__about">
+                            <a href="index.html" class="main-footer-two__logo"
+                                style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:18px;">
+                                <img src="assets/images/apl_logo.png" alt="ALP Business School" height="54"
+                                    style="width:auto;max-width:60px;object-fit:contain;">
+                                <div style="line-height:1.2;">
+                                    <div style="font-size:17px;font-weight:800;color:#ffffff;letter-spacing:0.3px;">ALP
+                                        Business School</div>
+                                    <div
+                                        style="font-size:11px;color:var(--alp-accent, #C6A75E);font-weight:600;letter-spacing:0.8px;text-transform:uppercase;">
+                                        Up Lift Your Career</div>
+                                </div>
+                            </a>
+                            <p style="color:#aab3c6;font-size:14px;line-height:1.7;margin-bottom:18px;">Ofqual-regulated
+                                professional qualifications from Level 3 to Level 7 – delivered fully online to learners
+                                across the UK and worldwide.</p>
+                            <ul class="main-footer-two__info-list">
+                                <li><span class="icon-Location"></span>London, United Kingdom</li>
+                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456
+                                        7890</a></li>
+                                <li><span class="icon-Email"></span><a
+                                        href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
+                            </ul>
+                            <div class="main-footer-two__social">
+                                <a href="https://www.facebook.com/" aria-label="Facebook"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="https://twitter.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/" aria-label="YouTube"><i
+                                        class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Col 2: Quick Links -->
+                    <div class="col-xl-2 col-md-3 col-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="main-footer-two__navmenu main-footer-two__widget01">
+                            <h3 class="main-footer-two__title">Quick Links</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about-introduction.html">About Us</a></li>
+                                <li><a href="index.html#courses">Our Courses</a></li>
+                                <li><a href="index.html#contact">Contact Us</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Col 3: Our Courses -->
+                    <div class="col-xl-3 col-md-3 col-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="main-footer-two__navmenu main-footer-two__widget02">
+                            <h3 class="main-footer-two__title">Our Courses</h3>
+                            <ul>
+                                <li><a href="course-intro-management-l3.html">Intro to Management (L3)</a></li>
+                                <li><a href="course-business-management-l3.html">Business Management (L3)</a></li>
+                                <li><a href="course-business-management-l45.html">Business Management (L4&amp;5)</a>
+                                </li>
+                                <li><a href="course-business-admin-l6.html">Business Admin (L6)</a></li>
+                                <li><a href="course-hrm-l45.html">HR Management (L4&amp;5)</a></li>
+                                <li><a href="course-teacher-training-l5.html">Teacher Training (L5)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Col 4: Contact Info -->
+                    <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="main-footer-two__navmenu">
+                            <h3 class="main-footer-two__title">Get In Touch</h3>
+                            <ul class="main-footer-two__info-list" style="margin-bottom:20px;">
+                                <li><span class="icon-Location"></span>London, United Kingdom</li>
+                                <li><span class="icon-Telephone"></span><a href="tel:+441234567890">+44 (0) 123 456
+                                        7890</a></li>
+                                <li><span class="icon-Email"></span><a
+                                        href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a></li>
+                                <li><span class="icon-clock"></span>Mon –
+                                    Fri: 9:00am – 6:00pm</li>
+                            </ul>
+                            <a href="index.html#contact" class="eduact-btn eduact-btn-second"
+                                style="font-size:13px;padding:10px 22px;"><span class="eduact-btn__curve"></span>Enquire
+                                Now <i class="icon-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <section class="copyright text-center">
+            <div class="container wow fadeInUp" data-wow-delay="400ms">
+                <p class="copyright__text">Copyright <span class="dynamic-year"></span> &copy; ALP Business School. All Rights Reserved</p>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box">
+                <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+                    <img src="assets/images/apl_logo.png" height="50"
+                        style="width:auto;max-width:50px;object-fit:contain;flex-shrink:0;" alt="ALP Business School" />
+                    <div style="line-height:1.2;">
+                        <div style="font-size:16px;font-weight:800;color:#FFFFFF;letter-spacing:0.2px;">ALP Business School</div>
+                        <div style="font-size:10px;font-weight:600;color:#C6A75E;letter-spacing:0.8px;text-transform:uppercase;">Up Lift Your Career</div>
+                    </div>
+                </a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@alpbusiness.ac.uk">info@alpbusiness.ac.uk</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:+441234567890">+44 (0) 123 456 7890</a>
+                </li>
+            </ul>
+            <div class="mobile-nav__social">
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" class="eduact-btn"><span class="eduact-btn__curve"></span><i
+                        class="icon-Search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <a href="#" class="scroll-top">
+        <svg class="scroll-top__circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </a>
+
+    <script src="assets/vendors/jquery/jquery-3.5.1.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/js/eduact.js"></script>
+</body>
+
+</html>
