@@ -103,6 +103,19 @@
     color: var(--alp-white) !important;
 }
 
+/* ── Transparent Header for Index/Hero Page ── */
+/* When at top (not scrolled), header is completely transparent - video shows through */
+.alp-transparent-hero-nav:not(.stricky-fixed) {
+    background-color: transparent !important;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* When scrolled (stricky-fixed class added), header becomes solid */
+.alp-transparent-hero-nav.stricky-fixed {
+    background-color: var(--alp-primary) !important;
+    box-shadow: 0 4px 20px rgba(15, 34, 48, 0.15);
+}
+
 /* ==========================================================================
    APPLY NOW BUTTON (header)
    ========================================================================== */
