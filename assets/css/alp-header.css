@@ -25,15 +25,15 @@
 .main-menu__logo a.alp-logo-link {
     display: inline-flex !important;
     align-items: center !important;
-    gap: clamp(8px, 2vw, 12px);
+    gap: clamp(10px, 2.2vw, 15px);
     text-decoration: none;
 }
 
-/* ── Logo image — smooth scale from 38px (≈320 vw) → 58px (desktop) ── */
+/* ── Logo image — Mortha-inspired large scale: 55px (mobile) → 95px (desktop) ── */
 .main-menu__logo .alp-logo-img {
-    height: clamp(38px, 8vw, 58px);
+    height: clamp(55px, 10vw, 95px);
     width: auto;
-    max-width: clamp(42px, 9vw, 62px);
+    max-width: clamp(60px, 11vw, 100px);
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -43,24 +43,24 @@
     line-height: 1.25;
 }
 
-/* ── Brand name — smooth scale 13px → 17px ── */
+/* ── Brand name — scaled up proportionally: 16px → 22px ── */
 .alp-logo-name {
     display: block;
     font-weight: 800;
     color: var(--alp-white, #ffffff) !important;
     letter-spacing: 0.2px;
-    font-size: clamp(13px, 2.2vw, 17px);
+    font-size: clamp(16px, 2.8vw, 22px);
     white-space: nowrap;
 }
 
-/* ── Tagline — smooth scale 9.5px → 11.5px ── */
+/* ── Tagline — scaled up proportionally: 11px → 14px ── */
 .alp-logo-caption {
     display: block;
     font-weight: 600;
     color: var(--alp-accent, #C6A75E);
-    letter-spacing: clamp(0.3px, 0.15vw, 1px);
+    letter-spacing: clamp(0.4px, 0.2vw, 1.2px);
     text-transform: uppercase;
-    font-size: clamp(9.5px, 1.5vw, 11.5px);
+    font-size: clamp(11px, 1.8vw, 14px);
     white-space: nowrap;
 }
 
