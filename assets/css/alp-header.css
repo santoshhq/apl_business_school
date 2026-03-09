@@ -125,6 +125,263 @@
    and must NOT be clipped by the parent. Use overflow:visible (default). */
 
 /* ========================================================================
+   MEGA MENU - Courses Dropdown
+   ======================================================================== */
+
+/* ==============================================
+   COURSES SUBMENU - Clean Fresh Design with Pagination
+   ============================================== */
+
+/* Courses menu container */
+.main-menu__list > li.alp-courses-menu {
+    position: relative;
+}
+
+/* Courses dropdown */
+.alp-courses-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    max-width: 95vw;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    padding: 30px 40px 40px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    margin-top: 20px;
+}
+
+.alp-courses-menu:hover .alp-courses-dropdown {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+
+/* Navigation Controls */
+.alp-courses-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.alp-course-nav-btn {
+    background: #009688;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.alp-course-nav-btn:hover {
+    background: #00796b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 150, 136, 0.3);
+}
+
+.alp-course-nav-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.alp-course-nav-btn i {
+    font-size: 12px;
+}
+
+/* Indicators */
+.alp-course-indicators {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.alp-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d0d0d0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.alp-indicator.active {
+    background: #009688;
+    width: 14px;
+    height: 14px;
+}
+
+.alp-indicator:hover {
+    background: #00796b;
+}
+
+/* Pages */
+.alp-courses-page {
+    display: none;
+}
+
+.alp-courses-page.active {
+    display: block;
+    animation: fadeInPage 0.4s ease;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Courses container - 3 column grid */
+.alp-courses-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+/* Each category */
+.alp-course-category {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #009688;
+}
+
+/* Category title */
+.alp-category-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #009688;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Courses list */
+.alp-courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* Level labels */
+.alp-level {
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
+    margin: 12px 0 6px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Course links */
+.alp-courses-list a {
+    display: block;
+    font-size: 13px;
+    color: #009688;
+    text-decoration: none;
+    padding: 4px 0;
+    line-height: 1.4;
+    transition: all 0.2s ease;
+}
+
+.alp-courses-list a:hover {
+    color: #00796b;
+    padding-left: 8px;
+    text-decoration: underline;
+}
+
+/* Mobile/Tablet responsiveness */
+@media (max-width: 991px) {
+    .alp-courses-dropdown {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        display: none;
+        padding: 20px;
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    .alp-courses-menu.active .alp-courses-dropdown {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .alp-courses-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .alp-course-nav-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .alp-courses-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .alp-course-category {
+        padding: 15px;
+    }
+
+    .alp-category-title {
+        font-size: 15px;
+        cursor: pointer;
+        position: relative;
+        padding-right: 30px;
+    }
+
+    .alp-category-title::after {
+        content: '+';
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 20px;
+        font-weight: 700;
+        color: #009688;
+    }
+
+    .alp-course-category.active .alp-category-title::after {
+        content: '−';
+    }
+
+    .alp-courses-list {
+        display: none;
+        padding-top: 10px;
+    }
+
+    .alp-course-category.active .alp-courses-list {
+        display: flex;
+    }
+}
+
+/* ========================================================================
    Single breakpoint: tablets & phones (≤ 991px)
    ======================================================================== */
 @media (max-width: 991px) {
@@ -142,4 +399,178 @@
     .main-menu__toggler {
         display: none !important;
     }
+}
+/* ======================================
+   COURSE MODAL
+   ======================================*/
+
+.course-catalog-modal{
+
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background: rgba(0,0,0,0.55);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:0.3s;
+
+    z-index:99999;
+}
+
+.course-catalog-modal.active{
+    opacity:1;
+    visibility:visible;
+}
+
+
+/* container */
+
+.course-catalog-container{
+
+    background:#ffffff;
+
+    width:1200px;
+    max-width:95%;
+
+    border-radius:10px;
+
+    padding:40px;
+
+}
+
+
+/* header */
+
+.course-catalog-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:30px;
+}
+
+.course-catalog-header h2{
+
+    font-size:24px;
+    font-weight:700;
+}
+
+.course-catalog-close{
+
+    font-size:30px;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+
+
+/* grid */
+
+.course-catalog-grid{
+
+    display:grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap:40px;
+}
+
+
+
+/* category */
+
+.course-category h3{
+
+    font-size:17px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+    border-bottom:2px solid #009688;
+
+    padding-bottom:8px;
+}
+
+
+
+/* level title */
+
+.course-level-title{
+
+    font-weight:700;
+
+    font-size:13px;
+
+    margin-top:12px;
+
+    margin-bottom:6px;
+
+    text-transform:uppercase;
+}
+
+
+
+/* course list */
+
+.course-category ul{
+
+    list-style:disc;
+
+    padding-left:18px;
+
+    margin-bottom:12px;
+}
+
+.course-category ul li{
+
+    font-size:14px;
+
+    margin-bottom:4px;
+
+    color:#009688;
+}
+
+/* Force display of course lists - override any global CSS */
+.course-category ul {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+    list-style: disc !important;
+    padding-left: 18px !important;
+    margin-bottom: 12px !important;
+}
+
+.course-category ul li {
+    display: list-item !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 14px !important;
+    margin-bottom: 4px !important;
+    color: #009688 !important;
+}
+
+/* mobile */
+
+@media(max-width:900px){
+
+.course-catalog-grid{
+
+grid-template-columns:1fr;
+
+}
+
 }
