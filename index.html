@@ -2604,16 +2604,10 @@
         (function() {
             const modal = document.getElementById('courseCatalogModal');
             const closeBtn = document.getElementById('closeCatalogModal');
-            const courseCards = document.querySelectorAll('.alp-course-card');
-            
-            // Open modal when any course card is clicked
-            courseCards.forEach(function(card) {
-                card.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
+
+            if (!modal || !closeBtn) {
+                return;
+            }
             
             // Close modal when close button is clicked
             closeBtn.addEventListener('click', function() {
