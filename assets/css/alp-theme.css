@@ -24,6 +24,8 @@
     --alp-accent-hover: #a8893d;
     --alp-primary-hover: #152d3c;
     --alp-secondary-light: rgba(47, 93, 117, 0.18);
+    --alp-overlay-rgb: 61, 79, 93;
+    --alp-overlay-color: rgba(var(--alp-overlay-rgb), 0.30);
     --alp-border: rgba(47, 93, 117, 0.22);
     --alp-shadow: 0 4px 20px rgba(30, 58, 76, 0.10);
 
@@ -199,6 +201,34 @@ h6 {
 
 .section-title__tagline svg path {
     fill: var(--alp-accent) !important;
+}
+
+/* Hero video overlay readability layer */
+.alp-video-hero {
+    position: relative !important;
+}
+
+.alp-video-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--alp-overlay-color) !important;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.alp-video-hero__video {
+    z-index: 0 !important;
+    filter: brightness(0.78) !important;
+}
+
+.alp-video-hero__overlay {
+    display: none !important;
+}
+
+.alp-video-hero__content {
+    position: relative !important;
+    z-index: 2 !important;
 }
 
 /* ==========================================================================

@@ -256,6 +256,15 @@
             justify-content: flex-start;
         }
 
+        .alp-video-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--alp-overlay-color, rgba(61, 79, 93, 0.30));
+            z-index: 1;
+            pointer-events: none;
+        }
+
         .alp-video-hero__video {
             position: absolute;
             top: 50%;
@@ -268,6 +277,7 @@
             transform-origin: center center;
             z-index: 0;
             object-fit: cover;
+            filter: brightness(0.78);
         }
 
         .alp-video-hero__overlay {
