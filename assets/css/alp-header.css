@@ -143,22 +143,24 @@
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 1200px;
-    max-width: 95vw;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-    padding: 30px 40px 40px 40px;
+    width: min(1120px, calc(100vw - 48px));
+    background: var(--alp-white);
+    border: 1px solid var(--alp-border);
+    border-top: 4px solid var(--alp-accent);
+    border-radius: 14px;
+    box-shadow: 0 18px 44px rgba(15, 34, 48, 0.22);
+    padding: 24px 26px 26px;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: opacity 0.28s ease, transform 0.28s ease, margin-top 0.28s ease;
     z-index: 9999;
-    margin-top: 20px;
+    margin-top: 14px;
 }
 
 .alp-courses-menu:hover .alp-courses-dropdown {
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%) translateY(0);
     margin-top: 0;
 }
 
@@ -167,34 +169,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--alp-border);
 }
 
 .alp-course-nav-btn {
-    background: #009688;
-    color: #ffffff;
+    background: var(--alp-primary);
+    color: var(--alp-white);
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 600;
+    min-width: 120px;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 7px;
 }
 
 .alp-course-nav-btn:hover {
-    background: #00796b;
+    background: var(--alp-secondary);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 150, 136, 0.3);
+    box-shadow: 0 8px 18px rgba(30, 58, 76, 0.28);
 }
 
 .alp-course-nav-btn:disabled {
-    background: #cccccc;
+    background: #d8dee4;
+    color: #7a8693;
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
@@ -207,27 +213,27 @@
 /* Indicators */
 .alp-course-indicators {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
 }
 
 .alp-indicator {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background: #d0d0d0;
+    background: rgba(47, 93, 117, 0.3);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .alp-indicator.active {
-    background: #009688;
-    width: 14px;
-    height: 14px;
+    background: var(--alp-accent);
+    width: 18px;
+    border-radius: 999px;
 }
 
 .alp-indicator:hover {
-    background: #00796b;
+    background: var(--alp-secondary);
 }
 
 /* Pages */
@@ -243,7 +249,7 @@
 @keyframes fadeInPage {
     from {
         opacity: 0;
-        transform: translateX(20px);
+        transform: translateX(14px);
     }
     to {
         opacity: 1;
@@ -255,61 +261,81 @@
 .alp-courses-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
+    gap: 16px;
 }
 
 /* Each category */
 .alp-course-category {
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    border-left: 4px solid #009688;
+    padding: 16px 16px 14px;
+    background: linear-gradient(180deg, rgba(247, 249, 251, 0.85) 0%, rgba(255, 255, 255, 0.95) 100%);
+    border-radius: 10px;
+    border: 1px solid rgba(47, 93, 117, 0.2);
+    border-top: 3px solid var(--alp-secondary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.alp-course-category:hover {
+    transform: translateY(-2px);
+    border-color: rgba(47, 93, 117, 0.35);
+    box-shadow: 0 10px 20px rgba(15, 34, 48, 0.08);
 }
 
 /* Category title */
 .alp-category-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
-    color: #333;
-    margin: 0 0 20px 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #009688;
+    color: var(--alp-primary);
+    margin: 0 0 14px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--alp-border);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.35px;
+    line-height: 1.35;
 }
 
 /* Courses list */
 .alp-courses-list {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 2px;
 }
 
 /* Level labels */
 .alp-level {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
-    color: #666;
-    margin: 12px 0 6px 0;
+    color: var(--alp-secondary);
+    margin: 10px 0 4px 0;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
 }
 
 /* Course links */
 .alp-courses-list a {
     display: block;
-    font-size: 13px;
-    color: #009688;
+    font-size: 12.5px;
+    color: var(--alp-text-dark);
     text-decoration: none;
-    padding: 4px 0;
-    line-height: 1.4;
+    padding: 3px 0;
+    line-height: 1.45;
     transition: all 0.2s ease;
 }
 
 .alp-courses-list a:hover {
-    color: #00796b;
-    padding-left: 8px;
-    text-decoration: underline;
+    color: var(--alp-secondary);
+    padding-left: 6px;
+    text-decoration: none;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .alp-courses-dropdown {
+        width: min(980px, calc(100vw - 32px));
+        padding: 20px;
+    }
+
+    .alp-courses-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Mobile/Tablet responsiveness */
@@ -320,41 +346,48 @@
         width: 100%;
         max-width: 100%;
         display: none;
-        padding: 20px;
         margin-top: 0;
-        border-radius: 0;
+        padding: 14px;
+        border: 1px solid var(--alp-border);
+        border-top: 3px solid var(--alp-accent);
+        border-radius: 10px;
+        box-shadow: 0 10px 24px rgba(15, 34, 48, 0.2);
     }
 
     .alp-courses-menu.active .alp-courses-dropdown {
         display: block;
         opacity: 1;
         visibility: visible;
+        transform: none;
     }
 
     .alp-courses-nav {
-        flex-direction: column;
-        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 14px;
+        padding-bottom: 12px;
     }
 
     .alp-course-nav-btn {
-        width: 100%;
-        justify-content: center;
+        min-width: 108px;
+        width: auto;
     }
 
     .alp-courses-container {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 12px;
     }
 
     .alp-course-category {
-        padding: 15px;
+        padding: 12px;
     }
 
     .alp-category-title {
-        font-size: 15px;
+        font-size: 13px;
         cursor: pointer;
         position: relative;
-        padding-right: 30px;
+        padding-right: 24px;
     }
 
     .alp-category-title::after {
@@ -362,9 +395,9 @@
         position: absolute;
         right: 0;
         top: 0;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 700;
-        color: #009688;
+        color: var(--alp-secondary);
     }
 
     .alp-course-category.active .alp-category-title::after {
