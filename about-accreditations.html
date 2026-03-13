@@ -236,27 +236,89 @@
 
         .alp-acc-logo-box {
             background: white;
-            padding: 40px 30px;
+            padding: 28px 24px;
             border-radius: 8px;
             box-shadow: 0 3px 15px rgba(30, 58, 76, 0.06);
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 160px;
+            gap: 14px;
+            min-height: 190px;
             transition: all 0.3s ease;
+            border: 1px solid rgba(47, 93, 117, 0.14);
         }
 
         .alp-acc-logo-box:hover {
             box-shadow: 0 8px 30px rgba(30, 58, 76, 0.12);
-            transform: scaleY(1.05);
+            transform: translateY(-4px);
         }
 
-        .alp-acc-logo-box__placeholder {
-            font-size: 18px;
+        .alp-acc-logo-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .alp-acc-logo-stack {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .alp-acc-logo-media {
+            width: 100%;
+            height: 84px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #ffffff 0%, #f6f9fd 100%);
+            border: 1px solid rgba(47, 93, 117, 0.18);
+            border-radius: 8px;
+            padding: 10px 14px;
+        }
+
+        .alp-acc-logo-media img {
+            max-width: 100%;
+            max-height: 62px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .alp-acc-logo-img {
+            max-width: 180px;
+            max-height: 62px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: saturate(0.95) contrast(1.02);
+            transition: transform 0.25s ease;
+        }
+
+        .alp-acc-logo-link:hover .alp-acc-logo-img {
+            transform: scale(1.04);
+        }
+
+        .alp-acc-logo-link:hover .alp-acc-logo-media {
+            border-color: rgba(198, 167, 94, 0.55);
+            box-shadow: 0 8px 20px rgba(30, 58, 76, 0.1);
+        }
+
+        .alp-acc-logo-name {
+            font-size: 14px;
             font-weight: 700;
             color: var(--alp-primary);
             text-align: center;
             line-height: 1.4;
+            letter-spacing: 0.2px;
         }
 
         .alp-acc-highlight-box {
@@ -286,6 +348,21 @@
         @media (max-width: 768px) {
             .alp-acc-hero__title {
                 font-size: 38px;
+            }
+
+            .alp-acc-logo-box {
+                min-height: 160px;
+                padding: 20px 16px;
+            }
+
+            .alp-acc-logo-img {
+                max-width: 130px;
+                max-height: 48px;
+            }
+
+            .alp-acc-logo-media {
+                height: 74px;
+                padding: 8px 10px;
             }
 
             .alp-acc-heading {
@@ -575,16 +652,36 @@
 
                 <div class="alp-acc-logo-grid">
                     <div class="alp-acc-logo-box wow fadeInUp" data-wow-delay="100ms">
-                        <div class="alp-acc-logo-box__placeholder">Pearson<br/>BTEC</div>
+                        <a class="alp-acc-logo-link" href="https://qualifications.pearson.com" target="_blank" rel="noopener noreferrer" aria-label="Pearson BTEC">
+                            <div class="alp-acc-logo-media">
+                                <img class="alp-acc-logo-img" src="assets/accreditional_and_affilation_images/pearson.jpg" alt="Pearson logo">
+                            </div>
+                            <span class="alp-acc-logo-name">Pearson / BTEC</span>
+                        </a>
                     </div>
                     <div class="alp-acc-logo-box wow fadeInUp" data-wow-delay="200ms">
-                        <div class="alp-acc-logo-box__placeholder">CMI<br/>Chartered Management Institute</div>
+                        <a class="alp-acc-logo-link" href="https://www.managers.org.uk" target="_blank" rel="noopener noreferrer" aria-label="Chartered Management Institute">
+                            <div class="alp-acc-logo-media">
+                                <img class="alp-acc-logo-img" src="assets/accreditional_and_affilation_images/cmi.png" alt="CMI Chartered Management Institute logo">
+                            </div>
+                            <span class="alp-acc-logo-name">CMI Chartered Management Institute</span>
+                        </a>
                     </div>
                     <div class="alp-acc-logo-box wow fadeInUp" data-wow-delay="300ms">
-                        <div class="alp-acc-logo-box__placeholder">OTHM<br/>Qualifications</div>
+                        <a class="alp-acc-logo-link" href="https://othm.org.uk" target="_blank" rel="noopener noreferrer" aria-label="OTHM Qualifications">
+                            <div class="alp-acc-logo-media">
+                                <img class="alp-acc-logo-img" src="assets/accreditional_and_affilation_images/othm.png" alt="OTHM Qualifications logo">
+                            </div>
+                            <span class="alp-acc-logo-name">OTHM Qualifications</span>
+                        </a>
                     </div>
                     <div class="alp-acc-logo-box wow fadeInUp" data-wow-delay="400ms">
-                        <div class="alp-acc-logo-box__placeholder">NCFE<br/>Awarding Body</div>
+                        <a class="alp-acc-logo-link" href="https://www.ncfe.org.uk" target="_blank" rel="noopener noreferrer" aria-label="NCFE Awarding Body">
+                            <div class="alp-acc-logo-media">
+                                <img class="alp-acc-logo-img" src="assets/accreditional_and_affilation_images/ncfe.png" alt="NCFE Awarding Body logo">
+                            </div>
+                            <span class="alp-acc-logo-name">NCFE Awarding Body</span>
+                        </a>
                     </div>
                 </div>
 
