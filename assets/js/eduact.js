@@ -136,6 +136,107 @@
         let navContent = document.querySelector(".main-menu__nav").innerHTML;
         let mobileNavContainer = document.querySelector(".mobile-nav__container");
         mobileNavContainer.innerHTML = navContent;
+
+        // Build a simple nested list for mobile from the custom Courses mega menu.
+        let mobileCoursesMenus = mobileNavContainer.querySelectorAll(
+            ".alp-courses-menu"
+        );
+
+        mobileCoursesMenus.forEach(function(menuItem) {
+            if (menuItem.querySelector("ul")) {
+                return;
+            }
+
+            let megaDropdown = menuItem.querySelector(".alp-courses-dropdown");
+            if (!megaDropdown) {
+                return;
+            }
+
+            let submenu = document.createElement("ul");
+            submenu.className = "sub-menu";
+
+            let categories = megaDropdown.querySelectorAll(".alp-course-category");
+            categories.forEach(function(category) {
+                let categoryTitleNode = category.querySelector(".alp-category-title");
+                let coursesList = category.querySelector(".alp-courses-list");
+
+                if (!categoryTitleNode || !coursesList) {
+                    return;
+                }
+
+                let categoryTitle = (categoryTitleNode.textContent || "").trim();
+                if (!categoryTitle) {
+                    return;
+                }
+
+                let categoryLi = document.createElement("li");
+                categoryLi.className = "dropdown";
+
+                let categoryAnchor = document.createElement("a");
+                categoryAnchor.setAttribute("href", "#");
+                categoryAnchor.textContent = categoryTitle;
+                categoryLi.appendChild(categoryAnchor);
+
+                let categorySubmenu = document.createElement("ul");
+                categorySubmenu.className = "sub-menu";
+
+                let currentLevelSubmenu = null;
+                Array.prototype.forEach.call(coursesList.children, function(node) {
+                    if (node.tagName === "P" && node.classList.contains("alp-level")) {
+                        let levelText = (node.textContent || "").trim();
+                        if (!levelText) {
+                            return;
+                        }
+
+                        let levelLi = document.createElement("li");
+                        levelLi.className = "dropdown";
+
+                        let levelAnchor = document.createElement("a");
+                        levelAnchor.setAttribute("href", "#");
+                        levelAnchor.textContent = levelText;
+                        levelLi.appendChild(levelAnchor);
+
+                        currentLevelSubmenu = document.createElement("ul");
+                        currentLevelSubmenu.className = "sub-menu";
+                        levelLi.appendChild(currentLevelSubmenu);
+                        categorySubmenu.appendChild(levelLi);
+                        return;
+                    }
+
+                    if (node.tagName === "A") {
+                        let rawHref = (node.getAttribute("href") || "").trim();
+                        let courseText = (node.textContent || "").replace(/^[\s\u2022]+/, "").trim();
+
+                        if (!courseText) {
+                            return;
+                        }
+
+                        let courseLi = document.createElement("li");
+                        let courseAnchor = document.createElement("a");
+                        courseAnchor.setAttribute("href", rawHref || "#");
+                        courseAnchor.textContent = courseText;
+                        courseLi.appendChild(courseAnchor);
+
+                        if (currentLevelSubmenu) {
+                            currentLevelSubmenu.appendChild(courseLi);
+                        } else {
+                            categorySubmenu.appendChild(courseLi);
+                        }
+                    }
+                });
+
+                if (categorySubmenu.children.length) {
+                    categoryLi.appendChild(categorySubmenu);
+                    submenu.appendChild(categoryLi);
+                }
+            });
+
+            if (submenu.children.length > 0) {
+                menuItem.classList.add("dropdown");
+                megaDropdown.style.display = "none";
+                menuItem.appendChild(submenu);
+            }
+        });
     }
     if ($(".sticky-header__content").length) {
         let navContent = document.querySelector(".main-menu").innerHTML;
@@ -145,7 +246,7 @@
 
     if ($(".mobile-nav__container .main-menu__list").length) {
         let dropdownAnchor = $(
-            ".mobile-nav__container .main-menu__list .dropdown > a"
+            ".mobile-nav__container .main-menu__list .dropdown > a, .mobile-nav__container .main-menu__list .alp-courses-menu > a"
         );
         dropdownAnchor.each(function() {
             let self = $(this);
@@ -158,9 +259,35 @@
             self.find("button").on("click", function(e) {
                 e.preventDefault();
                 let self = $(this);
-                self.toggleClass("expanded");
-                self.parent().toggleClass("expanded");
-                self.parent().parent().children("ul").slideToggle();
+                let currentAnchor = self.parent();
+                let currentItem = currentAnchor.parent();
+                let currentSubmenu = currentItem.children("ul").first();
+
+                if (!currentSubmenu.length) {
+                    return;
+                }
+
+                let siblingItems = currentItem.siblings("li");
+                siblingItems.each(function() {
+                    let sibling = $(this);
+                    sibling.removeClass("expanded");
+                    sibling.children("a").removeClass("expanded");
+                    sibling.children("a").find("button").removeClass("expanded");
+                    sibling.children("ul:visible").slideUp();
+                });
+
+                let isOpen = currentSubmenu.is(":visible");
+                if (isOpen) {
+                    self.removeClass("expanded");
+                    currentAnchor.removeClass("expanded");
+                    currentItem.removeClass("expanded");
+                    currentSubmenu.slideUp();
+                } else {
+                    self.addClass("expanded");
+                    currentAnchor.addClass("expanded");
+                    currentItem.addClass("expanded");
+                    currentSubmenu.slideDown();
+                }
             });
         });
     }
